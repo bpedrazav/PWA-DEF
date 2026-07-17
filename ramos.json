@@ -1,0 +1,92 @@
+{
+  "ramos": [
+    {
+      "id": "ICINF1108",
+      "nombre": "BACKEND",
+      "codigo": "ICINF1108",
+      "color": "#6366f1",
+      "maxAusencia": 30,
+      "semStart": "2026-08-10",
+      "horario": [
+        {
+          "dia": "Lunes",
+          "inicio": "08:00",
+          "fin": "11:20",
+          "sala": ""
+        },
+        {
+          "dia": "Miércoles",
+          "inicio": "08:00",
+          "fin": "10:10",
+          "sala": ""
+        }
+      ]
+    },
+    {
+      "id": "ICINF1109",
+      "nombre": "PROGRAMACIÓN II",
+      "codigo": "ICINF1109",
+      "color": "#84cc16",
+      "maxAusencia": 30,
+      "semStart": "2026-08-10",
+      "horario": [
+        {
+          "dia": "Lunes",
+          "inicio": "11:30",
+          "fin": "14:50",
+          "sala": ""
+        },
+        {
+          "dia": "Martes",
+          "inicio": "11:00",
+          "fin": "13:40",
+          "sala": ""
+        }
+      ]
+    },
+    {
+      "id": "MATE1134",
+      "nombre": "CALCULO II",
+      "codigo": "MATE1134",
+      "color": "#ef4444",
+      "maxAusencia": 30,
+      "semStart": "2026-08-10",
+      "horario": [
+        {
+          "dia": "Lunes",
+          "inicio": "15:00",
+          "fin": "18:20",
+          "sala": ""
+        },
+        {
+          "dia": "Viernes",
+          "inicio": "08:00",
+          "fin": "10:10",
+          "sala": ""
+        }
+      ]
+    },
+    {
+      "id": "ICINF1106",
+      "nombre": "REDES",
+      "codigo": "ICINF1106",
+      "color": "#8b5cf6",
+      "maxAusencia": 30,
+      "semStart": "2026-07-17",
+      "horario": [
+        {
+          "dia": "Martes",
+          "inicio": "08:00",
+          "fin": "10:10",
+          "sala": ""
+        },
+        {
+          "dia": "Jueves",
+          "inicio": "12:40",
+          "fin": "14:50",
+          "sala": ""
+        }
+      ]
+    }
+  ]
+}
