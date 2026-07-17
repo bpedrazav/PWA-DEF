@@ -67,12 +67,34 @@
       ]
     },
     {
+      "id": "ICINF1107",
+      "nombre": "FRONTEND",
+      "codigo": "ICINF1107",
+      "color": "#6366f1",
+      "maxAusencia": 30,
+      "semStart": "2026-08-10",
+      "horario": [
+        {
+          "dia": "Jueves",
+          "inicio": "08:00",
+          "fin": "11:20",
+          "sala": ""
+        },
+        {
+          "dia": "Jueves",
+          "inicio": "15:00",
+          "fin": "17:10",
+          "sala": ""
+        }
+      ]
+    },
+    {
       "id": "ICINF1106",
       "nombre": "REDES",
       "codigo": "ICINF1106",
-      "color": "#8b5cf6",
+      "color": "#6366f1",
       "maxAusencia": 30,
-      "semStart": "2026-07-17",
+      "semStart": "2026-08-10",
       "horario": [
         {
           "dia": "Martes",
