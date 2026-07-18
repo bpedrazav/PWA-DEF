@@ -32,29 +32,35 @@ def discover_and_store():
             repo, path, sha = file_info["repo"], file_info["path"], file_info["sha"]
             found += 1
 
-            if db.file_already_scanned(conn, repo, path, sha):
+            try:
+                if db.file_already_scanned(conn, repo, path, sha):
+                    continue
+
+                content = github_search.get_raw_content(repo, path)
+                if not content:
+                    continue
+
+                channels = m3u_parser.parse_m3u(content)
+                for ch in channels:
+                    db.upsert_channel(
+                        conn,
+                        url=ch["url"],
+                        name=ch["name"],
+                        logo=ch["logo"],
+                        group_title=ch["group_title"],
+                        source_repo=repo,
+                        source_file=path,
+                    )
+                    new_channels += 1
+
+                db.mark_file_scanned(conn, repo, path, sha)
+            except Exception as e:
+                # un archivo raro no debe tirar abajo un run de varios minutos
+                print(f"[main] Saltando {repo}/{path} por error: {e}")
                 continue
-
-            content = github_search.get_raw_content(repo, path)
-            if not content:
-                continue
-
-            channels = m3u_parser.parse_m3u(content)
-            for ch in channels:
-                db.upsert_channel(
-                    conn,
-                    url=ch["url"],
-                    name=ch["name"],
-                    logo=ch["logo"],
-                    group_title=ch["group_title"],
-                    source_repo=repo,
-                    source_file=path,
-                )
-                new_channels += 1
-
-            db.mark_file_scanned(conn, repo, path, sha)
 
             if found % 25 == 0:
+                conn.commit()
                 print(f"[main] ...{found} archivos vistos, {new_channels} entradas de canal procesadas")
 
     print(f"[main] Discovery terminado: {found} archivos revisados, {new_channels} entradas de canal upsert-eadas")
