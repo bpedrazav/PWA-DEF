@@ -1,76 +1,34 @@
 {
   "channels": [
     {
-      "name": "安徽交通广播 高清",
-      "url": "http://satellitepull.cnr.cn/live/wxahjtgb/playlist.m3u8?wsSession=d966c1f28016a758d88ba0c2-174830326162340&wsIPSercert=cd39a342afce39d82188ebae3a31d1b8",
+      "name": "C-SPAN 2 (720p)",
+      "url": "http://40.160.24.52/C-SPAN_2/index.m3u8",
+      "logo": "https://i.imgur.com/9B6XIQC.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "France 24 Arabic",
+      "url": "http://static.france24.com/live/F24_AR_LO_HLS/live_web.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Inspira TV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/0c913970f4e013e.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/RFYcXrq.png?v=1.0.0.1",
-      "group_title": "Local"
-    },
-    {
-      "name": "TVKU",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/29afb26faff1ccd.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/VLR16Or.png?v=1.0.0.1",
-      "group_title": "Local"
-    },
-    {
-      "name": "Channel Jowo",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/1de333734b1b7e0.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/JxtgBmg.png?v=1.0.0.1",
-      "group_title": "Local"
-    },
-    {
-      "name": "CGTN Documentary",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/knl/0d3dbf8c78f1fb7.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/vCe26fV.png?v=1.0.0.1",
-      "group_title": "Knowledge"
-    },
-    {
-      "name": "Music Information Channel",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/0c913970f4e0137.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/R3BrQZs.png?v=1.0.0.1",
-      "group_title": "Music"
-    },
-    {
-      "name": "MOJI",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/d4ff175b1e2d419.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/sSAf4Kz.png?v=1.0.0.1",
-      "group_title": "Dens.tv"
-    },
-    {
-      "name": "Radio RAI Radiodue",
-      "url": "https://radiodue-live.akamaized.net/hls/live/2032592/radiodue/radiodue/playlist.m3u8?auth=daEa1cpcVd4bqbrdVdUchdIcybfdbcwc6c_-bHYEXn-c0-DlwwyHt&aifp=V001",
+      "name": "CRI劲曲调频 HIT FM（广州）",
+      "url": "http://satellitepull.cnr.cn/live/wxhitfm/playlist.m3u8?",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "MDTV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/6cdb3402d11f58d.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/WaFICZ4.png?v=1.0.0.1",
-      "group_title": "🇮🇩 Nasional"
+      "name": "重庆综合广播",
+      "url": "http://satellitepull.cnr.cn/live/wxcqxwgb/playlist.m3u8",
+      "logo": null,
+      "group_title": null
     },
     {
-      "name": "324",
-      "url": "https://directes-tv-int.3catdirectes.cat/live-content/canal324-hls/master.m3u8",
-      "logo": "https://graph.facebook.com/324cat/picture?width=200&height=200",
-      "group_title": "Cataluña"
-    },
-    {
-      "name": "Surabaya TV 🇮🇩",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/86555c60e79d212.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/eqluvkr.png?v=1.0.0.1",
-      "group_title": "Local"
-    },
-    {
-      "name": "duta TV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/3254f236ad3e872.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/pzwi2WE.png?v=1.0.0.1",
-      "group_title": "Local"
+      "name": "河北音乐广播",
+      "url": "http://satellitepull.cnr.cn/live/wxhebyygb/playlist.m3u8",
+      "logo": null,
+      "group_title": null
     },
     {
       "name": "C-SPAN (720p)",
@@ -79,250 +37,34 @@
       "group_title": "Legislative"
     },
     {
-      "name": "RTHK Radio 2",
-      "url": "https://rthkradio2-live.akamaized.net/hls/live/2040078/radio2/index_64_a.m3u8",
-      "logo": "https://radiospinner.com/media/logos/180/81188/logo_RraVP5VmFw.png",
-      "group_title": null
-    },
-    {
-      "name": "Nusantara TV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/378a642ff00fed8.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/tQ6itG9.png?v=1.0.0.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "CNN Indonesia",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/d12f0b99ed1f070.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/D5zoAFR.png?v=1.1.1.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "Metro TV HD",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/6183ec225226ccc.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/Qdzsb1v.png?v=1.0.0.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "Indosiar",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/575eeb9f08dc8db.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/CiYAcVe.png?v=1.0.0.1",
-      "group_title": "Dens.tv"
-    },
-    {
-      "name": "ARB Gunes",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/arb-gunes.m3u8",
+      "name": "安徽交通广播 高清",
+      "url": "http://satellitepull.cnr.cn/live/wxahjtgb/playlist.m3u8?wsSession=d966c1f28016a758d88ba0c2-174830326162340&wsIPSercert=cd39a342afce39d82188ebae3a31d1b8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "RTHK Radio 4",
-      "url": "https://rthkradio4-live.akamaized.net/hls/live/2040080/radio4/index_64_a.m3u8",
-      "logo": "https://radiospinner.com/media/logos/180/81189/logo_WHx8CcnhXQ.png",
-      "group_title": null
-    },
-    {
-      "name": "WMXM 88.9 FM",
-      "url": "http://wmxm.streamguys1.com/live",
+      "name": "美国Newsmax TV",
+      "url": "http://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "JTV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/226fe77699e03c6.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/bKLoSVx.png?v=1.1.1.1",
-      "group_title": "Local"
+      "name": "泰国-公共三台",
+      "url": "http://thaipbs-live.cdn.byteark.com/live/playlist_720p/index.m3u8",
+      "logo": null,
+      "group_title": null
     },
     {
-      "name": "Sakti TV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/3202e9487d9cd5c.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/e4ZNl62.png?v=1.0.0.1",
-      "group_title": "Local"
-    },
-    {
-      "name": "MUI TV",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/71b5c8483161297.m3u8",
-      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi866S3gjBEh-2xwbkT0Hryo-cHL87xQYnEGvjuck8gV2auLanTr54aAGj_tXXV1DmT50HFhkfJO5q7WT3N-INtC_f3YeSrvlOFiOVU62qR3j-exk9NPF6m1yCBgCIhgp9bdxkHtkHZljkE4fFpBpGWjfDQfHI1qD-1RVc1PVyTSjbuNNezZPZpX5IzTwx-/s1600/hzPnJaX.png?v=1.0.0.1",
-      "group_title": "Ukhuwah Islamiyah"
-    },
-    {
-      "name": "TRT World",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/ns/27491db6bea155a.m3u8",
-      "logo": "https://thumbs2.imgbox.com/50/df/ZnZnRrHO_t.png?v=1.0.0.1",
+      "name": "Deutsche Welle Europe",
+      "url": "http://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8",
+      "logo": null,
       "group_title": "News"
     },
     {
-      "name": "Berita RTM",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/my/BeritaRTM/index.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/twIcy62.png?v=1.0.0.1",
-      "group_title": "🇲🇾 Malaysia"
-    },
-    {
-      "name": "TVRI Nasional HD",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/3f58825fe229a9f.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/Ax67v0u.png?v=1.0.0.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "Jawa Pos TV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/459caa984301138.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/iBrOoMG.png?v=1.0.0.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "CCTV-4",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/int/b0e5bb72ae995c6.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/Q2dStFM.png?v=1.0.0.1",
-      "group_title": "Entertainment"
-    },
-    {
-      "name": "DENS Food Channel",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/dfc160946781414.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/sE1nCEC.png?v=1.0.0.1",
-      "group_title": "Lifestyle"
-    },
-    {
-      "name": "海南卫视伴音",
-      "url": "https://piccpndali.v.myalicdn.com/audio/travel_2.m3u8",
+      "name": "SPIEGEL TV Konflikte",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65b9268fc798e800085add89/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b210d30-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=245f86b2-fa92-4679-a002-9525677a4532&serverSideAds=false&checkedby:iptvcat.com",
       "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "RTV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/590642f0a31efa4.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/5aNYcSQ.png?v=1.1.1.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "Elshinta TV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/383fb71f4a76ab2.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/9i6ufQh.png?v=1.0.0.1",
-      "group_title": "Local"
-    },
-    {
-      "name": "Al Arabiya",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/ar/b8b58e25df2b3ce.m3u8",
-      "logo": "https://thumbs2.imgbox.com/8c/77/td4c5ak5_t.png?v=1.0.0.1",
-      "group_title": "News"
-    },
-    {
-      "name": "TV1 HD",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/my/Tv1/index.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/BCopt1L.png?v=1.1.1.1",
-      "group_title": "🇲🇾 Malaysia"
-    },
-    {
-      "name": "TVONE",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/0976f879a0c4548.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/UqGSTVT.png?v=1.0.0.1",
-      "group_title": "Dens.tv"
-    },
-    {
-      "name": "Kompas TV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/ae5f9d6bcd610b6.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/Dksg1b8.png?v=1.0.0.1",
-      "group_title": "Dens.tv"
-    },
-    {
-      "name": "C-SPAN 2 (720p)",
-      "url": "http://40.160.24.52/C-SPAN_2/index.m3u8",
-      "logo": "https://i.imgur.com/9B6XIQC.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "RTHK Radio Putonghua",
-      "url": "https://rthkradiopth-live.akamaized.net/hls/live/2040082/radiopth/index_64_a.m3u8",
-      "logo": "https://radiospinner.com/media/logos/180/81182/logo_U4KcOpQIQO.png",
-      "group_title": null
-    },
-    {
-      "name": "MOJI",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/d4ff175b1e2d419.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/lFAUBcK.png?v=1.1.1.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "DAAI TV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/0525ed2747e3162.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/1eaZ3bd.png?v=1.1.1.1",
-      "group_title": "Local"
-    },
-    {
-      "name": "Al Jazeera English",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/ns/f5f5c18cf037919.m3u8",
-      "logo": "https://thumbs2.imgbox.com/fa/8a/w5za9Ci0_t.png?v=1.0.0.1",
-      "group_title": "News"
-    },
-    {
-      "name": "Garuda TV",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/b825800cf4d3aaa.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/HM01rkg.png?v=1.1.1.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "Metro TV HD",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/6183ec225226ccc.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/cjgZtZy.png?v=1.0.0.1",
-      "group_title": "Dens.tv"
-    },
-    {
-      "name": "Baku TV (720p)",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/baku-tv.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Indosiar HD",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/575eeb9f08dc8db.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/k3IqSHs.png?v=1.1.1.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "WION",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/ns/0a8c23a12b66e1b.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/Fq7axtv.png?v=1.0.0.1",
-      "group_title": "News"
-    },
-    {
-      "name": "SCTV",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/2b8fc230e8f847a.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/TYpz6Yv.png?v=1.0.0.1",
-      "group_title": "Dens.tv"
-    },
-    {
-      "name": "WKRV 107.1 FM",
-      "url": "http://cromwell-ice.streamguys1.com/WKRVFM",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Ativa Bom Despacho",
-      "url": "http://148.72.158.239:8036/live",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Trans 7",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/cdd283c9d3d43b5.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/sWeXuef.png?v=1.1.1.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "TVOne",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/0976f879a0c4548.m3u8",
-      "logo": "https://cdn4.mbahnunungonline.net/img/CTqyhF2.png?v=1.0.0.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "ARB 24",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/arb-24.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "TV2 HD",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/my/Tv2/index.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/JVfkufE.png?v=1.0.0.1",
-      "group_title": "🇲🇾 Malaysia"
+      "group_title": "Sport"
     },
     {
       "name": "A&R Canal Adventista (720p)",
@@ -331,56 +73,164 @@
       "group_title": null
     },
     {
-      "name": "My Cinema Europe",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/Mov/42f8fc7226dc12a1.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/WnZe5JF.png?v=1.0.0.1",
-      "group_title": "Movies"
-    },
-    {
-      "name": "Radio MIG",
-      "url": "http://185.171.67.81:8000/radio-mig",
+      "name": "ARB 24",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/arb-24.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | I'm Your Biggest Fan",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665128.mp4",
+      "name": "春晚2002",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/21/BMjAyMzAxMTMyMTE4MzRfNDAzMDAxOTlfOTM1MDY4ODIxNDdfMF8z_b_Ba6271d10b7e6cfae83759033a091f257.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "ARB Gunes",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/arb-gunes.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com -  Nurse",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665129.mp4",
+      "name": "春晚2009",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQzOTBfMF8z_b_B29a36a85e0277f6c2a1f033ef7c10708.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "SPIEGEL TV Konflikte",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65b9268fc798e800085add89/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b210d30-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=245f86b2-fa92-4679-a002-9525677a4532&checkedby:iptvcat.com",
+      "logo": null,
+      "group_title": "Sport"
+    },
+    {
+      "name": "France 24 Arabic",
+      "url": "https://static.france24.com/live/F24_AR_LO_HLS/live_web.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "CNBC Indonesia",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/ef7e8c7bc86110e.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/jmrik3d.png?v=1.0.0.1",
-      "group_title": "🇮🇩 Nasional"
-    },
-    {
-      "name": "Reggae Radio RastaMusic.com",
-      "url": "http://204.93.226.26:808/",
+      "name": ".166667",
+      "url": "https://8cinema.xyz/ef5702e50b506ac8f5d4341d04a06580.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "MDTV",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/6cdb3402d11f58d.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/3HN0wFp.png?v=1.0.0.1",
-      "group_title": "Dens.tv"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | New To Nudism",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664646.mp4",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/5dc57dd600101865d3037e0f8949c3a8.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "TVCARiB Kids & Teens (720p) [Not 24/7]",
-      "url": "https://cdn.mycloudstream.io/hls/live/broadcast/nro19k2h/index.m3u8",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/9aa2f4b76b774104162c3970db339c2c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "YouDotGov",
+      "url": "https://reflect-communitytv.cablecast.tv/live-3/live/stream-1/live.m3u8",
+      "logo": "https://i.imgur.com/4Mc7baR.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/51f7ad6e9e857d6742668d49df1a8e6c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".2",
+      "url": "https://8cinema.xyz/6ba4cf7145194f8d86f70813edd5e31f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".966667",
+      "url": "https://8cinema.xyz/ffb687bf7e99c6f3863a9537458971f3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".3",
+      "url": "https://8cinema.xyz/67ee3f4e453ec58b1d2fc71e0712cb59.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".066667",
+      "url": "https://8cinema.xyz/77b62ae2079ea3c0026c6323f2b5faab.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".666667",
+      "url": "https://8cinema.xyz/677a7cb6037550e0387333a2564c0a8f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".2",
+      "url": "https://8cinema.xyz/dbed76e00b8b4a906c3e3b8c3f4cd9f6.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/a73dcf1b38219e7a12741ec381e30df4.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".9",
+      "url": "https://8cinema.xyz/1db782bdb8fb4ecb86de7fcea85df3cd.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".033333",
+      "url": "https://8cinema.xyz/9a338f05caf56550edc193b241c208d4.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".466667",
+      "url": "https://8cinema.xyz/332330ba07c2824cda7ba1565b064b9f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".6",
+      "url": "https://8cinema.xyz/320810d55188c00f178396308b71122d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".966667",
+      "url": "https://8cinema.xyz/b318bf618a3063ad6a1779d78e95d553.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/123fc8114e0784cdc41d78662fe87575.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/a373d1dc1b773e05610e88d36b000f0d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".666667",
+      "url": "https://8cinema.xyz/059d5efb8d5b6ea8d489c0abd84fb45a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/57712df5b966c4f3e57b04c341e4adc6.html",
       "logo": null,
       "group_title": null
     },
@@ -391,968 +241,164 @@
       "group_title": null
     },
     {
-      "name": "Powerhitz Com The Planet The New Rock Alternative",
-      "url": "http://jbmedia-edge1.cdnstream.com:80/planet",
+      "name": "Radio MIG",
+      "url": "http://185.171.67.81:8000/radio-mig",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Load Size - Jordi's Max",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664641.mp4",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/d47d5f74ae370fd8ac8787ec292eabd6.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Marsha Raises the Bar FIRST ANAL",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665328.mp4",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/fb2ec9a4cebea6178d84d6c4c38775ee.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com -  Twerk It Out!",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665132.mp4",
+      "name": ".4",
+      "url": "https://8cinema.xyz/0d2f0ccdb438945dd4a8296b55789d72.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | My Blindfolded Best Friend",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665331.mp4",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/910ac6c266ea971f639688b269744345.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Venevisión Internacional (720p)",
-      "url": "https://vod2live.univtec.com/manifest/4c41c0d8-e2e4-43cc-bd43-79afe715e1b3.m3u8",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/27465f997464e8948cd476eae8593a76.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Out Like A Light",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665339.mp4",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/2a4dc77d586ad5a637d1d39ce9093c31.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Roadie Head",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665341.mp4",
+      "name": ".1",
+      "url": "https://8cinema.xyz/3e8d691a183b4ca101317172a2f57714.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Alarabiya (1080p)",
-      "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/alarabiapublish/alarabiya_1080p/chunks.m3u8",
+      "name": ".566667",
+      "url": "https://8cinema.xyz/9bac9fd95244dcb73f7ea952c0cfcbe3.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Peen-ata Pounding",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665135.mp4",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/f8377273e11c1aebdf4900ebfc8a5484.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Milf And Cookies",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665329.mp4",
+      "name": ".866667",
+      "url": "https://8cinema.xyz/79719f1ed89ab47741e9c22b051a442f.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Stepsibling Rivalry",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665342.mp4",
+      "name": ".9",
+      "url": "https://8cinema.xyz/445a9651666f2d181f51c817725a6585.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "DW",
-      "url": "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/stream05/streamPlaylist.m3u8",
-      "logo": "https://www.izzigo.tv/images/ch/97/LOGO/m/0",
-      "group_title": null
-    },
-    {
-      "name": "Da Vinci Learning",
-      "url": "https://warningfm.github.io/v3/live/str/op/7335edf66aba711.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/kDghfOK.png?v=1.0.0.1",
-      "group_title": "Entertainment"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Sex Tape Mistake",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664649.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Cherie Peeping",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665118.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Here For My Boyfriend's Stuff",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665125.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Naughty Date With The Neighbor",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665334.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Gingervitis",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664637.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Nurse's Orders",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664644.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Desert Desires",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665119.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Day With A Pornstar - Angela White",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665120.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WKAQ-DT2 (Punto 2) (720p)",
-      "url": "https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream2/master.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Bingo Bang",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665113.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Mom's Got A Meeting",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665330.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "KUAF 91.3FM",
-      "url": "http://war.str3am.com:7030/kuaf1",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Red Bull TV (1080p)",
-      "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/4YIBApo.png?v=1.0.0.1",
-      "group_title": "Sports"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Getting Good Vibes",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664639.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Night Walk",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664645.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Horny For The Holidays - Part 2",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665127.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Shower Curtain Cock",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665343.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | A Housewife Scorned - Brandi Love & Valentina Nappi",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665885.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "MCJ TV",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/mcj-tv-shop.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "CKNX AM 920 - CKNX",
-      "url": "http://live.leanstream.co//CKNXAM",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Long Beach Television (720p)",
-      "url": "https://edge-f.swagit.com/live/longbeachca/live-3-a/playlist.m3u8",
-      "logo": "https://i.imgur.com/DjkVuFF.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "Miami Beach Tv (MBTV) (Miami Beach FL) (720p)",
-      "url": "https://edge-f.swagit.com/live/miamibeachfl/live-1-a/playlist.m3u8",
-      "logo": "https://i.imgur.com/LyqFr9E.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Backyard Banging",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665114.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Sexercise",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665136.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Neon Rain",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665336.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Fighting Foot Domination",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665124.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Trippy Hula Hippie",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665138.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Chanel Preston & Amarna Miller",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665889.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Space TV",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/space-tv.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Glendale 11 AZ (360p)",
-      "url": "https://edge-f.swagit.com/live/glendaleaz/live-1-a-1/playlist.m3u8",
-      "logo": "https://i.imgur.com/jehiyV7.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "WJWR Bloomington",
-      "url": "http://ais-sa1.streamon.fm/7086_24k.aac",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Nailed Through The Wall",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664643.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Sweet And Sour",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664648.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "MindsEye Radio - Virtual Newsstand Reading Service for the Blind",
-      "url": "https://mindseye.streamguys1.com/xstream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Love Moms - Ilsa (50) & Lara",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665900.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "CGTN阿语",
-      "url": "https://0472.org/hls/cgtna.m3u8",
-      "logo": null,
-      "group_title": "央视IPV4"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Black Out",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665116.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Eating Out for Thanksgiving",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665121.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Lingerie Rubdown",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665131.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Upgrading My Room",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665139.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Size Stamina",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665344.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Horny For The Holidays - Part 1",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664638.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Eyes On The Prize",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665123.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | The Voyeur Next Door - Part 3",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665346.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "PLEX TV",
-      "url": "http://connectiktv.ddns.net:5000/plextv/@plextv/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Lessons From the Champ",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664642.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | A Very Neighborly Affair",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665112.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Blindfolded Bride",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665117.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Pornstar Prey",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665134.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Poolside Fucking",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665338.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | FinishHim 17-08-10 Bella Ink",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665893.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "BBC News (UK)",
-      "url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8",
-      "logo": "https://raw.githubusercontent.com/thomraider12/icones_tv/main/bbcnews.png",
-      "group_title": "Internacionais"
-    },
-    {
-      "name": "LT9 Radio Brigadier Lopez",
-      "url": "http://streaming1.locucionar.com:12294/stream/",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "AswajaTV",
-      "url": "https://warningfm.github.io/dailymotion/AswajaTV.m3u8",
-      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUSfuYiKJQecm6oG-t1wvGTKJGymZzH0yT1ZMR94TmQ158STHvoa7g-YRPdRSli5iA9Wl2UAf8cUrvVbW-AmZNu1T2-hZBOx9LOK8Ym1qKFFVQihkCnm3pNEC6oUOSDdI02T4PoYra-dU6JVPtThPHgmavSignQMnxe4NQmCuxUtv5FF8TqFSf-kmzWs2A/s1600/WlUjXgD.pn?v=1.0.0.1",
-      "group_title": "Ukhuwah Islamiyah"
-    },
-    {
-      "name": "Fort Pierce Live Stream (Fort Pierce FL) (720p)",
-      "url": "https://edge-f.swagit.com/live/fortpiercefl/live-1-a/playlist.m3u8",
-      "logo": "https://i.imgur.com/2ChoSsi.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "CGTN俄语",
-      "url": "https://0472.org/hls/cgtne.m3u8",
-      "logo": null,
-      "group_title": "央视IPV4"
-    },
-    {
-      "name": "Campeones Radio",
-      "url": "http://01.solumedia.com.ar:7193/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "CvsRadio1-ReggaeJam",
-      "url": "http://74.50.122.103:9128/;stream",
-      "logo": null,
-      "group_title": "广播频道"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | The Voyeur Next Door - Part 4",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665347.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Aniplus",
-      "url": "https://warningfm.github.io/v3/live/str/op/7335edf66aba710.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/nQEfdUN.png?v=1.0.0.1",
-      "group_title": "Entertainment"
-    },
-    {
-      "name": "My TV Channel (720p) [Not 24/7]",
-      "url": "http://connectiktv.ddns.net:5000/mytvchannel/@mytvchannel/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Xezer TV",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/xezer-tv.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WGNN 102.5 Great News Radio",
-      "url": "http://ais-sa1.streamon.fm/7667_48k.aac",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | The Temp's Crush",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665137.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "MTV TV",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/mtv-azerbaycan.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Tennis Balls Deep",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664650.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Office 4-Play - Latina Edition",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665337.mp4",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/c121f35c9acbcfa79b8d830572a1449c.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Working Late",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666037.mp4",
+      "name": ".266667",
+      "url": "https://8cinema.xyz/3eb82c618662531c12fc712f3c6a1e58.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "WCSF 88.7 FM",
-      "url": "http://ais-sa1.streamon.fm/7030_32k.aac",
+      "name": ".633333",
+      "url": "https://8cinema.xyz/97b83a5734efddffca4aaf5fd0179e83.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Disney Channel",
-      "url": "https://a77aivottepl-a.akamaihd.net/pdx-nitro/live/clients/dash/enc/zuf794yutz/out/v1/ca3534bfe4f148298b36719204d108e0/cenc.mpd",
-      "logo": "https://warningfm.github.io/v3/img/1mftATn.png?v=1.0.0.1",
-      "group_title": "Kids"
-    },
-    {
-      "name": "CGTN法语",
-      "url": "https://0472.org/hls/cgtnf.m3u8",
-      "logo": null,
-      "group_title": "央视IPV4"
-    },
-    {
-      "name": "WGNJ 89.3",
-      "url": "http://ais-sa1.streamon.fm/7668_48k.aac",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio 10",
-      "url": "http://radio10.stweb.tv/radio10/live/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Two Can Play At Paige's Game",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665348.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com -  Sovereign Syre & Sabina Rouge",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665892.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Herceg Novi 90.0 && 102.7",
-      "url": "http://s2.voscast.com:10354/stream1490674747632/1",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "105.5 The Ticket",
-      "url": "http://ice41.securenetsystems.net/WYKT",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Something For My Husband",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665345.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | All Over 30 - Ella Knox & Mindi Mink",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665887.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Kanal S TV",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/kanal-s.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Sendas FM",
-      "url": "http://74.91.125.187:8028/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "1 - CIFA-FM",
-      "url": "http://stream2.statsradio.com:8080/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Balls To Her Wall",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664636.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Pregnant Vicky - Me & My Bisexual Friend Going At It",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665902.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Countdown To Cock",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666028.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Cock And Frisk",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666029.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Dunya TV",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/dunya-tv.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "TMB TV",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/tmb-azerbaycan.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "106.1 FM CKJM - CKJM-FM",
-      "url": "http://stream2.statsradio.com:8036/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Lake Country Radio - KCKL",
-      "url": "http://ice42.securenetsystems.net/KCKL",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Kicker 108 - WZKX",
-      "url": "http://ice42.securenetsystems.net/WZKX",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Non Stop Hindi",
-      "url": "http://s5.voscast.com:8216/",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | More Than Just A Pretty Face",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665133.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Tied Up",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666036.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "PromarTV (1080p) [Not 24/7]",
-      "url": "http://vcp1.myplaytv.com:1935/promar/promar/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "CIMS-FM",
-      "url": "http://stream2.statsradio.com:8068/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Locatelli",
-      "url": "http://streamingp.shoutcast.com/JamendoLounge?lang=*",
-      "logo": "https://radio.streamitter.com/images/logos/HWV3Z.png",
-      "group_title": null
-    },
-    {
-      "name": "NPR Illinois - WUIS 91.9",
-      "url": "https://war.streamguys1.com:7785/wuis.mp3",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Free CT",
-      "url": "http://us1.internet-radio.com:8006/stream/1",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | I'm A Giver And A Taker",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665126.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Professional Pussy Protection",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666034.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Rada TV (1080p)",
-      "url": "https://lowa8026-cmyk.github.io/Ukraine/Edyni_Novyny/RADA.m3u8",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Rada_TV_%282021%29.svg/960px-Rada_TV_%282021%29.svg.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Behind Her Husbands Back",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665115.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | vanessa",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665909.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Play TV (720p) [Not 24/7]",
-      "url": "http://connectiktv.ddns.net:5000/playtv/@playtv/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "District of Columbia Network (DCN) (1080p)",
-      "url": "https://video.oct.dc.gov/out/u/DCN.m3u8",
-      "logo": "https://i.imgur.com/GGZ8BQ8.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "Radio Alce",
-      "url": "http://amber.streamguys.com:6050/live",
-      "logo": "https://radio.streamitter.com/images/logos/KIG07.png",
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Mom's Helping Hands",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665335.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Boss Me Around",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667779.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "CILE 95.1 - 97.7 - CILE-FM",
-      "url": "http://stream2.statsradio.com:8128/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | An Extra Buck",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667324.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Obedience And Orgasms",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667334.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Bonce TV (480p) [Not 24/7]",
-      "url": "https://seswa.bonce.tv/hls/bonceswa.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "3 FM - CIQI-FM",
-      "url": "http://stream.statsradio.com:8044/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | WankItNow 19-12-07 Natalia Forrest Trying On Lingerie",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665907.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Mom's Got New Boobs",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667332.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WNBY 1450 - WNBY",
-      "url": "http://ice24.securenetsystems.net/WNBYAM",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Zia Country 99.5 - KXPZ",
-      "url": "http://ice42.securenetsystems.net/KXPZ",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "X Country 106.5",
-      "url": "http://ice41.securenetsystems.net/WXNU",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "RED BULL TV OPT 1",
-      "url": "https://dms.redbull.tv/v3/linear-borb/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXRlZ29yeSI6InBlcnNvbmFsX2NvbXB1dGVyIiwiY291bnRyeV9jb2RlIjoidXMiLCJleHBpcmVzIjoiMjAxNy0wOS0xNlQxNzo0NjowMy45NjM0NjI4NDJaIiwib3NfZmFtaWx5IjoiaHR0cCIsInJlbW90ZV9pcCI6IjEwLjE1Ny4xMTIuMTQ4IiwidWEiOiJNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMF8xMl81KSBBcHBsZVdlYktpdC82MDMuMi40IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMC4xLjEgU2FmYXJpLzYwMy4yLjQiLCJ1aWQiOiJkOGZiZWYzMC0yZDhhLTQwYTUtOGNjNy0wNzgxNGJhMTliNzMifQ.Q_38FNpW3so5yrA5FQt9qBuix3dTulKpb6uQ0dRjrtY/playlist.ts",
-      "logo": "https://m3u-editor.com/storage/channel-logos/07cd9d90-3cc5-11ea-9aa8-0b5bd3ba261d/92704/14042862.png",
-      "group_title": ""
-    },
-    {
-      "name": "BBN 中文",
-      "url": "https://audio-edge-vqwx4.yyz.g.radiomast.io/ce298b32-8776-4192-9900-092f44b63e7f",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Inhaler - Totally",
-      "url": "https://www.youtube.com/watch?v=wQndBQRLnIg",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "CGTN西语",
-      "url": "https://0472.org/hls/cgtnx.m3u8",
-      "logo": null,
-      "group_title": "央视IPV4"
-    },
-    {
-      "name": "95.7 WCRC",
-      "url": "http://cromwell-ice.streamguys1.com/WCRCFM",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WCGO 1590 AM",
-      "url": "http://ice23.securenetsystems.net/WCGO",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Samantha Ryan & Siri",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665904.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Telesur HD (1080p)",
-      "url": "https://mblesmain01.telesur.ultrabase.net/mbliveMain/hd/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "VIP TV",
-      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/vip.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | WankItNow 19-12-06 Selene Second Thoughts",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665908.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Catholic Spirit Radio 88.3 FM",
-      "url": "http://ice23.securenetsystems.net/WSPI",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Otaku | NTS",
-      "url": "https://audio-edge-qse4n.yyz.g.radiomast.io/7481798f-063c-42a2-8048-15ff98fe309e",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "AS3 Sport TV (1080p)",
-      "url": "https://streamtv.as3sport.online:3394/hybrid/play.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Catie Turner - A Little More",
-      "url": "https://www.youtube.com/watch?v=e9Kh3Clashw",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Bronzing In The Batter's Booth",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666025.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Robocock",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667335.mp4",
+      "name": "春晚2006",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQyNzlfMF8z_b_Bbc3703fc331dc994c50859c19aad28ff.mp4",
       "logo": null,
-      "group_title": null
+      "group_title": "历年春晚"
     },
     {
-      "name": "106.7 The Fox",
-      "url": "http://cromwell-ice.streamguys1.com/WZNXFM",
+      "name": ".3",
+      "url": "https://8cinema.xyz/ba15b42c8da89cf1a0862d3334b010cf.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "WUIS Xponential Radio HD3 91.9 FM",
-      "url": "http://war.str3am.com:7780/WUISRIS-3",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/970850ad41d4696e20bc6246e907b126.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Catie Turner - Love on the Moon",
-      "url": "https://www.youtube.com/watch?v=daXXWSeLlBo",
+      "name": ".566667",
+      "url": "https://8cinema.xyz/73e4ad64c858695ee502f3251cd2b0f8.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Catie Turner - Gets Better",
-      "url": "https://www.youtube.com/watch?v=XEWfzBQKEMk",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/bdf616b95fa690dcf06496634efa000a.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Assential Oil",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666022.mp4",
+      "name": ".366667",
+      "url": "https://8cinema.xyz/50174e73cbd0d2721bf73090065bb3bf.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | A Woman Scorned",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666023.mp4",
+      "name": ".2",
+      "url": "https://8cinema.xyz/478e518178fa9965c88cce2c104fd159.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Classically Trained To Fuck",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666027.mp4",
+      "name": ".966667",
+      "url": "https://8cinema.xyz/0cd83f253bc21ad4894759989d1674e7.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://www.youtube.com/watch?v=-8d8-c0yvyU",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/1205f03d73df6bd6d41bc6949c986a37.html",
       "logo": null,
       "group_title": null
-    },
-    {
-      "name": "France 24 English",
-      "url": "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_5000.m3u8",
-      "logo": "https://raw.githubusercontent.com/thomraider12/icones_tv/main/france24.png",
-      "group_title": "Internacionais"
     },
     {
-      "name": "Power 98 FM",
-      "url": "http://power98fm.com/",
+      "name": ".266667",
+      "url": "https://8cinema.xyz/68d073189d58c46f04f2f8ed4fea8df4.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Making Madison Wet",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667330.mp4",
+      "name": ".3",
+      "url": "https://8cinema.xyz/aca746bded5dbb5eba3b546ff41ebd29.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Trading Up Times Two",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667337.mp4",
+      "name": ".3",
+      "url": "https://8cinema.xyz/4b056c7f60abb9338748127698e66cb0.html",
       "logo": null,
       "group_title": null
     },
@@ -1363,88 +409,778 @@
       "group_title": null
     },
     {
-      "name": "The Oldies Superstation 106.7",
-      "url": "http://ice23.securenetsystems.net/WPWQ",
+      "name": ".666667",
+      "url": "https://8cinema.xyz/b6bfc22f606037a1e842b53683107a0a.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Catie Turner - Play God",
-      "url": "https://www.youtube.com/watch?v=AP5JySM_GiY",
+      "name": ".166667",
+      "url": "https://8cinema.xyz/2e515d0afdefcea5436631c9a164945c.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Catie Turner - Breathe",
-      "url": "https://www.youtube.com/watch?v=lxaaN2ScHPo",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/a40aa9af60fbbe03f0f6470bb28305e1.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | In The Pink",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667845.mp4",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/49320fc0f5c60ba0ac01087184b062c9.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com -  Tits And Ass",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667863.mp4",
+      "name": ".366667",
+      "url": "https://8cinema.xyz/9e81955b27035ccc51aa2748ed6529d5.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Bloomberg Asia",
-      "url": "https://www.bloomberg.com/media-manifest/streams/asia.m3u8",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/e0f49be48e3c884a731fb62ee065fa94.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "CCTV-4中文国际欧洲伴音",
-      "url": "https://piccpndali.v.myalicdn.com/audio/cctveurope_2.m3u8",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/cca9caa872d508e532c87d9c05b38fb8.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "TheEL.US - America's Rock Station",
-      "url": "http://das-edge13-live365-dal02.cdnstream.com/a71722",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/d504773f30025a7f457c93a958512bbf.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Here She Comes - August Ames & Kendra James",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/665896.mp4",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/8bc780d859c73a1d54709bde64cc3335.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | My Girlfriend's Girlfriend",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667333.mp4",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/9fc1e3a4aad9119c84417b3e30949b22.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Arca - Lost Woman Found",
-      "url": "https://www.youtube.com/watch?v=qKBBNRjfT0c",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/88826abd5f3eb92dae76eb96362b1d9e.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "The Green Room",
-      "url": "http://das-edge63-live365-dal03.cdnstream.com/a78128",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/766a6b7743d7b5fe83038914caae70f0.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Horny For The Holidays - Part 3",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666032.mp4",
+      "name": ".1",
+      "url": "https://8cinema.xyz/f917ee75c41d30bb3c097935ae21cef5.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/02ea8ff7ab97cac168aee470ad3630a2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "春晚2001",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQyMDFfMF8z_b_B70592cb7c4054e9cabb675e849bbf4bd.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "Space TV",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/space-tv.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Reggae Radio RastaMusic.com",
+      "url": "http://204.93.226.26:808/",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/4b16c57a98493c68d90defcce9db5065.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/7338d6053b894ba97702df0c85fc306f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/55f3f905088db6bef90e1d491970e7e6.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/89850f6d414df6a8ae898e6f80e5ca86.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".233333",
+      "url": "https://8cinema.xyz/d8a8163f647821f60e7b2a294fd8e9a4.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".7",
+      "url": "https://8cinema.xyz/e10437cac32ce94e9c23f3fc32a4fd9c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/105a6b0534c9ac880c182b5819aaf7db.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/26a3ab86ec9fe518dc95e07b5b79943d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".433333",
+      "url": "https://8cinema.xyz/289df9d66c6bef404aa171b6565c3b2f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/148ea78cf008eaae9f48c31cb5c1f595.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".733333",
+      "url": "https://8cinema.xyz/bde21c70867d557d3dea36ffdf061364.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".966667",
+      "url": "https://8cinema.xyz/d8829aac8b23ce2e2d61e4d046ced61f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/4b2600b6d5ea1da6d3f64dd77fb62e69.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".6",
+      "url": "https://8cinema.xyz/7d4d45f8f6bad58977ec2e9d02773a84.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".9",
+      "url": "https://8cinema.xyz/8ee04a5259efcc06945efd167ab8673e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Red Bull TV (1080p)",
+      "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+      "logo": "https://i.imgur.com/BcN8B3D.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "France 24 Arabic",
+      "url": "https://static.france24.com/live/F24_AR_HI_HLS/live_tv.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".9",
+      "url": "https://8cinema.xyz/fdb49ce9066b38d9ae6094fb4334e43f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/3a21884ce0b99e912bd6be37f581b5ec.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".066667",
+      "url": "https://8cinema.xyz/70ea8709d768245821d9244dbfedf3a2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/cc3df25b0b34721de746e7e821e7ef57.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/617b50791a4745add6a4a7cf82680925.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/5adb41ab25dd283d198787783d1242f3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/a166feed2260fa4ee1e6c10e20e1a5ae.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".733333",
+      "url": "https://8cinema.xyz/56089c75fd224068480a46338a97e8df.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/130a069748342342613171d92b4fcb46.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/67255c3330d769a6aec820dd82ac38b2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/d70ea1cdc4d063bb9c3b200894082a97.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".133333",
+      "url": "https://8cinema.xyz/d67820c55273b5803d2940d7a1dc6634.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".3",
+      "url": "https://8cinema.xyz/1bbde9a06866f5bdee7b8daca18f3dc8.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "新加坡",
+      "url": "https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_4.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/809b9bd09a77d216adad606aec7f86ad.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/3befe7a38401dafb11c12babef8a78b9.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/9e598fa8811039da15557969977dc20d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".2",
+      "url": "https://8cinema.xyz/6f450dfa06de62ef2423c08ef1033868.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".9",
+      "url": "https://8cinema.xyz/570840848e0a7a0d1f69cc96b6b30c0f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".233333",
+      "url": "https://8cinema.xyz/0600fa61321865e79adad09bad0b44de.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/2c24e78f34bbcbc2645d8c30b77d46cd.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/ea2582d7ea4c42ef30a88cfaf11a8f6b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".2",
+      "url": "https://8cinema.xyz/3be3f17d179da88ccf8da4950a8efd71.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".3",
+      "url": "https://8cinema.xyz/fc7e2215f2943e0ab49b65bc58be60f1.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".933333",
+      "url": "https://8cinema.xyz/b56866cfd04017294fe3758c78be1a08.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "HARD KNOCKS FIGHTING CHAMPIONSHIP (720P)",
+      "url": "https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/2ee2b8d4-acc4-4296-9dc8-66f1ffd0fff8/5.m3u8",
+      "logo": null,
+      "group_title": "UNDEFINED"
+    },
+    {
+      "name": "PBR RidePass",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/60d39387706fe50007fda8e8/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a9f21-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=f7275d4e-aa8e-4e8d-9d5e-6a5665bf8190",
+      "logo": "https://i.imgur.com/gUxH97E.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/a23ee16be4777801d7261659a55ca8ec.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".6",
+      "url": "https://8cinema.xyz/6862027c1497daf11116e3e483c6c62e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/6efcdee55e8f5543f519c69b40076647.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/f315310b652600ce4b06dd31ded5d99b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".4",
+      "url": "https://8cinema.xyz/88da03558ab638fdd3ea04710000ac36.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".466667",
+      "url": "https://8cinema.xyz/21a5c89c92de89a1d9476c28e298c3b4.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/504b6e1e63bb75151feac5ef338572d7.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/e57c28ae982bedaf0a4a8c5ab20a0520.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/ee670ca5b87feb6a9b2824862dfb45ac.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/ef8b62aaca017768adf8df703416d7d1.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".833333",
+      "url": "https://8cinema.xyz/388c63cb799758b71a1411d067e17778.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".466667",
+      "url": "https://8cinema.xyz/4cf8e4837fc9251e6e63edcb805ef33b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/a24395e366faf31ab9010de343a3f379.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".066667",
+      "url": "https://8cinema.xyz/dab991ec87d69d4ed5b192a8a3b741e8.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/db07d74782246e72c1b179290e7792bc.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/0ca7da000b86d7bd628c0237a0e32b6f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/bc59cdcb4eac6566e4f286adb6513928.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/13cdf93b4187f6a9d55834d4d647d146.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".066667",
+      "url": "https://8cinema.xyz/3150feac600c2688722f96200e8e6482.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".133333",
+      "url": "https://8cinema.xyz/e2ff8134632267f30e3ce6d88c241c44.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".4",
+      "url": "https://8cinema.xyz/720fc205b8f8c0edc9e5f5d3488efb39.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/707738e696c4b7a980fa83fecfa82656.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".966667",
+      "url": "https://8cinema.xyz/80b0cff8b77219fe031d6a2ee94efa4c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "RTHK Radio 2",
+      "url": "https://rthkradio2-live.akamaized.net/hls/live/2040078/radio2/index_64_a.m3u8",
+      "logo": "https://radiospinner.com/media/logos/180/81188/logo_RraVP5VmFw.png",
+      "group_title": null
+    },
+    {
+      "name": "World Poker Tour",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/62ea4b755e8e770007387b79/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=2c7c9e97-35fc-11ef-a031-2b5d494037a2&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=14cdb377-9292-4d37-85af-4d89aff56e90",
+      "logo": "https://i.imgur.com/98kLMjj.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "ElPingüinoTV",
+      "url": "http://167.114.133.205:1935/live/pinguinotv_720p/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/7b5c785a7521a2c32d833eb3e8fff314.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/76b6f44fdaaa42704112d508fcdc87a4.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".633333",
+      "url": "https://8cinema.xyz/9245db7c7126c1e1d9dd586899b70d2a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/f9ceb0d6c82dda695f2225e93c4dd5d3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/48cfd199584f1d0f59f69d65e45d5433.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://raw.githubusercontent.com/MassinDV/videos/main/kids/tattymisifu.m3u8",
+      "url": "https://8cinema.xyz/9a8daf6b13de574747921cd539375e2b.html",
       "logo": null,
       "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/6d4ef3fab3ee371eca068aa99ce1cd18.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/883b30012496e9f1f886c4eb59c09b79.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/1c19a3c6e83b13ca3c1b61d219361ea3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/880c17e99963f9d944531fe84185340c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".633333",
+      "url": "https://8cinema.xyz/0222b949bf12640e149df0dbf5a940bd.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/c943546c3381e2d2f655a5d17374f91f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/aaeedbcf83c1bfe04a44b8365484c606.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".566667",
+      "url": "https://8cinema.xyz/fa45becfb1b486369883443b8993a384.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".433333",
+      "url": "https://8cinema.xyz/ceb4b7b63506cee06442e2b813505e84.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/0f066fcbe798c0998aade6d51a26cfa7.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/d67e6ee8855d4c96fa7d66f24e5a6e8c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Baku TV (720p)",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/baku-tv.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Village of Hastings-On-H",
+      "url": "http://stream.swagit.com/live-edge/hastingsonhudsonny/smil:std-4x3-1-a/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/84b91e678b6929f111cd79a54174d671.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/170e818416fdcc9c1ba105684734ba49.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/978fc3794086946c7a3adf613fdcb29d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/e2ca69217a1bca562a130594da4df3f7.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".6",
+      "url": "https://8cinema.xyz/9dba217fd62eba96d2cf0c56f02f1809.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/5d5cecf71c93d0a3e213f2064c57e34a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".3",
+      "url": "https://8cinema.xyz/e8b5659f743373b1bc7469355fa7c856.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/cb82bd6109eafe565977b989b77e0c85.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".666667",
+      "url": "https://8cinema.xyz/dd5cc3e2ca7fd1733ec535b1b9cec14d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".233333",
+      "url": "https://8cinema.xyz/5efa84c9ffa267cfc79855523c00a52d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".1",
+      "url": "https://8cinema.xyz/3213bfa5556254f246dab93f26b1c7e0.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "[智利]ElPingüinoTV(360p)[Not24/7]",
+      "url": "http://167.114.133.205:1935/live/pinguinotv_360p/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Al Horreya TV (1080p)",
+      "url": "http://media.smc-host.com:1935/alhorreya.tv/alhorreya.smil/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "美国 Las Vegas - 13 Action News",
+      "url": "https://content.uplynk.com/channel/39919d3f7a074eefa8bf579214e952f9.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".966667",
+      "url": "https://8cinema.xyz/309b43f142b5aab111e92646b0843135.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/49a8294d1bcd632cec43702af7d01770.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/2f86c8dbbfc49144716000971fd26581.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".666667",
+      "url": "https://8cinema.xyz/b21d6d61ea0fbabd38a5847a47f7fab9.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".2",
+      "url": "https://8cinema.xyz/a6e158015633e689c868aa6372fb1d5a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/cc86f7a5e62efa244d5814531d7e686a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/9e048688c032e26ad38ac23ce63855f8.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/496423fd021d7d7e661a53bd40483710.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "春晚2008",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQzNTNfMF8z_b_Bd7346962e61bd7b84e11a1fa6e4616f9.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
     },
     {
       "name": "ARB",
@@ -1453,68 +1189,794 @@
       "group_title": null
     },
     {
-      "name": "Arca - Self Defense",
-      "url": "https://www.youtube.com/watch?v=wQTIjfGPnY0",
+      "name": "LT9 Radio Brigadier Lopez",
+      "url": "http://streaming1.locucionar.com:12294/stream/",
       "logo": null,
       "group_title": null
+    },
+    {
+      "name": "NBC 26 (WGBA)",
+      "url": "https://content.uplynk.com/channel/1fbfb28ae5044f619f75ae0adb011989.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".4",
+      "url": "https://8cinema.xyz/c1530db0d2d2b51c51f01e0bc970e86f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/4d32005048ad4baab2ebf2f38cf936e3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/b25d2d9e3131fac4ca9d25a1f6b26a0f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/a484a576a0ebeee7b1770e64d04c0364.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/06c7bcf7f4189ff0a070995bbd6c0c93.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".9",
+      "url": "https://8cinema.xyz/d8346a013fc82cf68735131d426330ad.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/acb2264ea8d9550974029d242c4b4f0d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/9562b4045f6c8fafb5ce8da69b25efb6.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/7999f0cc28fd55c29f8aff63dc04505f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".933333",
+      "url": "https://8cinema.xyz/f99eacd585353e974d4d757416ad4bfb.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "春晚2007",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQzMjNfMF8z_b_B00b069c7899976459ceeaa99353dfefe.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "Vale 97.5",
+      "url": "http://vale.stweb.tv:1935/vale/live/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "[美国]WhitePlainsCommunityMedia[640*360][640*360]",
+      "url": "http://stream.swagit.com/live-edge/whiteplainsny/smil:std-4x3-1-b/chunklist_w1456643228_b512000.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/1cee569d0a9f8265f28ec5751264f982.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/a8772d45060772885141e59edf97f020.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/22b8f54a023e1e75ebc38f317ef84548.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/ca5fab2c07de649df3a8466529d924d5.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".6",
+      "url": "https://8cinema.xyz/4589ec780081829b26a0532a3778b2c2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/d5d04aff6a94893d2ec4afb3db7391ae.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/21a723b3ed56681dddd1a31cf641510c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".3",
+      "url": "https://8cinema.xyz/d1a9d786716891b0f92b2b7dfbd802c9.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".9",
+      "url": "https://8cinema.xyz/0c027a5d45b70c116f4cc29e397ccfe7.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".433333",
+      "url": "https://8cinema.xyz/be7ec72638af74930bd42ee00f07955e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".4",
+      "url": "https://8cinema.xyz/8116bc6c7ab6a3a318993edd6419d5d2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/b9a5c316cf1237638e38df1ec283511c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "美国 红牛运动",
+      "url": "http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8",
+      "logo": null,
+      "group_title": "电视台"
+    },
+    {
+      "name": "Auto Motor Sport",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f760c3d41aa2d0007bfde19/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1c7954-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=419fb478-b5bb-4f2f-b6f0-d53563fbc250&serverSideAds=false&checkedby:iptvcat.com",
+      "logo": null,
+      "group_title": "Sport"
+    },
+    {
+      "name": "Glory Kickboxing",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5417a212ff9fba68282fbf5e/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c28f178-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=df3ca9c7-d700-4719-be3f-74dd169206f8",
+      "logo": "https://i.imgur.com/tS7Ub7i.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "5AABTV",
+      "url": "http://158.69.124.9:1935/5aabtv/5aabtv/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Court TV",
+      "url": "https://content.uplynk.com/channel/6c0bd0f94b1d4526a98676e9699a10ef.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "SardariTV",
+      "url": "http://158.69.124.9:1935/sardaritv/sardaritv/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "美国 Las Vegas - 13 Action News",
+      "url": "https://content.uplynk.com/channel/39919d3f7a074eefa8bf579214e952f9.m3u8?ad=live",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/9c0a04e35c69d17979b1c590bf83e7f9.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/7999a6c61a7800a9bca687b6f8c1c682.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/bec88573d50e9b79a2decdae714a5ad2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/99055506cbf6b497aec80d58b6d44532.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".566667",
+      "url": "https://8cinema.xyz/dcbd5d7e9ff067eae7c24f0e63cb4dbd.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Dunya TV",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/dunya-tv.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Radio 10",
+      "url": "http://radio10.stweb.tv/radio10/live/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "TNT (East)",
+      "url": "https://turnerlive.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_3564000.m3u8",
+      "logo": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11164_dark_360w_270h.png",
+      "group_title": "Entertainment"
+    },
+    {
+      "name": "France 24 English",
+      "url": "https://static.france24.com/live/F24_EN_HI_HLS/live_web.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".966667",
+      "url": "https://8cinema.xyz/ea4bd4b3ad388176af320fae864e8aab.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".633333",
+      "url": "https://8cinema.xyz/b98db76be2b40b38f7f169743e428eed.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".3",
+      "url": "https://8cinema.xyz/2258dec3da287390225b44c2279cf4c0.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/fde95a532153234ed898a9da399e72c5.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Glendale 11 AZ (360p)",
+      "url": "https://edge-f.swagit.com/live/glendaleaz/live-1-a-1/playlist.m3u8",
+      "logo": "https://i.imgur.com/jehiyV7.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "Equidia (1080p)",
+      "url": "https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/equidia/live2.m3u8",
+      "logo": "https://i.imgur.com/QPpbRcZ.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "France 24 Français",
+      "url": "https://static.france24.com/live/F24_FR_HI_HLS/live_tv.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "美国 ABC 15",
+      "url": "https://content.uplynk.com/channel/9deaf22aaa33461f9cac22e030ed00ec.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/2c431526cf46ccacc91fa30e292f2605.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/c107bc3ae0cd7ab3881436f080dd6a71.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/07fd32c431a9ae0c17ecde051646d828.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".6",
+      "url": "https://8cinema.xyz/166397d6824475ad54c6d993683e1394.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "CBS 3 Omaha NE (KMTV-TV) (720p)",
+      "url": "https://content.uplynk.com/4a09fbea28ef4f32bce095e9eae04bd8.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/5fe1b99e41e2a887bf800b0b54992087.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".666667",
+      "url": "https://8cinema.xyz/712ece53ff7c69c14d3a1430c576a28d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/f59db821a5776b9755e7a334df73ac07.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Xezer TV",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/xezer-tv.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Red Bull TV",
+      "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8",
+      "logo": "http://epg.do.am/logo2/redbull.png",
+      "group_title": "⚽️ Спортивные"
+    },
+    {
+      "name": "France 24 English",
+      "url": "https://static.france24.com/live/F24_EN_LO_HLS/live_web.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "France 24 Español",
+      "url": "https://static.france24.com/live/F24_ES_LO_HLS/live_web.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".7",
+      "url": "https://8cinema.xyz/1cb0a96bc45fae5ce4b57500f2697cb7.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/3dc02120c7752095441132840295b0cc.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://iwpm.xyz/f4ed0e4e633f107547911535d21266db.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/a9285b0861083cb96aeee3a7eb93c4af.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/296afcbdf5e9e1a8f179511a6a225747.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".233333",
+      "url": "https://8cinema.xyz/8eb78ffcca5f2753f4ecb31a3e6fd9e1.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/02aed4b41f6f4d366a4a03a2adaa867d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/e4bb15e230628d786828930ce7e51141.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "CBEW-FM - CBC Radio One Windsor 97.5 FM",
+      "url": "https://cbcradiolive.akamaized.net/hls/live/2041038/ES_R1EWD/master.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Pluto TV Lucha Libre AAA (720p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5c01df1759ee03633e7b272c/master.m3u8?advertisingId=&appName=web&appStoreUrl=&appVersion=DNT&app_name=&architecture=&buildVersion=&deviceDNT=0&deviceId=5c01df1759ee03633e7b272c&deviceLat=&deviceLon=&deviceMake=web&deviceModel=web&deviceType=web&deviceVersion=DNT&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false&sid=971&terminate=false&userId=",
+      "logo": "https://i.imgur.com/Nc7K060.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "World Poker Tour",
+      "url": "https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/playlist.m3u8?ads.xumo_channelId=88883102",
+      "logo": "https://i.imgur.com/98kLMjj.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "France 24 Français",
+      "url": "https://static.france24.com/live/F24_FR_HI_HLS/live_web.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/3baf30f46b33b5f2b1db32af99beabf4.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/e270ec7a7fb7d8b5d53f4efcef630314.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".0064",
+      "url": "https://iwpm.xyz/76c16d771b3f8e01c2695d55716e1eef.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Kanal S TV",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/kanal-s.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "DC.gov Council Hearing Room 120 (Washington DC) (1080p)",
+      "url": "https://video.oct.dc.gov/out/u/97_12.m3u8",
+      "logo": "https://i.imgur.com/8fljC7g.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/5c8b47a7b64f4892f576d31a4a64c38f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/f81eb871dcce7a8c8b64ffb636ed527a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/482e35d8dfcb64ec4c6272b9941a27f9.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "FunRoads",
+      "url": "http://104.143.4.5:2080/funroads.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "澳門蓮花",
+      "url": "http://cdn6.163189.xyz/163189/amlh",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Watchit Scream!",
+      "url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?avod=1&live=1&hls_marker=1&network_id=2246&pod_duration=121&min_ad_duration=6&max_ad_duration=120&cb=[CACHEBUSTER]&content_context=1&ip=[IP]&ua=[%UA%]&player_height=[HEIGHT]&player_width=[WIDTH]&site_page=www.galxy.tv&site_name=[APP_BUNDLE]&device_type=[DEVICE_TYPE]&content_cat=IAB1-7%2CIAB1%2CIAB1-5&content_channel=Watchit-Scream&content_genre=horror%2Csci-fi%2Cgrindhouse&content_language=en&content_network=GalxyTV&content_keywords=horror%2Csci-fi%2Cgrindhouse&content_rating=TV-14&us_privacy=[US_PRIVACY]&consent=[CONSENT]&is_lat=[LIMITED_AD_TRACKING]&ifa_type=[IFA_TYPE]",
+      "logo": "https://s3.amazonaws.com/mtdb.galxy.prod/storage/live-tv/channel-logos/h9UH6iSi6i2Q1zsHXyBL3vNawsP6D2GnueGb1luj.png",
+      "group_title": "galxytv"
+    },
+    {
+      "name": "MTV",
+      "url": "http://content.uplynk.com/channel/328d1434fb51476cb6567c74d5b2cc70.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".004267",
+      "url": "https://iwpm.xyz/eddeb16af218c86f1a8d2b43bf6b8925.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/6a444cd56fdd750c1d7080cb2b204c63.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "TMB TV",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/tmb-azerbaycan.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "VIP TV",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/vip.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "RTHK Radio 5",
+      "url": "https://rthkradio5-live.akamaized.net/hls/live/2040081/radio5/index_64_a.m3u8",
+      "logo": "https://radiospinner.com/media/logos/180/81184/logo_av85aHQl9o.png",
+      "group_title": null
+    },
+    {
+      "name": "CBS Sports HQ",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5e9f2c05172a0f0007db4786/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c27b8f5-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=3a15356b-8467-4ae7-b2f6-9c8467fcf41d",
+      "logo": "https://i.imgur.com/q8BENJg.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/d86becfb96ae74a29f3c757bf7bd025b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "美国 TD Ameritrade Network",
+      "url": "https://content.uplynk.com/channel/f9aafa1f132e40af9b9e7238bc18d128.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/971ca17852d73e70956ce2c4f72ca077.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "MTV TV",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/mtv-azerbaycan.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Pluto TV VEVO 90's (1080p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fd7bb1f86d94a000796e2c2/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS",
+      "logo": "https://images.pluto.tv/channels/5fd7bb1f86d94a000796e2c2/featuredImage.jpg",
+      "group_title": "Music"
+    },
+    {
+      "name": "France 24 Español",
+      "url": "https://static.france24.com/live/F24_ES_HI_HLS/live_web.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Radio RAI Radiodue",
+      "url": "https://radiodue-live.akamaized.net/hls/live/2032592/radiodue/radiodue/playlist.m3u8?auth=daEa1cpcVd4bqbrdVdUchdIcybfdbcwc6c_-bHYEXn-c0-DlwwyHt&aifp=V001",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Pluto TV VEVO 2K (720p) [Not 24/7]",
+      "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fd7bca3e0a4ee0007a38e8c/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS",
+      "logo": "https://images.pluto.tv/channels/5fd7bca3e0a4ee0007a38e8c/featuredImage.jpg",
+      "group_title": "Music"
+    },
+    {
+      "name": "NBC WTMJ4",
+      "url": "https://content.uplynk.com/channel/50bb38f57f0547319060274f3b94db4e.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "澳門體育",
+      "url": "http://cdn6.163189.xyz/163189/amty",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "3 FM - CIQI-FM",
+      "url": "http://stream.statsradio.com:8044/stream",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Rada TV (1080p)",
+      "url": "https://lowa8026-cmyk.github.io/Ukraine/Edyni_Novyny/RADA.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Rada_TV_%282021%29.svg/960px-Rada_TV_%282021%29.svg.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "Pluto TV Naturaleza (720p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5d8d10ce06a9665fe54bf74a/master.m3u8?advertisingId=&appName=web&appStoreUrl=&appVersion=DNT&app_name=&architecture=&buildVersion=&deviceDNT=0&deviceId=5d8d10ce06a9665fe54bf74a&deviceLat=&deviceLon=&deviceMake=web&deviceModel=web&deviceType=web&deviceVersion=DNT&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false&sid=962&terminate=false&userId=",
+      "logo": "https://i.imgur.com/vUHAWAJ.png",
+      "group_title": "Cultura"
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/7c6c96724a39a77927d9e5157f3c4d2e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".047044",
+      "url": "https://iwpm.xyz/b14a611d5c3c354bad1bab250204314f.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "106.1 FM CKJM - CKJM-FM",
+      "url": "http://stream2.statsradio.com:8036/stream",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Fort Pierce Live Stream (Fort Pierce FL) (720p)",
+      "url": "https://edge-f.swagit.com/live/fortpiercefl/live-1-a/playlist.m3u8",
+      "logo": "https://i.imgur.com/2ChoSsi.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "Miami Beach Tv (MBTV) (Miami Beach FL) (720p)",
+      "url": "https://edge-f.swagit.com/live/miamibeachfl/live-1-a/playlist.m3u8",
+      "logo": "https://i.imgur.com/LyqFr9E.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "HTV 2 Houston Television",
+      "url": "https://stream.swagit.com/live-edge/houstontx/smil:hd-16x9-2-b/playlist.m3u8",
+      "logo": "https://i.imgur.com/zvj1boM.jpg",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "NFL Channel",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ced7d5df64be98e07ed47b6/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a5105-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=6477ef85-3680-442c-94d8-27197903b1f6",
+      "logo": "https://i.imgur.com/mPGtwAP.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": ".1764",
+      "url": "https://2xpm.xyz/14878301f43d961666ea69601d466778.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".0064",
+      "url": "https://iwpm.xyz/0e7d7660dc229ba6ead9aeac31926125.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "澳門綜藝",
+      "url": "http://cdn6.163189.xyz/163189/amzy",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Radio Herceg Novi 90.0 &amp; 102.7",
+      "url": "http://s2.voscast.com:10354/;stream1490674747632/1",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "23 ABC (KERO)",
+      "url": "https://content.uplynk.com/channel/ff809e6d9ec34109abfb333f0d4444b5.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "CBC TV8 (1080p) [Not 24/7]",
+      "url": "https://1740288887.rsc.cdn77.org/1740288887/index.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Long Beach Television (720p)",
+      "url": "https://edge-f.swagit.com/live/longbeachca/live-3-a/playlist.m3u8",
+      "logo": "https://i.imgur.com/DjkVuFF.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "Star Trek Voyager",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/634dacf51d90320007fcd5fa/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2bd7a4-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=234402c1-3013-44bc-8b1d-c32ced363ff7&serverSideAds=false&checkedby:iptvcat.com",
+      "logo": "",
+      "group_title": "Star Trek"
+    },
+    {
+      "name": "Pluto TV Deportes (720p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5dcde07af1c85b0009b18651/master.m3u8?advertisingId=&appName=web&appVersion=5.14.0-0f5ca04c21649b8c8aad4e56266a23b96d73b83a&app_name=web&clientDeviceType=0&clientID=6fbead95-26b1-415d-998f-1bdef62d10be&clientModelNumber=na&deviceDNT=false&deviceId=6fbead95-26b1-415d-998f-1bdef62d10be&deviceLat=19.4358&deviceLon=-99.1441&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=88.0.4324.150&marketingRegion=VE&serverSideAds=false&sessionID=b8e5a857-714a-11eb-b532-0242ac110002&sid=b8e5a857-714a-11eb-b532-0242ac110002&userId=",
+      "logo": "https://i.imgur.com/0pDy6f4.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/4d5cb65f584131c347826a595b6dd890.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".2",
+      "url": "https://8cinema.xyz/acaeeee6dfd9d3e1a77df53250bd6415.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".416667",
+      "url": "https://8cinema.xyz/cf92283e49cb95bbb6cc54c75adc3d8a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Sakkath Radio",
+      "url": "http://stream.zeno.fm/fcsk9ryerd0uv",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Powerhitz Com The Planet The New Rock Alternative",
+      "url": "http://jbmedia-edge1.cdnstream.com:80/planet",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://im.gurl.eu.org/file/d46dd06501a5632fd6936.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "NASATVPublic",
+      "url": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/95157a25411cb9c08713b4a62bab1f17.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Cinepride",
+      "url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?avod=1&live=1&hls_marker=1&network_id=2223&pod_duration=121&min_ad_duration=6&max_ad_duration=120&cb=[CACHEBUSTER]&content_context=1&ip=[IP]&ua=[%UA%]&player_height=[HEIGHT]&player_width=[WIDTH]&app_name=com.galxy.tv.desktop&app_bundle=GalxyTV&site_page=www.galxy.tv&site_name=GalxyTV&device_type=2&content_cat=IAB1-7%2CIAB1%2CIAB1-5&content_channel=Cinepride&content_genre=LGBTQ%2Cmovies&content_language=en%2CFrench%2Ces&content_network=GalxyTV&content_keywords=LGBTQ%2Cmovies%2Centertainment%2CAward-winning&content_rating=TV-14&is_lat=0&ifa_type=sessionid",
+      "logo": "https://s3.amazonaws.com/mtdb.galxy.prod/storage/media-images/channel_thumbnails/FQJG7s9AxQQDgVSKzGHltLWupHdw0CldrLYhx14G.png",
+      "group_title": "galxytv"
     },
     {
       "name": "Rock FM 105.5 FM en vivo",
       "url": "https://securestream.us/listen/rock_fm/radio.mp3",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio AFNL",
-      "url": "https://bozztv.com/1gbw5/tintv/tintv/chunklist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Catie Turner - Prom Queen",
-      "url": "https://www.youtube.com/watch?v=lY4G9FTK5wg",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Cum-Shot Caller",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666030.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Horny For The Holidays - Part 3",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667843.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Times Now",
-      "url": "https://www.youtube.com/watch?v=v2h_8erwDvU",
-      "logo": "",
-      "group_title": "海外"
-    },
-    {
-      "name": "Arca - Brokeup",
-      "url": "https://www.youtube.com/watch?v=bTP4J2VKZ44",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "CKRO - CKRO-FM",
-      "url": "http://stream2.statsradio.com:8014/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "三立新闻台",
-      "url": "https://www.youtube.com/watch?v=QsGswQvRmtU",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/SETNews.png",
-      "group_title": "台湾"
-    },
-    {
-      "name": "K-Star Country - KVST",
-      "url": "http://ice41.securenetsystems.net/KVST",
       "logo": null,
       "group_title": null
     },
@@ -1525,494 +1987,98 @@
       "group_title": "Legislative"
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Bianca's Bangin' Bod",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666024.mp4",
+      "name": "ABC 2 WMAR",
+      "url": "https://content.uplynk.com/channel/cf4dfec179064664ae326fa10ff4a43f.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Mutual Massage",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667850.mp4",
+      "name": "MCJ TV",
+      "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/mcj-tv-shop.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Stretching Skylar Out",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667861.mp4",
+      "name": "美国 HTV 1 - Houston Television",
+      "url": "https://stream.swagit.com/live-edge/houstontx/smil:hd-16x9-2-a/playlist.m3u8",
+      "logo": "https://i.imgur.com/zvj1boM.jpg",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "MLB",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5e66968a70f34c0007d050be/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c29dbd3-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=0f1d3baf-2f1b-47d7-9966-3e92a98f1c8a",
+      "logo": "https://i.imgur.com/ym3su2J.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "Bellator MMA",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ebc8688f3697d00072f7cf8/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c26f5a6-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=0e97a69e-3355-4217-b6fb-8952f0ad1803",
+      "logo": "https://i.imgur.com/VBKoLHk.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/8bf5897b3ae5e4beaea415503c25a882.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Bernama",
-      "url": "https://gist.githubusercontent.com/warningfm/fb30c7f87f9a7730154c9e55a1946478/raw/ebc720dc20fe0371b1d2b5061a772130fa5e5495/bernama.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/x81b2ZH.png?v=1.0.0.1",
-      "group_title": "🇲🇾 Malaysia"
-    },
-    {
-      "name": "中天新闻台",
-      "url": "https://www.youtube.com/watch?v=vr3XyVCR4T0",
-      "logo": "",
-      "group_title": "台湾"
-    },
-    {
-      "name": "日テレNEWS LIVE",
-      "url": "https://www.youtube.com/watch?v=t9kwjZBLI-A",
-      "logo": "",
-      "group_title": "日本"
-    },
-    {
-      "name": "ABC News Live",
-      "url": "https://www.youtube.com/watch?v=iipR5yUp36o",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/abcaus.png",
-      "group_title": "海外"
-    },
-    {
-      "name": "LiveNOW FOX",
-      "url": "https://www.youtube.com/watch?v=4nMfRpesYfw",
-      "logo": "",
-      "group_title": "海外"
-    },
-    {
-      "name": "Radio Aurora Digital",
-      "url": "http://198.204.234.10:8229/stream/1/",
+      "name": "Canal",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202601235d0d9902dd5780f4434abf34~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1800723137&x-signature=VqANFHyuNHGdQ%2FMGY%2BNwAE8pHXc%3D",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Catie Turner - Home",
-      "url": "https://www.youtube.com/watch?v=obr2Y3__E7M",
+      "name": ".466667",
+      "url": "https://8cinema.xyz/35761b541945739215acad977eeb7275.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Brook's Erotic Escape",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666026.mp4",
+      "name": "RAI Gr Parlamento",
+      "url": "https://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S32576004/GxPKuXIdZBcL/icecast",
+      "logo": "https://radio.streamitter.com/images/logos/2CGQPA.png",
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/71a44b3d8017485195a2651a56f7b35a.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Teachers' Lounge",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666035.mp4",
+      "name": "Canal",
+      "url": "https://im.gurl.eu.org/file/9267f377575a163a25e12.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Sibling Rivalry 4",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667858.mp4",
+      "name": ".966667",
+      "url": "https://8cinema.xyz/4c90662d319a6422f138bfff194ac39d.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "东森新闻台",
-      "url": "https://www.youtube.com/watch?v=V1p33hqPrUk",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/EBCNews.png",
-      "group_title": "台湾"
-    },
-    {
-      "name": "94.7 The Country Giant - WGSQ",
-      "url": "http://ice42.securenetsystems.net:80/WGSQFM",
+      "name": ".339022",
+      "url": "https://iwpm.xyz/5de27a17fd59d9943c5170e5dab59572.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Andys 80s Rare New Wave Alternative",
-      "url": "http://ct5.fast-serv.com:9844",
+      "name": "TVB星河",
+      "url": "http://cdn6.163189.xyz/163189/tvbxh",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "TVBS NEWS",
-      "url": "https://www.youtube.com/watch?v=m_dhMSvUCIc",
-      "logo": "",
-      "group_title": "台湾"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Mutual Massage",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666033.mp4",
+      "name": "CKRO - CKRO-FM",
+      "url": "http://stream2.statsradio.com:8014/stream",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Assential Oil",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667768.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "台视新闻台",
-      "url": "https://www.youtube.com/watch?v=xL0ch83RAK8",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/台视新闻.png",
-      "group_title": "台湾"
-    },
-    {
-      "name": "非凡财经",
-      "url": "https://www.youtube.com/watch?v=eA6Aczd3FZM",
-      "logo": "",
-      "group_title": "台湾"
-    },
-    {
-      "name": "春晚1993",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/22/BMjAyMzAxMTMyMjEwMDNfNDAzMDAxOTlfOTM1MTIzMzYwODJfMF8z_b_B647d10e431b4cc5e48e6c77347d69021.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Arca - Electra Rex",
-      "url": "https://www.youtube.com/watch?v=m-qzs7ePt1o",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Jerrod Niemann - I Got This",
-      "url": "https://www.youtube.com/watch?v=cfBuyVFZFAU",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Vale 97.5",
-      "url": "http://vale.stweb.tv:1935/vale/live/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WRTR - Regime Takeova Radio",
-      "url": "https://radio.securenetsystems.net/cwa/RTR",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "春晚1994",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/22/BMjAyMzAxMTMyMjEwMDNfNDAzMDAxOTlfOTM1MTIzMzYxMjNfMF8z_b_B3dde97f36273f04403d4dc5eec611a35.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "春晚2007",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQzMjNfMF8z_b_B00b069c7899976459ceeaa99353dfefe.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Arca - Nonbinary",
-      "url": "https://www.youtube.com/watch?v=gfGz4MTQ28I",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Arca - Waste",
-      "url": "https://www.youtube.com/watch?v=nx-4BD6tqys",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Watchit Kid!",
-      "url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?avod=1&live=1&hls_marker=1&network_id=2245&pod_duration=121&min_ad_duration=6&max_ad_duration=120&cb=[CACHEBUSTER]&content_context=1&ip=[IP]&ua=[%UA%]&player_height=[HEIGHT]&player_width=[WIDTH]&app_name=com.galxy.tv.desktop&app_bundle=GalxyTV&site_page=www.galxy.tv&site_name=GalxyTV&device_type=2&content_cat=IAB1-7%2CIAB1%2CIAB1-5&content_channel=Watchit-Kid&content_genre=kids%2Ccartoon%2Canimation&content_language=en&content_network=GalxyTV&content_keywords=Kong%2CSonic%2CDouble%20Dragon%2CHighlander%2Ckids%2Canimation%2Canimated%2Ccartoon%2Cnostalgia&content_rating=TV-G&is_lat=0&ifa_type=sessionid",
-      "logo": "https://s3.amazonaws.com/mtdb.galxy.prod/storage/live-tv/channel-logos/rojoG3jL9HdGZH9ZS1qJcylkbSEgtB94OcEyiG5h.png",
-      "group_title": "galxytv"
-    },
-    {
-      "name": "Editors - Munich",
-      "url": "https://www.youtube.com/watch?v=KPUs63HuJ78",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Editors - The Phone Book",
-      "url": "https://www.youtube.com/watch?v=B8leM1N6zKw",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Editors - The Racing Rats",
-      "url": "https://www.youtube.com/watch?v=KZhO3I9_XD0",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | An Eyeful Of Emma",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667323.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Library Lechery",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667331.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "华视新闻台",
-      "url": "https://www.youtube.com/watch?v=wM0g8EoUZ_E",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/cts_news.png",
-      "group_title": "台湾"
-    },
-    {
-      "name": "Mohabat TV (540p)",
-      "url": "http://204.11.235.251:1935/live_transcoder/ngrp:mohabat.stream_all/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "春晚2003",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/14/23/BMjAyMzAxMTQyMzQxNDdfNDAzMDAxOTlfOTM2MTU0MTk1NDFfMF8z_b_B182749d2cd2ea9323639254af385f24b.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Editors - Papillon",
-      "url": "https://www.youtube.com/watch?v=Wq4tyDRhU_4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radioalfa9 Latin hits",
-      "url": "http://stream.zeno.fm/4px23a06qtzuv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ANDYS 80S - The Rarest New Wave 80s Music - Make  REQUESTS at  ANDYS80S.com - S",
-      "url": "http://208.85.242.69:9844/stream/1",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "KTOY 104.7 FM",
-      "url": "https://radio.securenetsystems.net/v5/KTOY",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Disciplining The Squirt",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/666031.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Stepmom's Got Game",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667338.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Bronzing In The Batter's Booth",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667778.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Not Too Sick For Dick",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667853.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "AlJazeera Arabic",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/ar/f5f5c18cf037918b.m3u8",
-      "logo": "https://thumbs2.imgbox.com/4d/9d/4DNDSG7x_t.png?v=1.0.0.1",
-      "group_title": "News"
-    },
-    {
-      "name": "春晚2019",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/06/16/BMjAyMzAxMDYxNjMxMTRfNDAzMDAxOTlfOTI4OTY2ODE2MTBfMF8z_b_B11a778e34390a21de42d407e94f45b91.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "松視1台",
-      "url": "http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/88.ts",
-      "logo": "",
-      "group_title": "台湾频道"
-    },
-    {
-      "name": "Aural Oldies Radio",
-      "url": "http://stream.zeno.fm/ecn7y019e2zuv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Namm Radio – India’s Radio Stream",
-      "url": "http://stream.zenolive.com/6quh1pfnt1duv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Inhaler - In My Sleep",
-      "url": "https://www.youtube.com/watch?v=Ng_NxtZ5awc",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Inhaler - Falling In",
-      "url": "https://www.youtube.com/watch?v=KUwpt3pM4sY",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WLTL 88.1 Lagrange",
-      "url": "http://ice24.securenetsystems.net/WLTL",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WOCS FM",
-      "url": "https://radio.securenetsystems.net/v5/WOCS",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Sonar 1260",
-      "url": "http://stream.zeno.fm/v6f2gp5hzk8uv",
-      "logo": "https://cdn.colombia.com/canales/radio-sonar-151.jpg",
-      "group_title": "pop;news;culture"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Bathing With Her Boyfriend",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/664635.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Balled-Room Dancing",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667764.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Library Lechery",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667846.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Welivetogether  Karlee Grey And Abella Danger Take Them Off",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/668088.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Bloomberg",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/ns/29fe33a8dc20fa3.m3u8",
-      "logo": "https://thumbs2.imgbox.com/9a/98/5HnKe9J4_t.png?v=1.0.0.1",
-      "group_title": "News"
-    },
-    {
-      "name": "CCTV13",
-      "url": "https://www.youtube.com/watch?v=_hU2GTiYAtc",
-      "logo": "http://epg.51zmt.top:8000/tb1/CCTV/CCTV13.png",
-      "group_title": "央视"
-    },
-    {
-      "name": "Deep Dance Radio",
-      "url": "https://cast1.torontocast.com:1855/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "107 Pop Life",
-      "url": "http://streaming1.locucionar.com:14835/stream/",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "KZBR 97.1 FM",
-      "url": "https://radio.securenetsystems.net/cwa/kzbrfm",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Trading Up Times Two",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667869.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Robocock",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667875.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "春晚1995",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQwNzVfMF8z_b_B811c0dec6b9a3d3074a18522c185010a.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "春晚2017",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQ2NDhfMF8z_b_B6527b0c2ce3dda1d9b3f34edd4fdb9aa.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Radio Roška",
-      "url": "http://stream.zeno.fm/q7300aptbwzuv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Editors - An End Has a Start",
-      "url": "https://www.youtube.com/watch?v=oNFn_wi6T1E",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radioalfa19 Latin hits",
-      "url": "http://stream.zeno.fm/5ue6sepm0d0uv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "主内真生命-英语",
-      "url": "https://stream.tligradio.org/listen/english/radio.mp3",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WEGN 88.7 The Life FM",
-      "url": "http://ice41.securenetsystems.net/WHQA",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WUIS Classic HD2 91.9 FM",
-      "url": "http://war.str3am.com:7780/WUISRIS-2",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "107.9 FM NYJLA",
-      "url": "http://stream.zeno.fm/4cpmp17d41zuv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Sunny 107.7 FM",
-      "url": "https://radio.securenetsystems.net/v5/WMRS",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Force 3 Radio",
-      "url": "https://radio.securenetsystems.net/v5/KCLT",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Snippity Snip",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667336.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "DW Español",
-      "url": "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/stream04/streamPlaylist.m3u8",
-      "logo": "https://raw.githubusercontent.com/wazc/iptv/main/Imagenes/DW.jpeg",
-      "group_title": "Noticias"
-    },
-    {
-      "name": "Look Thoong TV (720p) [Not 24/7]",
-      "url": "https://livefta.malimarcdn.com/ftaedge00/lookthoongtv.sdp/playlist.m3u8",
+      "name": "CIMS-FM",
+      "url": "http://stream2.statsradio.com:8068/stream",
       "logo": null,
       "group_title": null
     },
@@ -2023,206 +2089,212 @@
       "group_title": null
     },
     {
-      "name": "Punjabi Beats",
-      "url": "http://stream.zenolive.com/qe3kbywg65quv",
+      "name": "Pluto TV VEVO 70's (1080p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f32f26bcd8aea00071240e5/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS",
+      "logo": "https://images.pluto.tv/channels/5f32f26bcd8aea00071240e5/featuredImage.jpg",
+      "group_title": "Music"
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/fd152a0625829e699afbb5a0dc9f24ea.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "RADIO 88",
-      "url": "http://stream.zeno.fm/qk5gr16529duv",
+      "name": ".416667",
+      "url": "https://8cinema.xyz/1a645703e06ae01704bcaa4cd72c0e87.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Yot Club - Landlord",
-      "url": "https://www.youtube.com/watch?v=QB8Fc4D1wXU",
+      "name": ".416667",
+      "url": "https://8cinema.xyz/4b8ac4bbdd31e6329e363e41874ba088.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Jerrod Niemann - Donkey",
-      "url": "https://www.youtube.com/watch?v=FsyIcJIy-yM",
+      "name": ".881267",
+      "url": "https://iwpm.xyz/3485303add369e55ed75e6b33501bf79.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Radioalfa7 latin hits",
-      "url": "http://stream.zeno.fm/gxpcf0kavqzuv",
+      "name": "Canal",
+      "url": "https://pervm1.xspcdn02.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/108011.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Catie Turner - Nothing",
-      "url": "https://www.youtube.com/watch?v=Ya2DabesO8M",
+      "name": "Non Stop Hindi",
+      "url": "http://s5.voscast.com:8216/",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Salsa Gorda Radio",
-      "url": "http://stream.zeno.fm/u27pdewuq74tv",
-      "logo": "https://cdn-radiotime-logos.tunein.com/s139027q.png",
-      "group_title": "salsa;cali;jazz"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | BlowBangGirls 19-11-28 Girls Want BBC OnBlack Friday",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/668068.mp4",
+      "name": "Canal",
+      "url": "https://8cinema.xyz/d01c324c6beec9b181e8c33667a88b19.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "公视新闻台",
-      "url": "https://www.youtube.com/watch?v=quwqlazU-c8",
-      "logo": "",
-      "group_title": "台湾"
-    },
-    {
-      "name": "Radio Herceg Novi 90.0 &amp; 102.7",
-      "url": "http://s2.voscast.com:10354/;stream1490674747632/1",
+      "name": ".966667",
+      "url": "https://8cinema.xyz/392f0f964fdeaf238da5a06e5ed9121f.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Radioalfa15 latin hits",
-      "url": "http://stream.zeno.fm/034v7pbzxwzuv",
+      "name": ".666667",
+      "url": "https://8cinema.xyz/4f0ef3e73f36ea8c0febbe9da5d2edad.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Inhaler - Fade Into You",
-      "url": "https://www.youtube.com/watch?v=jDG-hK0flZM",
+      "name": ".7",
+      "url": "https://8cinema.xyz/13c250ac2ce8df9c61e7f2a26e9f66c1.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Thy Word Network 91.7 WBJW",
-      "url": "http://ice24.securenetsystems.net/WBGW",
+      "name": "Cool FM 103.5 - CKRB-FM",
+      "url": "http://stream.statsradio.com:8040/stream",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "IL",
-      "url": "http://s7.viastreaming.net:8285/;",
+      "name": "Radio Herceg Novi 90.0 && 102.7",
+      "url": "http://s2.voscast.com:10354/stream1490674747632/1",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Catie Turner - God Must Hate Me",
-      "url": "https://www.youtube.com/watch?v=h_vmQvnKsug",
+      "name": "Pluto TV Viajes (720p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5dcddfbdb7cf0e0009ae09ea/master.m3u8?advertisingId=&appName=web&appVersion=5.14.0-0f5ca04c21649b8c8aad4e56266a23b96d73b83a&app_name=web&clientDeviceType=0&clientID=6fbead95-26b1-415d-998f-1bdef62d10be&clientModelNumber=na&deviceDNT=false&deviceId=6fbead95-26b1-415d-998f-1bdef62d10be&deviceLat=19.4358&deviceLon=-99.1441&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=88.0.4324.150&marketingRegion=VE&serverSideAds=false&sessionID=b8e5a857-714a-11eb-b532-0242ac110002&sid=b8e5a857-714a-11eb-b532-0242ac110002&userId=",
+      "logo": "https://i.imgur.com/kFbvw9R.png",
+      "group_title": "Cultura"
+    },
+    {
+      "name": ".466667",
+      "url": "https://8cinema.xyz/1fd683fc14af4054b0822f9898eed517.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Radio Verdad",
-      "url": "http://streaming1.locucionar.com:14631/stream/",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/b12963a58cf55cf9d7f23414f7df3e89.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "VIVA Russia (1080p)",
-      "url": "https://live20.bozztv.com/akamaissh101/ssh101/vivarussia/chunks.m3u8",
+      "name": "Canal",
+      "url": "https://ajmn-gen-vod.akamaized.net/media/v1/hls/v4/clear/665003304001/a1c7cbca-7fe3-4730-a4f5-0f8c66efefb1/8026f38f-ae6a-4b5d-8524-3937bcc72af0/5x/segment4.ts",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "春晚2015",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQ2MTZfMF8z_b_B4851f43f5a2bc2871a9b0ec87294a6e7.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Radio Sharda",
-      "url": "http://stream.zenolive.com/g4ua0b105eeuv",
+      "name": "Canal",
+      "url": "https://im.gurl.eu.org/file/f492e2de3194d68ff0590.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Editors - Sugar",
-      "url": "https://www.youtube.com/watch?v=ZWcc5VJiRVA",
+      "name": ".433333",
+      "url": "https://8cinema.xyz/5782340c2bc40c6a7ce399e364755181.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Radioalfa8 Latin hits",
-      "url": "http://stream.zeno.fm/51z3n54r1qzuv",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/2b239ce17f1acbcbacedb285ff62b40a.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Inhaler - My King Will Be Kind",
-      "url": "https://www.youtube.com/watch?v=2ptNz3sFVBM",
+      "name": ".4",
+      "url": "https://8cinema.xyz/d1a1d6a10815df4241d07ab2ecb5e7f1.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "CRIS Radio - The Chicago Lighthouse",
-      "url": "http://chicagolighthouse.streamguys1.com/Live",
+      "name": ".546211",
+      "url": "https://8cinema.xyz/1aca57a16e27f802657dfecfe395e47a.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "CvsRadio1 LIVE",
-      "url": "http://stream.zeno.fm/a7zuwuzasyduv",
+      "name": ".004267",
+      "url": "https://iwpm.xyz/bd6b529109da415a0acff56e29550426.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "SOUL GOOD RADIO",
-      "url": "https://c3.radioboss.fm:18090/stream",
+      "name": "Radio Singham Club",
+      "url": "http://stream.zeno.fm/2vhb00mhky8uv",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | A Slippery Situation",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667765.mp4",
+      "name": "RadioPNR",
+      "url": "http://108.59.9.147:8280/stream",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Makkah TV",
-      "url": "https://gist.githubusercontent.com/warningfm/b04ba9b82d3b32b0929262e9daad5d11/raw/e642aba7d7d6b9b274ee61f1613bc831ad311db1/3058a2456b128c1.m3u8",
-      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9lQaMQrxg4MpqDz-wjdPEAwhSPdkWCMIdJCptpibrNKncYnGnW2dW-44wUOgQx-88P35Tv_4wo3tvzr0y-Lu-Y0tCvdpLwa6KmzTYcPoOzTLfpStAYwegOka-tuRtCfvS3YAQuFmWvgyUEej-RV41cUCB2idWQpPqAbLjfvTRkO9IoSJ5mpXAoVHouZIh/s1600/LG4sbWl.png?v=1.1.1.1",
-      "group_title": "Ukhuwah Islamiyah"
-    },
-    {
-      "name": "BTV",
-      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/270f72deeb5843f.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/borDppE.png?v=1.0.0.1",
-      "group_title": "Dens.tv"
-    },
-    {
-      "name": "驚艷",
-      "url": "http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/85.ts",
-      "logo": "",
-      "group_title": "台湾频道"
-    },
-    {
-      "name": "松視2台",
-      "url": "http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/89.ts",
-      "logo": "",
-      "group_title": "台湾频道"
-    },
-    {
-      "name": "Watchit Scream!",
-      "url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?avod=1&live=1&hls_marker=1&network_id=2246&pod_duration=121&min_ad_duration=6&max_ad_duration=120&cb=[CACHEBUSTER]&content_context=1&ip=[IP]&ua=[%UA%]&player_height=[HEIGHT]&player_width=[WIDTH]&site_page=www.galxy.tv&site_name=[APP_BUNDLE]&device_type=[DEVICE_TYPE]&content_cat=IAB1-7%2CIAB1%2CIAB1-5&content_channel=Watchit-Scream&content_genre=horror%2Csci-fi%2Cgrindhouse&content_language=en&content_network=GalxyTV&content_keywords=horror%2Csci-fi%2Cgrindhouse&content_rating=TV-14&us_privacy=[US_PRIVACY]&consent=[CONSENT]&is_lat=[LIMITED_AD_TRACKING]&ifa_type=[IFA_TYPE]",
-      "logo": "https://s3.amazonaws.com/mtdb.galxy.prod/storage/live-tv/channel-logos/h9UH6iSi6i2Q1zsHXyBL3vNawsP6D2GnueGb1luj.png",
-      "group_title": "galxytv"
-    },
-    {
-      "name": "BB Radio Deutsche Hits",
-      "url": "http://irmedia.streamabc.net/irm-bbrdeutsch-mp3-128-1256792?sABC=64480rs2%230%23n1q9s1ns4osoonq326452q0po510q6pp%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1682444018",
+      "name": ".6",
+      "url": "https://8cinema.xyz/051ec048d68f6ea98655e7aff793d137.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "FGTV",
-      "url": "https://securestream11.champds.com/LIVE/FultonCoGALIVE/FultonCoGALIVE.m3u8",
-      "logo": "https://i.imgur.com/RXFmzVY.png",
+      "name": ".933333",
+      "url": "https://8cinema.xyz/99beac19b1be3bca5c821b0ea873a6b6.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".1",
+      "url": "https://8cinema.xyz/85d78dd2964957d1a05ed716143ffe1a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/b2bbafc9dba9def00386b532672aedf0.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".416667",
+      "url": "https://8cinema.xyz/8100dd4ac106da5a0eebb5a86648e98a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".547578",
+      "url": "https://iwpm.xyz/412455f8feccdfe03ce4a9c3d6dd1e0e.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "San Radio",
+      "url": "http://stream-148.zeno.fm/kcn3b5gfuhruv?zs=PRD2HPXBS32ub_JIrH21uQ",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Editors - An End Has a Start",
+      "url": "https://www.youtube.com/watch?v=oNFn_wi6T1E",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Legislative Assembly TV Nunavut",
+      "url": "http://temp2.isilive.ca/live/nunavut/live-eng/index.m3u8",
+      "logo": "https://i.imgur.com/wY9WhYS.png",
       "group_title": "Legislative"
     },
     {
-      "name": "Q 104 WQCY",
-      "url": "http://ice23.securenetsystems.net/WQCY",
+      "name": "Radio AFNL",
+      "url": "https://bozztv.com/1gbw5/tintv/tintv/chunklist.m3u8",
       "logo": null,
       "group_title": null
     },
@@ -2234,133 +2306,349 @@
     },
     {
       "name": "RadioPNR",
-      "url": "http://108.59.9.147:8280/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Copper X",
-      "url": "https://radio.securenetsystems.net/v5/KQCM",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "92.7 The Touch",
-      "url": "https://radio.securenetsystems.net/ce/index.cfm?stationCallSign=KSBU",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Boss For A Day",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667325.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Boss Me Around",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667326.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "寰宇新闻台",
-      "url": "https://www.youtube.com/watch?v=Ej3LQM_lTEw",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/GlobalNews.png",
-      "group_title": "台湾"
-    },
-    {
-      "name": "中视新闻台",
-      "url": "https://www.youtube.com/watch?v=TCnaIE_SAtM",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/中视新闻.png",
-      "group_title": "台湾"
-    },
-    {
-      "name": "镜新闻",
-      "url": "https://www.youtube.com/watch?v=UUQkLXnJSRE",
-      "logo": "",
-      "group_title": "台湾"
-    },
-    {
-      "name": "UN24 (720p)",
-      "url": "https://59d39900ebfb8.streamlock.net/untv-720/untv-720/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "98.3 Wild Country - WKEA-FM",
-      "url": "http://ice42.securenetsystems.net/WKEA",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "UnderGRAND Radio",
-      "url": "http://stream.zeno.fm/rp1swb5pgzzuv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Sakkath Radio",
-      "url": "http://stream.zeno.fm/fcsk9ryerd0uv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Legislative Assembly TV Nunavut",
-      "url": "http://temp2.isilive.ca/live/nunavut/live-eng/index.m3u8",
-      "logo": "https://i.imgur.com/wY9WhYS.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "WTAD 930 AM",
-      "url": "http://ice41.securenetsystems.net/WTAD",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "RadioPNR",
       "url": "http://108.59.9.147:8280/listen.mp3",
       "logo": "https://radio.streamitter.com/images/logos/MFHTFH.png",
       "group_title": null
     },
     {
-      "name": "Radio NQP",
-      "url": "http://cdn.instream.audio:8111/stream",
+      "name": ".733333",
+      "url": "https://8cinema.xyz/f061b661f0f9779e9136a0345fdc28b9.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Delta 90.3 FM",
-      "url": "http://cdn.instream.audio:9069/stream",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/ae36ef51ac622f5114ce8ea8a877bf21.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "La Voz de Jesús",
-      "url": "http://stream.zeno.fm/phybdd3ph98uv",
-      "logo": "https://static.mytuner.mobi/media/tvos_radios/CLNJwsMB48.jpg",
-      "group_title": "religious;catolica"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Sex With The Therapist",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667859.mp4",
+      "name": "Aural Oldies Radio",
+      "url": "http://stream.zeno.fm/ecn7y019e2zuv",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "春晚2008",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQzNTNfMF8z_b_Bd7346962e61bd7b84e11a1fa6e4616f9.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "WRLN FM 105.3 - WRLN",
-      "url": "http://ice23.securenetsystems.net:80/WRLN",
+      "name": "ABC News Live 6",
+      "url": "https://abcnews-streams.akamaized.net/hls/live/2023565/abcnews6/master.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Radio Onattukara",
-      "url": "http://stream.zeno.fm/fu94u25kqd0uv",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/f79d5212141ba65f7e225a686c4f78d8.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Hosanna Vision (720p) [Not 24/7]",
+      "url": "https://1206618505.rsc.cdn77.org/LS-ATL-59020-1/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Pluto TV 90s Throwback (684p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f4d86f519358a00072b978e/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS",
+      "logo": "https://images.pluto.tv/channels/5f4d86f519358a00072b978e/colorLogoPNG.png",
+      "group_title": "Pelis"
+    },
+    {
+      "name": "Pluto TV Cine Comédia (720p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f1ac8099c49f600076579b2/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&is_lat=1&platform=web&rdid=channel&tags=ROKU_CONTENT_TAGS",
+      "logo": "",
+      "group_title": "Pelis"
+    },
+    {
+      "name": "LEGO Kids TV¸",
+      "url": "https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/60fb01a24795a6000762fe83/master.m3u8?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientTime=0&deviceDNT=0&deviceId=94a0043a-b258-11ee-b6c7-67540c86de73&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=bca05fe1-d777-48d3-80f2-58183408d1d1&userId=&serverSideAds=true",
+      "logo": "https://i.ibb.co/QkNWGtG/legokidstv.png",
+      "group_title": "BOCIL"
+    },
+    {
+      "name": "ABC News Live 2",
+      "url": "https://abcnews-streams.akamaized.net/hls/live/2023561/abcnews2/master.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".233333",
+      "url": "https://8cinema.xyz/9ca23497669420ea92116edf217d4e66.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/3e53036491de0a01f97c30f7efdbe2b9.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/af94d5fe7a97967864966a6dd2391fc0.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".433333",
+      "url": "https://8cinema.xyz/80a4ddb16e4936d9db7914e8182f7f5e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".416667",
+      "url": "https://8cinema.xyz/fb6099765fe63b946bd721180df79b59.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Big2",
+      "url": "http://stream-150.zeno.fm/q7300aptbwzuv?zs=dJohecuiRfOzWX1N7waAsA",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Vevo '80s",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5fd7b8bf927e090007685853/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2cc206-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=e72e853c-9c99-4dda-b7b5-22baedf34c42&serverSideAds=false&checkedby:iptvcat.com",
+      "logo": "",
+      "group_title": "Music"
+    },
+    {
+      "name": "PGA Tour",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5de94dacb394a300099fa22a/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2ac630-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=6c2b7359-0375-4f34-996b-4fb9429ead78",
+      "logo": "https://i.imgur.com/J0TY9dG.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "ABC News Live 3",
+      "url": "https://abcnews-streams.akamaized.net/hls/live/2023562/abcnews3/master.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202601235d0dfdb6ded990604241801b~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1800723124&x-signature=8MNBeda1ASJqe%2B5YO3h6nJzJqN8%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/0262762091657f0c3b7a62aa35615163.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".066667",
+      "url": "https://8cinema.xyz/4c7d199e78907721f02ebd315903975f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".6",
+      "url": "https://8cinema.xyz/098d66f4995da19894a7951394b5cc5e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".708333",
+      "url": "https://8cinema.xyz/09fa8648168948154c4c184817dd546e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".004267",
+      "url": "https://iwpm.xyz/06931a340dbfcd667ea879fe916761cb.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".0064",
+      "url": "https://iwpm.xyz/6d8de70a7b5a305afd5af9da126cbcb9.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Punjabi Beats",
+      "url": "http://stream.zenolive.com/qe3kbywg65quv",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "107 Pop Life",
+      "url": "http://streaming1.locucionar.com:14835/stream/",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Pluto TV Cine Drama (720p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f1ac947dcd00d0007937c08/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&is_lat=1&platform=web&rdid=channel&tags=ROKU_CONTENT_TAGS",
+      "logo": "",
+      "group_title": "Pelis"
+    },
+    {
+      "name": "White Plains Community M",
+      "url": "https://stream.swagit.com/live-edge/whiteplainsny/smil:std-4x3-1-b/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/05844410e4787d0230e81e6ab9cca1a1.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/f8d308a29fa8dfd53691d2173b6e5d92.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".416667",
+      "url": "https://8cinema.xyz/c170438055f05782169f6c6a6664ef8f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "DUNGEON TV",
+      "url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?avod=1&live=1&hls_marker=1&network_id=2226&pod_duration=121&min_ad_duration=6&max_ad_duration=120&cb=[CACHEBUSTER]&content_context=1&ip=[IP]&ua=[%UA%]&player_height=[HEIGHT]&player_width=[WIDTH]&app_name=com.galxy.tv.desktop&app_bundle=GalxyTV&site_page=www.galxy.tv&site_name=GalxyTV&device_type=2&content_cat=IAB9-30%2CIAB19-29%2CIAB9-26%2CIAB1-7&content_channel=DungeonTV&content_genre=Esports%2Clive&content_language=en&content_network=GalxyTV&content_keywords=Esports%2Clive%2CDungeons%20and%20Dragons%2Crole%20play&content_rating=TV-PG&is_lat=0&ifa_type=sessionid",
+      "logo": "https://s3.amazonaws.com/mtdb.galxy.prod/storage/live-tv/channel-logos/SOnSEoHQ0F6rWrJzviU897Qh2qC02YapBGc37bIE.png",
+      "group_title": "E Sports"
+    },
+    {
+      "name": "CKNX AM 920 - CKNX",
+      "url": "http://live.leanstream.co//CKNXAM",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Láser 92.5 FM",
+      "url": "http://streaming1.locucionar.com:12288/stream/",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/86a1276070a53566b226650ad491e1d6.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/6455152675135e8c93026b14e3f17286.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/3c7336aeb89ec8ece83c26f51876704e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://im.gurl.eu.org/file/0dc6b7b40fd0c3b602dc3.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "[美国]Christian Youth Channel (CYC) (720p)",
+      "url": "http://media.smc-host.com:1935/cycnow.com/cyc2/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/334384b644f31477c911dab63c0cf6cc.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".7",
+      "url": "https://8cinema.xyz/7e1a7ea5de9789a922295f75d07ce3b9.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Bolton Community Voice Channel (CVC) Government (Bolton CT) (480p)",
+      "url": "https://dlttx48mxf9m3.cloudfront.net/vod_clients/bolton/live/ch3/video.m3u8",
+      "logo": "https://i.imgur.com/qLJhNhq.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": ".466667",
+      "url": "https://8cinema.xyz/e77ff071f7e93c6fe116aa86bca499fe.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".002",
+      "url": "https://iwpm.xyz/a9f7ae0ce12bc81b2ae2cc6ad49f55bc.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/0ff5c1205a3987a995569b9370129f84.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".416667",
+      "url": "https://8cinema.xyz/b2db3b65f624002a86866cd73ac9ff16.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Frmula Meldica",
+      "url": "https://s2.yesstreaming.net:9085/stream",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Radio Verdad",
+      "url": "http://streaming1.locucionar.com:14631/stream/",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "翡翠台4K",
+      "url": "https://cdn6.163189.xyz/163189/fct4k",
+      "logo": null,
+      "group_title": "4K频道"
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/026d904e8bc3d55fffc4e11d58aa2d74.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/29e3b5be70f56d63054fe3d8de411e62.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Radio Ativa Bom Despacho",
+      "url": "http://148.72.158.239:8036/live",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://pervm1.xspcdn02.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/10801.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Xera Radio",
+      "url": "http://stream.zeno.fm/1lb6ggir9mdtv",
+      "logo": "https://radiospinner.com/media/logos/180/41169/logo_8vk54Z9pnB.png",
+      "group_title": null
+    },
+    {
+      "name": "Namm Radio – Gulf Radio Stream",
+      "url": "http://stream.zenolive.com/kgw2tp5p1y5tv",
       "logo": null,
       "group_title": null
     },
@@ -2371,602 +2659,50 @@
       "group_title": null
     },
     {
-      "name": "WQID 105.3",
-      "url": "https://radio.securenetsystems.net/v5/index.cfm?stationCallSign=WQID",
+      "name": ".8",
+      "url": "https://sxpm.xyz/74a9550d904d52e3424f941c92cd4dcb.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "テレ朝NEWS24",
-      "url": "https://www.youtube.com/watch?v=coYw-eVU0Ks",
-      "logo": "",
-      "group_title": "日本"
-    },
-    {
-      "name": "春晚2014",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/06/16/BMjAyMzAxMDYxNjMxMTNfNDAzMDAxOTlfOTI4OTY2ODAzNjlfMF8z_b_Bdee65c77f9e7b2120a185c919dad81d2.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Arca - Araña",
-      "url": "https://www.youtube.com/watch?v=q8IjPnIvm8k",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Y 93.7 - KYEZ",
-      "url": "http://ice23.securenetsystems.net/KYEZ",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Delfin Radio",
-      "url": "http://s3.voscast.com:9210/listen.pls",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Monroe County Television MCTV (Monroe County FL) (1080p)",
-      "url": "https://castus-vod-dev.s3.amazonaws.com/vod_clients/monroe/live/ch1/video.m3u8",
-      "logo": "https://i.imgur.com/YJfzdSu.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "Radioalfa5 latin hits",
-      "url": "http://stream.zeno.fm/x9y4ytkavqzuv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Inhaler - Ice Cream Sundae",
-      "url": "https://www.youtube.com/watch?v=ijRRdjp_6N0",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "98.9 The Game",
-      "url": "http://cromwell-ice.streamguys1.com/WHQQFM",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Bethanie of Elmont New York",
-      "url": "http://162.244.81.11:9422/stream.mp3",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Club DJ 80s",
-      "url": "http://stream.zeno.fm/rc34f5vfwzzuv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Rebel 107.9",
-      "url": "https://radio.securenetsystems.net/cwa/WPLG",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Mr. Criminal - Side 2 Side",
-      "url": "https://www.youtube.com/watch?v=sgJZ5jHjLhI",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Cum-Shot Caller",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667785.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Snippity Snip",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667860.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | GrandMams 19-11-05 Mature Danny Visits A Secret Sex Club",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/668077.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Universal Premiere",
-      "url": "http://200.115.96.66:4000/play/a035/index.m3u8",
-      "logo": "https://raw.githubusercontent.com/wazc/iptv/main/Imagenes/universal-premiere.png",
-      "group_title": "Cine"
-    },
-    {
-      "name": "NBC TV (1080p) [Not 24/7]",
-      "url": "https://205444.global.ssl.fastly.net/64ee8a084b935f9f8a6f8825/live_ab333a6093bc11eeb89fbd81423485b7/index.fmp4.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "San Radio",
-      "url": "http://stream-148.zeno.fm/kcn3b5gfuhruv?zs=PRD2HPXBS32ub_JIrH21uQ",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Baingan",
-      "url": "http://stream.zeno.fm/eyxg23ky4x8uv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "春晚2013",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQ1NjNfMF8z_b_B4fea55408dca4471a68a963ae096be59.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "春晚2021",
-      "url": "https://alimov2.a.kwimgs.com/upic/2022/01/30/17/BMjAyMjAxMzAxNzE4NTJfNDAzMDAxOTlfNjYxNzUzOTg3NjlfMF8z_b_Be41d9503181d7b0608a839ed401e02c2.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Daš Extra Radio",
-      "url": "http://158.69.119.6:8085/&amptype=mp3",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "KMOJ-HD2 The Ice",
-      "url": "https://kmojfm.streamguys1.com/theice",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Mojdeh FM",
-      "url": "http://ic2317.c1261.fast-serv.com/rm64",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Inhaler - We Have To Move On",
-      "url": "https://www.youtube.com/watch?v=DlmqLOq-YmU",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Singham Club",
-      "url": "http://stream.zeno.fm/2vhb00mhky8uv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Libre 890",
-      "url": "http://radio.solumedia.com.ar:8420/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WAGR-FM",
-      "url": "https://radio.securenetsystems.net/v5/WAGRFM",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Read My Lips",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667857.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "World Fashion Channel",
-      "url": "https://raw.githubusercontent.com/warningfm/kano/main/live/m3u8/fs/stream-eng.m3u8",
-      "logo": "https://thumbs2.imgbox.com/6e/a1/oVGKQbaC_t.png?v=1.0.0.1",
-      "group_title": "Fashion"
-    },
-    {
-      "name": "Canal",
-      "url": "https://raw.githubusercontent.com/git32max/f9ed69a279c13df3/refs/heads/master/480p/github_playlist_480p.m3u8?_cb=1747549608",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "凤凰卫视",
-      "url": "https://www.youtube.com/watch?v=fN9uYWCjQaw",
-      "logo": "http://epg.51zmt.top:8000/tb1/gt/fenghuangzhongwen.png",
-      "group_title": "凤凰"
-    },
-    {
-      "name": "春晚2009",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQzOTBfMF8z_b_B29a36a85e0277f6c2a1f033ef7c10708.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Playboy TV Latin America (1080p)",
-      "url": "http://190.11.225.124:5000/live/playboy_hd/playlist.m3u8",
-      "logo": "https://i.imgur.com/B3DMUM9.png",
-      "group_title": "XXX"
-    },
-    {
-      "name": "Jerrod Niemann - But I Do",
-      "url": "https://www.youtube.com/watch?v=GxS_gAA7HOg",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Inhaler - My Honest Face",
-      "url": "https://www.youtube.com/watch?v=A1rx_Tp3o5k",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "BeGoodRadio - 80s Rock Mix",
-      "url": "http://bigrradio.cdnstream1.com/5219_128",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "24/7 Polka Heaven",
-      "url": "http://192.99.83.149:8046/;stream.nsv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Namaste Bollywood",
-      "url": "http://stream.zeno.fm/cqak4ap7by8uv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio DAŠ",
-      "url": "http://158.69.119.6:8095/&type=mp3",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Mango",
-      "url": "http://158.69.119.6:8780/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | EuroGirlsOnGirls 20-01-27 Katy Rose And Inna Innaki Lesbian Dildo Fucking",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/668069.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Lesbea - Sarah Sultry And Soyivania",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/668082.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "FX",
-      "url": "http://200.115.96.66:4000/play/a0he/index.m3u8",
-      "logo": "https://raw.githubusercontent.com/wazc/iptv/main/Imagenes/FX.jpg",
-      "group_title": "Cine"
-    },
-    {
-      "name": "Hosanna Vision (720p) [Not 24/7]",
-      "url": "https://1206618505.rsc.cdn77.org/LS-ATL-59020-1/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "FTC FM",
-      "url": "http://167.114.131.90:5750/stream/",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Tamil Vaanoli – Maippanin Kural",
-      "url": "http://stream.zeno.fm/qg03b0px34zuv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "HJ94.1_Boom_FM_Georgetown",
-      "url": "http://192.99.8.192:3630/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "DC.gov Council Hearing Room 120 (Washington DC) (1080p)",
-      "url": "https://video.oct.dc.gov/out/u/97_12.m3u8",
-      "logo": "https://i.imgur.com/8fljC7g.png",
-      "group_title": "Legislative"
-    },
-    {
-      "name": "Home Improvement USA",
-      "url": "http://158.69.227.214:8076/;",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "TLC Tv",
-      "url": "https://www.youtube.com/watch?v=IMy6RvwMJLs",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Fucking Her Friend's Mom",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667776.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | The Dommes Next Door - Double Dommed",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667864.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "TVRI Jawa Timur",
-      "url": "http://khano.nng.cloudns.us/live/m3u8/id/3f58825fe229a8g.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/1GW0BTz.png?v=1.0.0.1",
-      "group_title": "Local"
-    },
-    {
-      "name": "春晚2010",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQ0MjlfMF8z_b_B8818807a00eed329a69fb494f405bd43.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Kickin Country - KARB",
-      "url": "http://www.ophanim.net:7180/stream/",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Das",
-      "url": "http://158.69.119.6:8095/;&type=mp3",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Jerrod Niemann - Old Glory",
-      "url": "https://www.youtube.com/watch?v=a9frCo7vACY",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Inhaler - I Want You",
-      "url": "https://www.youtube.com/watch?v=bZXn94zSXRg",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "BeGoodRadio - 80s Pop",
-      "url": "http://bigrradio.cdnstream1.com/5216_128",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "WDJR.net",
-      "url": "http://142.44.136.201:5379/;stream/1",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Punjabi TV",
-      "url": "http://cdn9.live247stream.com/punjabitvcanada/tv/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Late Date",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667328.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Magma Film 20-01-28 Dacada Mature Homemade Threesome",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/668107.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://raw.githubusercontent.com/MassinDV/videos/main/kids/mayaandmary.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Oman TV (1080p)",
-      "url": "https://partneta.cdn.mgmlcdn.com/omantv/smil:omantv.stream.smil/chunklist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Folk Radio Beograd",
-      "url": "http://epsilon.shoutca.st:8392/;stream.nsv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Boystown Live Dance Radio",
-      "url": "http://142.44.159.230:7084/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "HJIY Olímpica Stéreo Montería 90.5",
-      "url": "https://master.letio.com/io/?gs=9112&type=master.m3u8",
-      "logo": "http://olimpicastereo.com.co/wp-pics/themes/olimpica/img/icn/logo.png",
-      "group_title": "merengue;salsa;tropical"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Boss For A Day",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667777.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | Tied Up",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667872.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Indonesiana TV",
-      "url": "https://gist.githubusercontent.com/warningfm/f951716f1dfd96d4480dbdad6a000eeb/raw/65169ac6d2221de0cf3346bac07e65c6e67b3fc9/indonesiana.m3u8",
-      "logo": "https://warningfm.github.io/v3/img/OzEYGDL.png?v=8.8.4.4",
-      "group_title": "Entertainment"
-    },
-    {
-      "name": "MTNA TV",
-      "url": "https://live.mtna.tv/hls/mtna/mtna.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Daš",
-      "url": "http://158.69.119.6:8095/&amptype=mp3",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Egata Radio",
-      "url": "http://stream.zeno.fm/kcn3b5gfuhruv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "HIT FM",
-      "url": "http://cast2.name.ba:8153/;stream.nsv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "105.1 Jack FM",
-      "url": "http://cromwell-ice.streamguys1.com/WZUSFM",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Ajmer Radio",
-      "url": "http://stream.zeno.fm/yftb93nbay8uv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Radio Suquia",
-      "url": "http://streaming01.shockmedia.com.ar:9968/stream/",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Mr. Criminal - Sick Thoughts",
-      "url": "https://www.youtube.com/watch?v=oh88Zz08cK8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "MaxTV/Dieu TV (1080p)",
-      "url": "https://cdn.katapy.io/cache/stream/katapytv/dieu/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Al Arabiya (1080p)",
-      "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "CCTV-17農業農村",
-      "url": "https://cdn16.163189.xyz/163189/cctv17",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Nesaganam Tamil Online Radio",
-      "url": "http://192.95.39.65:5206/stream/",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Eventos_Católicos_Radio",
-      "url": "http://stream.zeno.fm/1g9cduy10bruv",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Z TV",
-      "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeetv/default/manifest.mpd",
-      "logo": "https://warningfm.github.io/v3/img/hLTssci.png?v=1.0.0.1",
-      "group_title": "🇮🇳 Hindi"
-    },
-    {
-      "name": "RAVAGE ENTERTAINMENT RADIO",
-      "url": "http://usa19.fastcast4u.com:5830/?type=http&ampnocache=1625519964",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "HJTD Estrella Estéreo 104.3",
-      "url": "http://68.233.236.92:8006/listen.pls",
-      "logo": "https://cdn-radiotime-logos.tunein.com/s99249g.png",
-      "group_title": "local;news;talk"
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | BangBus 20-01-15 Binky Beaz",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667358.mp4",
+      "name": ".233333",
+      "url": "https://ixpm.xyz/cb03f018d840233427c6b1f4ac3b3ef6.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Publicpickups -  Gina Ferocious Sneaky Street Fuck",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667380.mp4",
+      "name": ".133333",
+      "url": "https://8cinema.xyz/488a12a070b750b874dab840df9549e5.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Getting The Shot",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667840.mp4",
+      "name": ".0064",
+      "url": "https://ixpm.xyz/8da152c2b4f2ba0ce2c20ae4791c5ed0.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | Working Late",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667873.mp4",
+      "name": ".541667",
+      "url": "https://8cinema.xyz/03d06d58914e6766c11230833368ab31.html",
       "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "ahlakid.com - ahlakid.com - Adult | GrandMams 19-10-08 Young Gigolo Fucks Horny Granny",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/668075.mp4",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Mphangwe FM radio 88.9",
-      "url": "https://ec4.yesstreaming.net:1925/stream",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Sunny&#x27;s Music Show Radio",
-      "url": "http://procyon.shoutca.st:8492/listen.mp3",
-      "logo": "https://radiospinner.com/media/logos/180/81196/logo_5CSjF3DklC.png",
       "group_title": null
     },
     {
-      "name": "V100.7",
-      "url": "https://stream.revma.ihrhls.com/zc2673",
+      "name": ".416667",
+      "url": "https://8cinema.xyz/b03dfcad5d410c93a47685bdd03d52ff.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "BeGoodRadio - 80s Pop Rock",
-      "url": "http://bigrradio.cdnstream1.com/5217_128",
+      "name": ".004267",
+      "url": "https://iwpm.xyz/9df03cc95f8c397573b4f2e6308ea39c.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "TALK WKAN 1320 AM",
-      "url": "http://ice23.securenetsystems.net/WKAN",
+      "name": "Arca - Nonbinary",
+      "url": "https://www.youtube.com/watch?v=gfGz4MTQ28I",
       "logo": null,
       "group_title": null
     },
@@ -2977,29 +2713,293 @@
       "group_title": null
     },
     {
-      "name": "Radio Vision 99.5 FM",
-      "url": "http://cdn.instream.audio:9061/stream",
+      "name": "Radio Bethanie of Elmont New York",
+      "url": "http://162.244.81.11:9422/stream.mp3",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "ahlakid.com - ahlakid.com - Adult | A Woman Scorned",
-      "url": "http://ipflix.click:80/movie/sq1x0qr86b/7777/667775.mp4",
+      "name": "Pluto TV Cine Estelar (684p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5cf968040ab7d8f181e6a68b/master.m3u8?advertisingId=&appName=web&appStoreUrl=&appVersion=DNT&app_name=&architecture=&buildVersion=&deviceDNT=0&deviceId=5cf968040ab7d8f181e6a68b&deviceLat=&deviceLon=&deviceMake=web&deviceModel=web&deviceType=web&deviceVersion=DNT&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false&sid=901&terminate=false&userId=",
+      "logo": "https://images.pluto.tv/channels/5f1ac1f1b66c76000790ef27/colorLogoPNG.png",
+      "group_title": "Pelis"
+    },
+    {
+      "name": ".1",
+      "url": "https://8cinema.xyz/04a1b81cc7654f3d569362d6a2896617.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "beIN SPORTS XTRA en Espanol",
-      "url": "https://bein-esp-xumo.amagi.tv/playlist.m3u8",
-      "logo": "https://i.imgur.com/V562tpO.png",
-      "group_title": "SPAIN"
+      "name": ".333333",
+      "url": "https://8cinema.xyz/7332047d20bc652291b44b8b9a297df2.html",
+      "logo": null,
+      "group_title": null
     },
     {
-      "name": "Comedy Central",
-      "url": "http://200.115.96.66:4000/play/a0ja/index.m3u8",
-      "logo": "https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/0c/15/a5/0c15a58c-8a67-45f9-904f-3e7e971b2aa1/source/256x256bb.jpg",
-      "group_title": "Entretenimiento"
+      "name": ".433333",
+      "url": "https://8cinema.xyz/cd498fc5bef11e1f22d840432953b3c0.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".463089",
+      "url": "https://iwpm.xyz/d2212b8ed5d4ead479ff72440571588a.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Jerrod Niemann - Old Glory",
+      "url": "https://www.youtube.com/watch?v=a9frCo7vACY",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Dupa Fm New Automation System",
+      "url": "http://relay.sonixcast.com:80/8343/stream/1",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/6e6ec7ca078372b4c30a62b0f71f6b4b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".1",
+      "url": "https://8cinema.xyz/d942e1c626d27ddbe8126566bfaa7ca3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/3d6e15bd048ba971c30d1e15a26f3c71.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "CBSN Sacramento",
+      "url": "https://cbsnews.akamaized.net/hls/live/2020607/cbsnsac_2/master.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://ixpm.xyz/55c4497f2b91d335c01138b5824ae5a7.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".733333",
+      "url": "https://8cinema.xyz/b187b95a18d1fc4ed39fb5d6d6960067.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".0064",
+      "url": "https://iwpm.xyz/4a504c89fa39eefa87ec1ab877f1e9d6.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Arca - Electra Rex",
+      "url": "https://www.youtube.com/watch?v=m-qzs7ePt1o",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Arca - Lost Woman Found",
+      "url": "https://www.youtube.com/watch?v=qKBBNRjfT0c",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "International Radio Serbia - Chinese",
+      "url": "http://server2.glassrbije.org/media/kineska.mp3",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Stefanelli Sound",
+      "url": "https://ec4.yesstreaming.net:2350/stream",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Auto Motor Sport",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f760c3d41aa2d0007bfde19/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=84ac2f82-4b92-11ef-aece-533610f1ea34&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=bd6f9149-f825-44a8-988e-28acbcdc798e&checkedby:iptvcat.com",
+      "logo": null,
+      "group_title": "Sport"
+    },
+    {
+      "name": "Auto Motor Sport",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f760c3d41aa2d0007bfde19/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=84ac2f82-4b92-11ef-aece-533610f1ea34&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=bd6f9149-f825-44a8-988e-28acbcdc798e&serverSideAds=false&checkedby:iptvcat.com",
+      "logo": null,
+      "group_title": "Sport"
+    },
+    {
+      "name": ".966667",
+      "url": "https://8cinema.xyz/5398b58e6da46cfeb2c2c006accf7354.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/f3c125ccc5ddefc2135a748a10dbc52a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".733333",
+      "url": "https://8cinema.xyz/4ae04eeaa4dbdfd74c388283e5567d29.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "[伊朗]MohabatTV(540p)[676*540][676*540]",
+      "url": "http://204.11.235.251:1935/live_transcoder/ngrp:mohabat.stream_all/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".4",
+      "url": "https://8cinema.xyz/ed311776065bece837b45f07d0444d47.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".666667",
+      "url": "https://8cinema.xyz/665fca0c3819a5667d1ce4a6bfa7ab46.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Radio Kanal 6 - Chill Out",
+      "url": "http://node-33.zeno.fm/qqx4q8pdfwzuv?rj-ttl=5\\u0026rj-tok=AAABcjX9oLIANNDdFLkpsKmn4g",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "RADIO 88",
+      "url": "http://stream.zeno.fm/qk5gr16529duv",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Editors - Blood",
+      "url": "https://www.youtube.com/watch?v=JOH6bJqapV8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Magic 95.5 FM HD 2",
+      "url": "http://cromwell-ice.streamguys1.com/WYDSFM",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "XmasMelody.com",
+      "url": "http://s7.viastreaming.net:7000/stream?icy=http",
+      "logo": "https://radio.streamitter.com/images/logos/NQIKA.png",
+      "group_title": null
+    },
+    {
+      "name": "Catie Turner - Home",
+      "url": "https://www.youtube.com/watch?v=obr2Y3__E7M",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Catie Turner - Nothing",
+      "url": "https://www.youtube.com/watch?v=Ya2DabesO8M",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "World Poker Tour",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ad9b7aae738977e2c312132/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b21a974-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=97bdb4b6-f530-4173-966d-19421ac303a0",
+      "logo": "https://i.imgur.com/98kLMjj.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "HTV 2 - Houston Televisi",
+      "url": "https://stream.swagit.com/live-edge/houstontx/smil:hd-16x9-2-b/HasBahCa.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".75",
+      "url": "https://8cinema.xyz/835aea03adf92741382382d28d3b4cea.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Arca - Brokeup",
+      "url": "https://www.youtube.com/watch?v=bTP4J2VKZ44",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Mphangwe FM radio 88.9",
+      "url": "https://ec4.yesstreaming.net:1925/stream",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".375",
+      "url": "https://ixpm.xyz/d9262cf5f8e748d044a952cf7010ddce.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".466667",
+      "url": "https://8cinema.xyz/43c8d0b562a52733e99105d72596cdaf.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/74c344a9cb68b1b42531b1a4ef63d34d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://im.gurl.eu.org/file/fb2097fd07388d8562c69.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "ABC 7 Denver (KMGH)",
+      "url": "https://content.uplynk.com/channel/64ca339f04964a5e961c3207a7771bf1.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".297311",
+      "url": "https://iwpm.xyz/ac30b86123bff97e96357e4db92dc12c.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Radio Onattukara",
+      "url": "http://stream.zeno.fm/fu94u25kqd0uv",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Editors - The Racing Rats",
+      "url": "https://www.youtube.com/watch?v=KZhO3I9_XD0",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".933333",
+      "url": "https://8cinema.xyz/b1d11c22830ecc33f371a013779db0ba.html",
+      "logo": null,
+      "group_title": null
     }
   ],
-  "generated_at": "2026-07-18T09:32:09.531257+00:00"
+  "generated_at": "2026-07-18T18:03:33.792970+00:00"
 }
