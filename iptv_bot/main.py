@@ -112,7 +112,11 @@ def main():
         discover_and_store()
         return
 
-    discover_and_store()
+    try:
+        discover_and_store()  # (protegido internamente: si se agota el rate limit, sigue con lo ya encontrado)
+    except Exception as e:
+        print(f"[main] Discovery terminó con un error inesperado, se sigue con lo que ya está en la DB: {e}")
+
     check_all(limit=args.limit)
     prune()
 
