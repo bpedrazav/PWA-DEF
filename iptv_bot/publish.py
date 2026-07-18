@@ -8,13 +8,17 @@ ya no reporta como funcionando (los agregados manualmente por el usuario
 nunca se tocan, porque se identifican por separado con source:'bot').
 
 Variables de entorno:
-  PUBLISH_TOKEN   Token con permiso de escritura sobre CHANNELS_REPO.
-                  (el GITHUB_TOKEN por defecto de Actions NO alcanza si
-                  CHANNELS_REPO es un repo distinto al de este bot)
-  CHANNELS_REPO   Repo destino, formato "usuario/repo". Default: bpedrazav/PWA-DEF
-  CHANNELS_PATH   Ruta del archivo en ese repo. Default: channels_bot.json
-  CHANNELS_BRANCH Rama destino. Default: main
-  MAX_CHANNELS    Máximo de canales a publicar (los más rápidos primero). Default: 500
+  PUBLISH_TOKEN     Token con permiso de escritura sobre CHANNELS_REPO.
+                    (el GITHUB_TOKEN por defecto de Actions NO alcanza si
+                    CHANNELS_REPO es un repo distinto al de este bot)
+  CHANNELS_REPO     Repo destino, formato "usuario/repo". Default: bpedrazav/PWA-DEF
+  CHANNELS_PATH     Ruta del archivo en ese repo. Default: channels_bot.json
+  CHANNELS_BRANCH   Rama destino. Default: main
+  MAX_CHANNELS      Máximo de canales a publicar (los más rápidos primero). Default: 500
+  EXCLUDE_KEYWORDS  Palabras separadas por coma: si el nombre o la categoría
+                    (group_title) de un canal contiene alguna, se excluye.
+                    Editá la lista de abajo (EXCLUDE_KEYWORDS_DEFAULT) o
+                    seteá la env var para override completo.
 """
 import base64
 import json
@@ -30,6 +34,20 @@ TARGET_PATH = os.environ.get("CHANNELS_PATH", "channels_bot.json")
 TARGET_BRANCH = os.environ.get("CHANNELS_BRANCH", "main")
 MAX_CHANNELS = int(os.environ.get("MAX_CHANNELS", "500"))
 
+# Palabras clave (en minúscula) que, si aparecen en el nombre o la categoría
+# (group_title) del canal, hacen que NO se publique. Edita esta lista a mano
+# según lo que no te interese ver (países, idiomas, tipos de contenido, etc).
+EXCLUDE_KEYWORDS_DEFAULT = [
+    "china", "chino", "cn", "cctv", "cgtn",  # canales chinos
+    "adult", "xxx", "porn", "+18",           # contenido adulto
+    "religious", "religioso",                 # opcional: sácalo si sí te interesan
+]
+EXCLUDE_KEYWORDS = [
+    k.strip().lower()
+    for k in os.environ.get("EXCLUDE_KEYWORDS", ",".join(EXCLUDE_KEYWORDS_DEFAULT)).split(",")
+    if k.strip()
+]
+
 HEADERS = {
     "Accept": "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
@@ -37,15 +55,30 @@ HEADERS = {
 }
 
 
+def is_excluded(name: str, group_title: str) -> bool:
+    haystack = f"{name or ''} {group_title or ''}".lower()
+    return any(kw in haystack for kw in EXCLUDE_KEYWORDS)
+
+
 def build_payload(max_channels: int = MAX_CHANNELS):
     with db.get_conn() as conn:
         rows = conn.execute(
             """SELECT url, name, logo, group_title FROM channels
                WHERE status = 'working'
-               ORDER BY latency_ms ASC
-               LIMIT ?""",
-            (max_channels,),
+               ORDER BY latency_ms ASC""",
         ).fetchall()
+
+    kept = []
+    excluded_count = 0
+    for r in rows:
+        if is_excluded(r["name"], r["group_title"]):
+            excluded_count += 1
+            continue
+        kept.append(r)
+        if len(kept) >= max_channels:
+            break
+
+    print(f"[publish] {excluded_count} canales excluidos por palabra clave ({', '.join(EXCLUDE_KEYWORDS)})")
     return [
         {
             "name": r["name"] or "Canal",
@@ -53,7 +86,7 @@ def build_payload(max_channels: int = MAX_CHANNELS):
             "logo": r["logo"],
             "group_title": r["group_title"],
         }
-        for r in rows
+        for r in kept
     ]
 
 
