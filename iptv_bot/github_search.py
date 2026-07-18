@@ -22,7 +22,7 @@ SEARCH_QUERIES = [
 ]
 
 PER_PAGE = 100
-MAX_PAGES_PER_QUERY = 10  # la API de búsqueda de GitHub limita a 1000 resultados (10 páginas x 100)
+MAX_PAGES_PER_QUERY = 5  # más conservador para no chocar tan seguido con el rate limit secundario de GitHub
 
 
 def _request_with_backoff(url, params=None, max_retries=5):
@@ -51,7 +51,14 @@ def search_m3u_files():
         page = 1
         while page <= MAX_PAGES_PER_QUERY:
             params = {"q": query, "per_page": PER_PAGE, "page": page}
-            resp = _request_with_backoff(f"{GITHUB_API}/search/code", params=params)
+            try:
+                resp = _request_with_backoff(f"{GITHUB_API}/search/code", params=params)
+            except RuntimeError:
+                # Se agotó el rate limit (incluido el "secundario" de abuso) para
+                # esta query en particular. En vez de matar todo el run, dejamos
+                # lo ya encontrado hasta ahora y pasamos a la siguiente query.
+                print(f"[github_search] Rate limit agotado en query '{query}', se sigue con lo ya encontrado")
+                break
             data = resp.json()
             items = data.get("items", [])
             if not items:
