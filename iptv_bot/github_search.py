@@ -85,7 +85,20 @@ def get_raw_content(repo: str, path: str, ref: str = None) -> str | None:
         resp = _request_with_backoff(url, params=params)
     except requests.HTTPError:
         return None
+    except RuntimeError:
+        # backoff agotado (rate limit persistente) - saltar este archivo, no tumbar todo el run
+        return None
+
     data = resp.json()
+
+    # La Contents API a veces responde con una LISTA en vez de un objeto
+    # (paths ambiguos, gitlinks/submódulos, colisiones de mayúsculas/minúsculas
+    # en sistemas de archivos case-insensitive, etc). En esos casos no hay
+    # contenido de archivo real que extraer - se salta y sigue con el resto.
+    if not isinstance(data, dict):
+        return None
+    if data.get("type") != "file":
+        return None
     if data.get("encoding") == "base64":
         import base64
         try:
