@@ -620,7 +620,7 @@ body.light-theme .top-bar { background:rgba(255,255,255,.92); }
       </button>
       <button class="tab-btn" data-tab="anime">
         <span class="tab-icon">◇</span>
-        <span>ANIME</span>
+        <span>ENTRETENIMIENTO</span>
       </button>
       <button class="tab-btn" data-tab="settings">
         <span class="tab-icon">≡</span>
@@ -726,11 +726,33 @@ body.light-theme .top-bar { background:rgba(255,255,255,.92); }
     <div id="fin-container"></div>
   </section>
 
+  <!-- ENTRETENIMIENTO -->
   <section id="tab-anime" class="tab-content hidden">
-    <div class="empty-state" style="padding:64px 24px">
-      <div style="font-size:30px;color:var(--accent);margin-bottom:6px">◇</div>
-      <p style="font-size:18px;font-weight:700;color:var(--txt)">Anime</p>
-      <p class="empty-sub" style="max-width:260px;line-height:1.55">Este espacio está reservado para tu servidor y tus series. Lo construiremos cuando quieras.</p>
+    <div class="iptv-tabs">
+      <button class="iptv-tab active" data-ent="peliculas">Películas</button>
+      <button class="iptv-tab" data-ent="series">Series</button>
+      <button class="iptv-tab" data-ent="anime">Anime</button>
+    </div>
+    <div id="ent-peliculas" class="iptv-panel" style="display:block">
+      <div class="empty-state" style="padding:64px 24px">
+        <div style="font-size:30px;color:var(--accent);margin-bottom:6px">◇</div>
+        <p style="font-size:18px;font-weight:700;color:var(--txt)">Películas</p>
+        <p class="empty-sub" style="max-width:260px;line-height:1.55">Este espacio está reservado para tu servidor y tu lista personal. Lo construiremos cuando quieras.</p>
+      </div>
+    </div>
+    <div id="ent-series" class="iptv-panel" style="display:none">
+      <div class="empty-state" style="padding:64px 24px">
+        <div style="font-size:30px;color:var(--accent);margin-bottom:6px">◇</div>
+        <p style="font-size:18px;font-weight:700;color:var(--txt)">Series</p>
+        <p class="empty-sub" style="max-width:260px;line-height:1.55">Este espacio está reservado para tu servidor y tu lista personal. Lo construiremos cuando quieras.</p>
+      </div>
+    </div>
+    <div id="ent-anime" class="iptv-panel" style="display:none">
+      <div class="empty-state" style="padding:64px 24px">
+        <div style="font-size:30px;color:var(--accent);margin-bottom:6px">◇</div>
+        <p style="font-size:18px;font-weight:700;color:var(--txt)">Anime</p>
+        <p class="empty-sub" style="max-width:260px;line-height:1.55">Este espacio está reservado para tu servidor y tus series. Lo construiremos cuando quieras.</p>
+      </div>
     </div>
   </section>
 
@@ -917,6 +939,8 @@ window.addEventListener('DOMContentLoaded', () => {
     b.addEventListener('click', () => switchTab(b.dataset.tab)));
   document.querySelectorAll('.iptv-tab').forEach(b =>
     b.addEventListener('click', () => switchIPTV(b.dataset.iptv)));
+  document.querySelectorAll('#tab-anime .iptv-tab').forEach(b =>
+    b.addEventListener('click', () => switchEnt(b.dataset.ent)));
   document.querySelectorAll('.genre-filter .filter-btn, .league-filter .filter-btn').forEach(b =>
     b.addEventListener('click', () => {
       b.closest('.genre-filter, .league-filter').querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
@@ -1359,6 +1383,15 @@ function switchIPTV(panel) {
   });
 }
 window.switchIPTV = switchIPTV;
+
+function switchEnt(panel) {
+  document.querySelectorAll('#tab-anime .iptv-tab').forEach(b => b.classList.toggle('active', b.dataset.ent === panel));
+  ['peliculas','series','anime'].forEach(p => {
+    const el = document.getElementById('ent-' + p);
+    if (el) el.style.display = p === panel ? 'block' : 'none';
+  });
+}
+window.switchEnt = switchEnt;
 
 function loadChannels() {
   try { channels = JSON.parse(localStorage.getItem('mp_channels') || '[]'); } catch { channels = []; }
@@ -3347,11 +3380,11 @@ function mesNombre(yyyymm) {
 // Perfiles y selección de secciones. Los datos viven en este dispositivo.
 const PROFILE_STORAGE_KEY = 'hacedetodo_profiles_v1';
 const MODULES = [
-  { id: 'uni', label: 'Universidad', description: 'Ramos, asistencia y notas' },
-  { id: 'fin', label: 'Finanzas', description: 'Presupuesto y movimientos' },
-  { id: 'football', label: 'Fútbol', description: 'Partidos y resultados' },
-  { id: 'iptv', label: 'TV', description: 'Tus canales guardados' },
-  { id: 'anime', label: 'Anime', description: 'Tu futuro servidor y lista personal' }
+  { id: 'uni', label: 'Universidad', description: 'En este módulo podrás controlar y supervisar tus ramos, notas y asistencia para que puedas flojear con tranquilidad' },
+  { id: 'fin', label: 'Finanzas', description: 'En este módulo podrás organizar tus ingresos, gastos, ahorros, hasta el dinero de tu locomoción de forma sencilla' },
+  { id: 'football', label: 'Fútbol', description: 'En este módulo podrás monitorear en tiempo real tanto partidos como resultados' },
+  { id: 'iptv', label: 'TV', description: 'En este módulo podrás mirar canales de televisión de todo el mundo a tu antojo' },
+  { id: 'anime', label: 'Entretenimiento', description: 'En este módulo podrás mirar series, películas y tus animes favoritos sin costo' }
 ];
 
 function loadUniData() {
@@ -3406,12 +3439,12 @@ function renderProfileStep(step) {
   const c = document.getElementById('wizard-content'); if (!c) return;
   const module = MODULES[step - 1];
   if (step === 0) {
-    c.innerHTML = `<h1 style="font-size:30px;letter-spacing:-1px;margin-bottom:8px">Partamos simple.</h1><p style="color:var(--txt2);line-height:1.55">Primero crea tu perfil. Después veremos cada apartado, uno por uno.</p><div class="flojer-progress"><span style="width:12%"></span></div><label class="form-label">Tu nombre</label><input id="profile-name" class="form-input" maxlength="24" placeholder="Ej: Albert Y Einstein" style="margin-bottom:14px"><button class="btn-primary" style="width:100%" onclick="nextProfileStep(0)">Continuar</button>`;
+    c.innerHTML = `<h1 style="font-size:30px;letter-spacing:-1px;margin-bottom:8px">Empecemos.</h1><p style="color:var(--txt2);line-height:1.55">Primero crea tu usuario, después seleccionarás los módulos que quieras añadir a tu FlojerApp</p><div class="flojer-progress"><span style="width:12%"></span></div><label class="form-label">Tu nombre</label><input id="profile-name" class="form-input" maxlength="24" placeholder="Ej: Albert Y Einstein" style="margin-bottom:14px"><button class="btn-primary" style="width:100%" onclick="nextProfileStep(0)">Continuar</button>`;
     return;
   }
   if (step <= MODULES.length) {
     const selected = profileWizard.modules.includes(module.id);
-    c.innerHTML = `<div style="font-size:11px;color:var(--txt2);font-weight:700;letter-spacing:1px">APARTADO ${step} DE ${MODULES.length}</div><h1 style="font-size:29px;letter-spacing:-1px;margin:8px 0">${module.label}</h1><p style="color:var(--txt2);line-height:1.55;min-height:48px">${module.description}. Puedes activarlo ahora o dejarlo fuera; cambiarlo después será fácil.</p><div class="flojer-progress"><span style="width:${18 + step * 16}%"></span></div><button id="wizard-choice" class="btn-primary" style="width:100%;margin-bottom:10px" onclick="toggleWizardModule('${module.id}')">${selected ? 'Añadido · tocar para quitar' : 'Añadir a mi app'}</button><button class="btn-secondary" style="width:100%;margin-bottom:12px" onclick="nextProfileStep(${step})">Siguiente</button><button style="width:100%;border:0;background:none;color:var(--txt2);font:inherit;font-size:12px" onclick="renderProfileStep(${step - 1})">Volver</button>`;
+    c.innerHTML = `<div style="font-size:11px;color:var(--txt2);font-weight:700;letter-spacing:1px">APARTADO ${step} DE ${MODULES.length}</div><h1 style="font-size:29px;letter-spacing:-1px;margin:8px 0">${module.label}</h1><p style="color:var(--txt2);line-height:1.55;min-height:48px">${module.description}</p><div class="flojer-progress"><span style="width:${18 + step * 16}%"></span></div><button id="wizard-choice" class="btn-primary" style="width:100%;margin-bottom:10px" onclick="toggleWizardModule('${module.id}')">${selected ? 'Añadido · tocar para quitar' : 'Añadir a mi app'}</button><button class="btn-secondary" style="width:100%;margin-bottom:12px" onclick="nextProfileStep(${step})">Siguiente</button><button style="width:100%;border:0;background:none;color:var(--txt2);font:inherit;font-size:12px" onclick="renderProfileStep(${step - 1})">Volver</button>`;
     return;
   }
   c.innerHTML = `<h1 style="font-size:29px;letter-spacing:-1px;margin-bottom:8px">Listo, ${profileWizard.name}.</h1><p style="color:var(--txt2);line-height:1.55">Tu FlojerApp mostrará solo lo que elegiste.</p><div class="flojer-progress"><span style="width:100%"></span></div><button class="btn-primary" style="width:100%" onclick="createProfile()">Entrar a FlojerApp</button>`;
@@ -3473,7 +3506,7 @@ function changeLanguage(lang) {
 }
 function appText(key, lang = (getAppPrefs().language || 'es')) {
   const text = {
-    football:['FÚTBOL','FOOTBALL'], iptv:['TV','TV'], uni:['UNI','UNI'], fin:['FINANZAS','FINANCE'], anime:['ANIME','ANIME'], settings:['AJUSTES','SETTINGS'],
+    football:['FÚTBOL','FOOTBALL'], iptv:['TV','TV'], uni:['UNI','UNI'], fin:['FINANZAS','FINANCE'], anime:['ENTRETENIMIENTO','ENTERTAINMENT'], settings:['AJUSTES','SETTINGS'],
     settingsTitle:['Ajustes','Settings'], account:['CUENTA','ACCOUNT'], changeProfile:['Cambiar perfil','Switch profile'], appearance:['APARIENCIA','APPEARANCE'], dark:['Oscuro','Dark'], light:['Claro','Light'], language:['IDIOMA','LANGUAGE'], saved:['La preferencia queda guardada en este dispositivo.','Your preference is saved on this device.']
   };
   return text[key]?.[lang === 'en' ? 1 : 0] || key;
@@ -3525,8 +3558,8 @@ const I18N_ES_EN = {
   'Resetear todas las finanzas':'Reset all finances', 'PLATA MICRO':'BUS CARD', 'ADULTO':'ADULT', 'ESTUDIANTE':'STUDENT',
   'Otro monto':'Other amount', 'Recargar':'Top up', 'Recargar Plata Micro':'Top up bus card',
   // Onboarding
-  'Partamos simple.':"Let's keep it simple.",
-  'Primero crea tu perfil. Después veremos cada apartado, uno por uno.':'First create your profile. Then we\'ll set up each section, one by one.',
+  'Empecemos.':"Let's start.",
+  'Primero crea tu usuario, después seleccionarás los módulos que quieras añadir a tu FlojerApp':'First create your user, then you\'ll pick the modules you want to add to your FlojerApp',
   'Tu nombre':'Your name', 'Ej: Albert Y Einstein':'Ex: Albert Einstein', 'Continuar':'Continue',
   'Siguiente':'Next', 'Volver':'Back', 'CONTINUAR COMO':'CONTINUE AS', 'Entrar a FlojerApp':'Enter FlojerApp',
   'Ir a Ajustes':'Go to Settings', 'Admin':'Admin', 'Sin perfil':'No profile',
