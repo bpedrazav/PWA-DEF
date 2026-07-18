@@ -708,6 +708,11 @@ body.light-theme .top-bar { background:rgba(255,255,255,.92); }
         <p style="font-size:12px;color:var(--txt2);margin-bottom:10px;line-height:1.6">Se sincronizan automáticamente. Los que el bot deja de detectar como funcionando se eliminan solos.</p>
         <button class="btn-secondary" style="width:100%" onclick="syncBotChannels(true)">↻ Sincronizar ahora</button>
       </div>
+      <div class="settings-section">
+        <h3>Filtrar por categoría/país</h3>
+        <p style="font-size:12px;color:var(--txt2);margin-bottom:8px;line-height:1.6">Desmarca las que no quieres ver. Solo afecta a los canales del bot 🤖, nunca a los que agregaste a mano.</p>
+        <div id="group-filters-list"></div>
+      </div>
     </div>
   </section>
 
@@ -725,7 +730,7 @@ body.light-theme .top-bar { background:rgba(255,255,255,.92); }
     <div class="empty-state" style="padding:64px 24px">
       <div style="font-size:30px;color:var(--accent);margin-bottom:6px">◇</div>
       <p style="font-size:18px;font-weight:700;color:var(--txt)">Anime</p>
-      <p class="empty-sub" style="max-width:260px;line-height:1.55">Me da flojera meterle el anime hoy, otro dia lo actualizooo.</p>
+      <p class="empty-sub" style="max-width:260px;line-height:1.55">Este espacio está reservado para tu servidor y tus series. Lo construiremos cuando quieras.</p>
     </div>
   </section>
 
@@ -1357,7 +1362,7 @@ window.switchIPTV = switchIPTV;
 
 function loadChannels() {
   try { channels = JSON.parse(localStorage.getItem('mp_channels') || '[]'); } catch { channels = []; }
-  renderChannelsList(); renderSettingsChannels();
+  renderChannelsList(); renderSettingsChannels(); renderGroupFilters();
 }
 
 function persistChannels() {
@@ -1411,6 +1416,7 @@ async function syncBotChannels(manual = false) {
         name: c.name || 'Canal',
         url: c.url,
         logo: c.logo || (c.name || 'TV').slice(0, 6).toUpperCase(),
+        group_title: c.group_title || 'Otros',
         source: 'bot'
       };
       channels.push(ch);
@@ -1418,7 +1424,7 @@ async function syncBotChannels(manual = false) {
       added++;
     }
 
-    persistChannels(); renderChannelsList(); renderSettingsChannels();
+    persistChannels(); renderChannelsList(); renderSettingsChannels(); renderGroupFilters();
     if (manual) showToast(`Canales del bot: +${added} nuevos, -${removed} caídos`);
   } catch (e) {
     console.log('[bot-channels] sync error', e);
@@ -1426,6 +1432,53 @@ async function syncBotChannels(manual = false) {
   }
 }
 window.syncBotChannels = syncBotChannels;
+
+// ─── Filtro por categoría/país (group_title) ───────────────────────────────
+// Los .m3u suelen traer group-title="País|Categoría" (ej: "China", "Sports").
+// Guardamos qué categorías el usuario decidió ocultar, y esas se sacan de la
+// lista de reproducción sin borrar el canal (si el bot lo vuelve a marcar
+// funcionando después, sigue oculto hasta que lo reactives).
+function getHiddenGroups() {
+  try { return JSON.parse(localStorage.getItem('mp_hidden_groups') || '[]'); }
+  catch (e) { return []; }
+}
+function setHiddenGroups(arr) {
+  localStorage.setItem('mp_hidden_groups', JSON.stringify(arr));
+}
+function isChannelVisible(ch) {
+  if (ch.source !== 'bot') return true; // los agregados a mano nunca se filtran
+  const hidden = getHiddenGroups();
+  return !hidden.includes(ch.group_title || 'Otros');
+}
+function toggleGroupHidden(group) {
+  const hidden = getHiddenGroups();
+  const idx = hidden.indexOf(group);
+  if (idx >= 0) hidden.splice(idx, 1); else hidden.push(group);
+  setHiddenGroups(hidden);
+  renderChannelsList();
+  renderGroupFilters();
+}
+function renderGroupFilters() {
+  const container = document.getElementById('group-filters-list');
+  if (!container) return;
+  const groups = [...new Set(channels.filter(c => c.source === 'bot').map(c => c.group_title || 'Otros'))].sort();
+  const hidden = getHiddenGroups();
+  if (groups.length === 0) {
+    container.innerHTML = '<p style="font-size:12px;color:var(--muted)">Aún no hay categorías del bot para filtrar.</p>';
+    return;
+  }
+  container.innerHTML = groups.map(g => {
+    const isHidden = hidden.includes(g);
+    const count = channels.filter(c => c.source === 'bot' && (c.group_title || 'Otros') === g).length;
+    return `<label style="display:flex;align-items:center;gap:8px;padding:7px 0;font-size:13px;color:${isHidden ? 'var(--muted)' : 'var(--txt)'}">
+      <input type="checkbox" ${isHidden ? '' : 'checked'} onchange="toggleGroupHidden('${g.replace(/'/g, "\\'")}')">
+      <span style="flex:1">${g}</span>
+      <span style="font-size:11px;color:var(--txt2)">${count}</span>
+    </label>`;
+  }).join('');
+}
+window.toggleGroupHidden = toggleGroupHidden;
+window.renderGroupFilters = renderGroupFilters;
 
 function saveChannel() {
   const name = document.getElementById('ch-name').value.trim();
@@ -1490,7 +1543,8 @@ function renderChannelsList(filter = '') {
   const list  = document.getElementById('channels-list');
   const empty = document.getElementById('no-channels');
   if (!list) return;
-  const show = filter ? channels.filter(c => c.name.toLowerCase().includes(filter)) : channels;
+  let show = channels.filter(isChannelVisible);
+  if (filter) show = show.filter(c => c.name.toLowerCase().includes(filter));
   if (!show.length) { list.innerHTML=''; if(empty) empty.style.display='flex'; return; }
   if(empty) empty.style.display='none';
   list.innerHTML = show.map(ch => `
