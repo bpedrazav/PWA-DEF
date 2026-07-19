@@ -6,71 +6,45 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-// CONFIGURACIÓN CRÍTICA: Sirve la raíz del proyecto para no mover tus archivos
+// Sirve tu PWA/index.html desde la raíz sin mover nada
 app.use(express.static(__dirname));
 
-let canalesVerificadosCache = [
-  { name: "Canal de Respaldo HLS", url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" }
-];
-
-const FUENTES_IPTV = [
-  "https://iptv-org.github.io/iptv/countries/cl.m3u", 
-  "https://raw.githubusercontent.com/RamXenon/IPTV/main/Latino.m3u"
-];
-
-async function ejecutarScrapingIPTV() {
-  console.log("[Scraper] Extrayendo listas M3U...");
-  let candidatos = [];
-
-  for (const url of FUENTES_IPTV) {
-    try {
-      const res = await axios.get(url, { timeout: 5000 });
-      const lineas = res.data.split('\n');
-      
-      for (let i = 0; i < lineas.length; i++) {
-        if (lineas[i].startsWith('#EXTINF:')) {
-          const nombre = lineas[i].split(',').pop().trim();
-          const streamUrl = lineas[i + 1] ? lineas[i + 1].trim() : '';
-          if (streamUrl.startsWith('http')) {
-            candidatos.push({ name: nombre, url: streamUrl });
-          }
-        }
-      }
-    } catch (err) {
-      console.error(`[Scraper] No se pudo acceder a: ${url}`);
-    }
-  }
-
-  candidatos = [...new Map(candidatos.map(item => [item.url, item])).values()].slice(0, 30);
+// NUEVA RUTA: Aquí se procesará el scraping para Cuevana o similares
+app.get('/api/peliculas', async (req, res) => {
+  console.log("[Scraper] Buscando últimas películas...");
   
-  const validados = [];
-  await Promise.all(candidatos.map(async (canal) => {
-    try {
-      const response = await axios.head(canal.url, { timeout: 2000 });
-      if (response.status === 200) validados.push(canal);
-    } catch (e) {}
-  }));
+  // URL objetivo (Puedes cambiarla por el clon activo de Cuevana que uses, ej: cuevana3, etc.)
+  const CUEVANA_URL = 'https://api.themoviedb.org/3/trending/movie/week?api_key=ca83597e1b7d3a105f88fc90f5144947&language=es-MX'; 
+  // Nota: Como Cuevana cambia mucho de dominio y bloquea scrapers básicos, 
+  // usar una API espejo o un scraper directo nos da los enlaces estables.
 
-  if (validados.length > 0) {
-    canalesVerificadosCache = validados;
-    console.log(`[Scraper] Sincronización completada. ${validados.length} canales operativos.`);
+  try {
+    // Ejemplo de Scraping/Fetch de catálogo multimedia en español
+    const response = await axios.get(CUEVANA_URL, { timeout: 7000 });
+    
+    // Mapeamos los resultados para entregarte títulos, portadas y sinopsis listos para tu FlojerApp
+    const peliculas = response.data.results.map(p => ({
+      id: p.id,
+      titulo: p.title,
+      sinopsis: p.overview,
+      poster: `https://image.tmdb.org/t/p/w500${p.poster_path}`,
+      fecha: p.release_date,
+      // Aquí puedes estructurar la URL final de reproducción de tu servidor de streaming preferido
+      streamUrl: `https://vidsrc.to/embed/movie/${p.id}` 
+    }));
+
+    res.json({ success: true, data: peliculas });
+  } catch (error) {
+    console.error("[Scraper] Error al obtener películas:", error.message);
+    res.status(500).json({ success: false, message: "No se pudieron cargar las películas" });
   }
-}
-
-// Ejecutar scraper automático cada 6 horas
-ejecutarScrapingIPTV();
-setInterval(ejecutarScrapingIPTV, 6 * 60 * 60 * 1000);
-
-// Rutas de API para FlojerApp por si las necesitas
-app.get('/api/iptv', (req, res) => {
-  res.json(canalesVerificadosCache);
 });
 
-// Cualquier otra ruta que no sea un archivo estático cargará tu index.html
+// Ruta comodín para que tu PWA cargue siempre correctamente
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`FlojerApp corriendo en el puerto ${PORT}`);
+  console.log(`FlojerApp (Hub Multimedia) corriendo en el puerto ${PORT}`);
 });
