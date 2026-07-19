@@ -1,0 +1,27 @@
+name: Verificar Streams
+
+on:
+  schedule:
+    # Ejecutar cada lunes a las 3:00 AM
+    - cron: '0 3 * * 1'
+  workflow_dispatch: # También manual
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Verificar streams
+        run: node verify-streams.js
+      
+      - name: Subir reporte
+        uses: actions/upload-artifact@v3
+        with:
+          name: reporte-streams
+          path: reporte-*.json
