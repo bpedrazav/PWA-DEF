@@ -2,26 +2,32 @@ name: Verificar Streams
 
 on:
   schedule:
-    # Ejecutar cada lunes a las 3:00 AM
+    # Cada lunes a las 3:00 AM UTC
     - cron: '0 3 * * 1'
-  workflow_dispatch: # También manual
+  workflow_dispatch: # Para ejecutarlo manualmente
 
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
       
-      - name: Verificar streams
+      - name: Verificar streams y notificar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: node verify-streams.js
       
+      # Esta parte ahora usa la versión v4 que sí funciona
       - name: Subir reporte
-        uses: actions/upload-artifact@v3
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: reporte-streams
           path: reporte-*.json
+          retention-days: 5
