@@ -76,4 +76,107 @@ async function verifyCategory(category) {
   console.log(`✅ Funcionan: ${ok.length}`);
   console.log(`❌ Fallaron: ${failed.length}`);
   
-  return
+  return { ok, failed };
+}
+
+// Enviar mensaje a Telegram
+async function sendTelegramMessage(message) {
+  if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+    console.log('⚠️  Telegram no configurado (sin TOKEN o CHAT_ID)');
+    return;
+  }
+  
+  const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+  
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: TELEGRAM_CHAT_ID,
+        text: message,
+        parse_mode: 'HTML'
+      })
+    });
+    
+    const data = await res.json();
+    if (data.ok) {
+      console.log('📱 Mensaje enviado a Telegram');
+    } else {
+      console.error('Error enviando a Telegram:', data);
+    }
+  } catch (e) {
+    console.error('Error en Telegram:', e.message);
+  }
+}
+
+// Formatear mensaje para Telegram
+function formatTelegramMessage(results) {
+  let message = '<b>🎬 Reporte de Streams - FlojerApp</b>\n\n';
+  
+  let totalOk = 0;
+  let totalFailed = 0;
+  const failedItems = [];
+  
+  for (const [category, res] of Object.entries(results)) {
+    const emoji = category === 'peliculas' ? '🎥' : category === 'series' ? '' : '🎌';
+    message += `${emoji} <b>${category.toUpperCase()}</b>\n`;
+    message += `   ✅ Funcionan: ${res.ok.length}\n`;
+    message += `   ❌ Fallaron: ${res.failed.length}\n\n`;
+    
+    totalOk += res.ok.length;
+    totalFailed += res.failed.length;
+    
+    if (res.failed.length > 0) {
+      res.failed.forEach(item => {
+        failedItems.push(`${category}: ${item.titulo}`);
+      });
+    }
+  }
+  
+  message += `<b> Total:</b>\n`;
+  message += `   ✅ ${totalOk} |  ${totalFailed}\n`;
+  
+  if (totalFailed > 0) {
+    message += `\n<b>⚠️  Streams caídos:</b>\n`;
+    failedItems.slice(0, 10).forEach(item => {
+      message += `   • ${item}\n`;
+    });
+    
+    if (failedItems.length > 10) {
+      message += `   ... y ${failedItems.length - 10} más\n`;
+    }
+  } else {
+    message += `\n<b>🎉 ¡Todo funciona perfecto!</b>`;
+  }
+  
+  message += `\n\n<i>Generado: ${new Date().toLocaleString('es-ES')}</i>`;
+  
+  return message;
+}
+
+async function main() {
+  console.log('🚀 Iniciando verificación de streams...\n');
+  
+  const results = {};
+  
+  for (const category of CATEGORIES) {
+    results[category] = await verifyCategory(category);
+  }
+  
+  // Enviar a Telegram
+  const message = formatTelegramMessage(results);
+  await sendTelegramMessage(message);
+  
+  // Guardar reporte en archivo
+  const fs = require('fs');
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  fs.writeFileSync(`reporte-streams-${timestamp}.json`, JSON.stringify(results, null, 2));
+  
+  console.log('\n📈 RESUMEN FINAL:');
+  for (const [cat, res] of Object.entries(results)) {
+    console.log(`${cat}: ✅ ${res.ok.length} | ❌ ${res.failed.length}`);
+  }
+}
+
+main().catch(console.error);
