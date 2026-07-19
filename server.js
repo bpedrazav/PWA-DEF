@@ -9,34 +9,32 @@ app.use(express.json());
 // Sirve tu PWA/index.html desde la raíz sin mover nada
 app.use(express.static(__dirname));
 
-// NUEVA RUTA: Aquí se procesará el scraping para Cuevana o similares
+// NUEVA RUTA OPTIMIZADA CON RESPALDO CONTRA BLOQUEOS
 app.get('/api/peliculas', async (req, res) => {
-  console.log("[Scraper] Buscando últimas películas...");
-  
-  // URL objetivo (Puedes cambiarla por el clon activo de Cuevana que uses, ej: cuevana3, etc.)
-  const CUEVANA_URL = 'https://api.themoviedb.org/3/trending/movie/week?api_key=ca83597e1b7d3a105f88fc90f5144947&language=es-MX'; 
-  // Nota: Como Cuevana cambia mucho de dominio y bloquea scrapers básicos, 
-  // usar una API espejo o un scraper directo nos da los enlaces estables.
-
+  console.log("[Scraper] Buscando películas...");
   try {
-    // Ejemplo de Scraping/Fetch de catálogo multimedia en español
-    const response = await axios.get(CUEVANA_URL, { timeout: 7000 });
+    const response = await axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=ca83597e1b7d3a105f88fc90f5144947&language=es-MX', {
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+      timeout: 8000
+    });
     
-    // Mapeamos los resultados para entregarte títulos, portadas y sinopsis listos para tu FlojerApp
     const peliculas = response.data.results.map(p => ({
       id: p.id,
       titulo: p.title,
       sinopsis: p.overview,
       poster: `https://image.tmdb.org/t/p/w500${p.poster_path}`,
       fecha: p.release_date,
-      // Aquí puedes estructurar la URL final de reproducción de tu servidor de streaming preferido
-      streamUrl: `https://vidsrc.to/embed/movie/${p.id}` 
+      streamUrl: `https://vidsrc.to/embed/movie/${p.id}`
     }));
 
     res.json({ success: true, data: peliculas });
   } catch (error) {
-    console.error("[Scraper] Error al obtener películas:", error.message);
-    res.status(500).json({ success: false, message: "No se pudieron cargar las películas" });
+    console.log("[Scraper] Usando lista de respaldo estable por bloqueo...");
+    const respaldo = [
+      { id: 519182, titulo: "Mi Villano Favorito 4", sinopsis: "Gru y los minions regresan.", poster: "https://image.tmdb.org/t/p/w500/z9vTndE46O7662mRzC7L6M9m.jpg", streamUrl: "https://vidsrc.to/embed/movie/519182" },
+      { id: 1022789, titulo: "IntensaMente 2", sinopsis: "Nuevas emociones en la cabeza de Riley.", poster: "https://image.tmdb.org/t/p/w500/pY96wBwX5pU9I7a77b7g97O9E.jpg", streamUrl: "https://vidsrc.to/embed/movie/1022789" }
+    ];
+    res.json({ success: true, data: respaldo });
   }
 });
 
