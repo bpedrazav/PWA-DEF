@@ -12,7 +12,7 @@ app.use(express.static(__dirname));
 const API_KEY = 'f745ccfefedb83e1edca042526da0868';
 
 // =========================================================================
-// 1. ENDPOINT DE PELÍCULAS MASIVAS
+// 1. ENDPOINT DE PELÍCULAS MASIVAS (CON MULTI-SERVIDOR)
 // =========================================================================
 app.get('/api/peliculas', async (req, res) => {
   const page = req.query.page || 1;
@@ -29,7 +29,9 @@ app.get('/api/peliculas', async (req, res) => {
         sinopsis: p.overview || "Sin sinopsis disponible.",
         poster: p.poster_path ? `https://image.tmdb.org/t/p/w500${p.poster_path}` : "https://via.placeholder.com/500x750?text=No+Image",
         fecha: p.release_date || "N/A",
-        streamUrl: `https://vidsrc.to/embed/movie/${p.id}`
+        // Enviamos ambas opciones para que el frontend pueda alternar si fallan los subtítulos
+        streamUrl: `https://vidsrc.to/embed/movie/${p.id}`, 
+        streamUrlBackup: `https://multiembed.to/embed/tmdb/movie/${p.id}`
       }));
       return res.json({ success: true, page: parseInt(page), total_pages: response.data.total_pages, data: peliculas });
     }
@@ -41,7 +43,7 @@ app.get('/api/peliculas', async (req, res) => {
 });
 
 // =========================================================================
-// 2. ENDPOINT DE SERIES MASIVAS
+// 2. ENDPOINT DE SERIES MASIVAS (CON MULTI-SERVIDOR)
 // =========================================================================
 app.get('/api/series', async (req, res) => {
   const page = req.query.page || 1;
@@ -54,12 +56,13 @@ app.get('/api/series', async (req, res) => {
     if (response.data && response.data.results) {
       const series = response.data.results.map(s => ({
         id: s.id,
-        titulo: s.name, // TMDB usa 'name' para series
+        titulo: s.name,
         sinopsis: s.overview || "Sin sinopsis disponible.",
         poster: s.poster_path ? `https://image.tmdb.org/t/p/w500${s.poster_path}` : "https://via.placeholder.com/500x750?text=No+Image",
         fecha: s.first_air_date || "N/A",
-        // El reproductor de series requiere por defecto temporada 1, episodio 1
-        streamUrl: `https://vidsrc.to/embed/tv/${s.id}/1/1`
+        // Temporada 1, Episodio 1 por defecto para la carga inicial
+        streamUrl: `https://vidsrc.to/embed/tv/${s.id}/1/1`,
+        streamUrlBackup: `https://multiembed.to/embed/tmdb/tv/${s.id}?s=1&e=1`
       }));
       return res.json({ success: true, page: parseInt(page), total_pages: response.data.total_pages, data: series });
     }
@@ -71,13 +74,13 @@ app.get('/api/series', async (req, res) => {
 });
 
 // =========================================================================
-// 3. ENDPOINT DE ANIMES MASIVOS
+// 3. ENDPOINT DE ANIMES MASIVOS (CON MULTI-SERVIDOR REVERTIDO POR DEFECTO)
 // =========================================================================
 app.get('/api/animes', async (req, res) => {
   const page = req.query.page || 1;
   console.log(`[Animes] Solicitando página ${page}...`);
   try {
-    // Filtrado por género Animación (with_genres=16) y origen Japón (with_origin_country=JP)
+    // Filtrado por género Animación (16) y origen Japón (JP)
     const response = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&language=es-MX&sort_by=popularity.desc&with_genres=16&with_origin_country=JP&page=${page}`, {
       headers: { 'User-Agent': 'Mozilla/5.0' },
       timeout: 6000
@@ -89,7 +92,9 @@ app.get('/api/animes', async (req, res) => {
         sinopsis: a.overview || "Sin sinopsis disponible.",
         poster: a.poster_path ? `https://image.tmdb.org/t/p/w500${a.poster_path}` : "https://via.placeholder.com/500x750?text=No+Image",
         fecha: a.first_air_date || "N/A",
-        streamUrl: `https://vidsrc.to/embed/tv/${a.id}/1/1`
+        // Estrategia inteligente: Para Anime ponemos MULTIEMBED como servidor principal porque cuida mejor los subtítulos en español
+        streamUrl: `https://multiembed.to/embed/tmdb/tv/${a.id}?s=1&e=1`,
+        streamUrlBackup: `https://vidsrc.to/embed/tv/${a.id}/1/1`
       }));
       return res.json({ success: true, page: parseInt(page), total_pages: response.data.total_pages, data: animes });
     }
@@ -100,7 +105,7 @@ app.get('/api/animes', async (req, res) => {
   }
 });
 
-// Ruta comodín para la SPA
+// Ruta comodín para soportar el enrutamiento de la PWA
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
