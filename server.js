@@ -9,16 +9,15 @@ app.use(express.json());
 // Sirve tu PWA/index.html desde la raíz sin mover nada
 app.use(express.static(__dirname));
 
-// RUTA AUTOMATIZADA DE CATÁLOGO MASIVO INTELIGENTE
+// RUTA AUTOMATIZADA DE CATÁLOGO MASIVO INTELIGENTE (CON TU PROPIA API KEY)
 app.get('/api/peliculas', async (req, res) => {
   // Permite al frontend pedir la página que quiera (ej: /api/peliculas?page=1)
-  // Por defecto, si no se pasa el parámetro, carga la página 1
   const page = req.query.page || 1;
   console.log(`[Scraper] Solicitando página ${page} del catálogo masivo...`);
   
   try {
-    // Hacemos una sola petición por llamado para evitar bloqueos por ráfagas en Render
-    const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=ca83597e1b7d3a105f88fc90f5144947&language=es-MX&sort_by=popularity.desc&page=${page}`, {
+    // Petición optimizada con tu clave personal para evitar el error 401
+    const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=f745ccfefedb83e1edca042526da0868&language=es-MX&sort_by=popularity.desc&page=${page}`, {
       headers: { 'User-Agent': 'Mozilla/5.0' },
       timeout: 6000
     });
@@ -30,11 +29,11 @@ app.get('/api/peliculas', async (req, res) => {
         sinopsis: p.overview || "Sin sinopsis disponible.",
         poster: p.poster_path ? `https://image.tmdb.org/t/p/w500${p.poster_path}` : "https://via.placeholder.com/500x750?text=No+Image",
         fecha: p.release_date || "N/A",
-        // Enlace automático de streaming usando el reproductor embed por ID de película
+        // Enlace automático de streaming usando el reproductor embed por ID
         streamUrl: `https://vidsrc.to/embed/movie/${p.id}`
       }));
 
-      console.log(`[Scraper] Éxito. Enviadas ${peliculas.length} películas de la página ${page}. Total de páginas disponibles: ${response.data.total_pages}`);
+      console.log(`[Scraper] Éxito. Enviadas ${peliculas.length} películas de la página ${page}. Total de páginas: ${response.data.total_pages}`);
       
       return res.json({ 
         success: true, 
@@ -49,7 +48,7 @@ app.get('/api/peliculas', async (req, res) => {
 
   } catch (error) {
     console.log(`[Scraper] Error al obtener catálogo (Página ${page}):`, error.message);
-    // Respaldo de seguridad en JSON para evitar que la PWA tire error 500
+    // Respaldo de seguridad en JSON para mantener la app viva si TMDB llega a fallar
     const respaldo = [
       { id: 519182, titulo: "Mi Villano Favorito 4", sinopsis: "Gru y los minions regresan.", poster: "https://image.tmdb.org/t/p/w500/z9vTndE46O7662mRzC7L6M9m.jpg", streamUrl: "https://vidsrc.to/embed/movie/519182" },
       { id: 1022789, titulo: "IntensaMente 2", sinopsis: "Nuevas emociones en la cabeza de Riley.", poster: "https://image.tmdb.org/t/p/w500/pY96wBwX5pU9I7a77b7g97O9E.jpg", streamUrl: "https://vidsrc.to/embed/movie/1022789" }
@@ -58,7 +57,7 @@ app.get('/api/peliculas', async (req, res) => {
   }
 });
 
-// Ruta comodín para que tu PWA cargue siempre correctamente sin romper rutas de la SPA
+// Ruta comodín para que tu PWA cargue siempre correctamente en cualquier subruta
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
