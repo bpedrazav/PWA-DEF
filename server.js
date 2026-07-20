@@ -7,7 +7,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Clave API de TMDB
-const TMDB_API_KEY = 'f1b3ccfede5e8e90bd4e3d30e0108990';
+// Clave API de TMDB (usando variable de entorno)
+const TMDB_API_KEY = process.env.TMDB_API_KEY || 'f1b3ccfede5e8e90bd4e3d30e0108990';
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
 // Helper para llamadas a TMDB
