@@ -2678,6 +2678,8 @@
     <section id="tab-anime" class="tab-content hidden">
       <div class="iptv-tabs">
         <button class="iptv-tab active" data-ent="peliculas">Películas</button>
+        <button class="iptv-tab" data-ent="series">Series</button>
+        <button class="iptv-tab" data-ent="anime">Anime</button>
         <button class="iptv-tab" data-ent="historial">📜 Historial</button>
       </div>
 
@@ -5675,12 +5677,8 @@
         try {
           const res = await fetch(`/api/search?query=${encodeURIComponent(query)}`);
           const resData = await res.json();
-
-          // Capturamos los resultados ya sea resData.data, resData.results o resData directo
-          const items = resData.data || resData.results || (Array.isArray(resData) ? resData : []);
-
-          if (items && items.length > 0) {
-            this.renderGrid(items);
+          if (resData.success && resData.data.length > 0) {
+            this.renderGrid(resData.data);
             if (this.pagination) this.pagination.classList.add('hidden');
           } else {
             this.grid.innerHTML = '<p class="empty">No se encontraron resultados para la búsqueda.</p>';
@@ -5719,44 +5717,24 @@
         }
 
         this.grid.innerHTML = items.map(item => {
-          const id = item.id;
-          const type = item.type || item.media_type || 'movie';
-          const rawTitle = item.title || item.name || '';
-          const safeTitle = rawTitle.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+          const title = (item.title || item.name || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
           const poster = item.poster || 'https://via.placeholder.com/500x750?text=Sin+Imagen';
-          const streamer = item.streamer || `https://vidsrc.icu/embed/${type}/${id}`;
+          const type = item.type || item.media_type || 'movie';
+          const streamer = item.streamer || `https://vidsrc.icu/embed/${type}/${item.id}`;
 
           return `
-        <div class="media-card" data-id="${id}">
+        <div class="media-card" data-id="${item.id}">
           <div class="media-poster">
-            <img src="${poster}" alt="${safeTitle}" loading="lazy" onerror="this.src='https://via.placeholder.com/500x750?text=Sin+Imagen'" />
-            <button class="play-btn" 
-                    data-id="${id}" 
-                    data-type="${type}" 
-                    data-title="${safeTitle}" 
-                    data-streamer="${streamer}"
-                    onclick="EntertainmentModule.handlePlayClick(this)">&#9654;</button>
+            <img src="${poster}" alt="${title}" loading="lazy" onerror="this.src='https://via.placeholder.com/500x750?text=Sin+Imagen'" />
+            <button class="play-btn" onclick="EntertainmentModule.playItem({id: '${item.id}', title: '${title}', streamer: '${streamer}', type: '${type}'})">&#9654;</button>
           </div>
           <div class="media-info">
-            <h4 class="media-title">${safeTitle}</h4>
+            <h4 class="media-title">${item.title || item.name}</h4>
           </div>
         </div>
       `;
         }).join('');
       },
-
-      // Manejador seguro para los clics en los botones de reproducir
-      handlePlayClick(btn) {
-        console.log("¡CLIC DETECTADO!", btn);
-        const item = {
-          id: btn.getAttribute('data-id'),
-          type: btn.getAttribute('data-type'),
-          title: btn.getAttribute('data-title'),
-          streamer: btn.getAttribute('data-streamer')
-        };
-        this.playItem(item);
-      },
-
 
       // Reproducción y Guardado en Historial
       playItem(item) {
