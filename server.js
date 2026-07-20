@@ -14,18 +14,21 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-// 1. SERVIR LOS ARCHIVOS ESTÁTICOS DE TU PWA (HTML, CSS, JS, imágenes)
+// Servir los archivos estáticos de tu PWA
 app.use(express.static(__dirname));
 
 // API KEY - TMDB
 const API_KEY = 'ff822aef912d0a0aca2e8024982bb608';
+
+// Helper para detectar la consulta de búsqueda sea cual sea el parámetro enviado
+const getQueryParam = (req) => req.query.query || req.query.search || req.query.q || '';
 
 // //////////////////////////////////////////////////////////////////
 // ENDPOINT PELÍCULAS
 // //////////////////////////////////////////////////////////////////
 app.get('/api/peliculas', async (req, res) => {
     const page = parseInt(req.query.page) || 1;
-    const search = req.query.search;
+    const search = getQueryParam(req);
 
     try {
         const tmdbUrl = search
@@ -58,7 +61,7 @@ app.get('/api/peliculas', async (req, res) => {
 // //////////////////////////////////////////////////////////////////
 app.get('/api/series', async (req, res) => {
     const page = parseInt(req.query.page) || 1;
-    const search = req.query.search;
+    const search = getQueryParam(req);
 
     try {
         const tmdbUrl = search
@@ -91,7 +94,7 @@ app.get('/api/series', async (req, res) => {
 // //////////////////////////////////////////////////////////////////
 app.get('/api/animes', async (req, res) => {
     const page = parseInt(req.query.page) || 1;
-    const search = req.query.search;
+    const search = getQueryParam(req);
 
     try {
         const tmdbUrl = search
@@ -119,7 +122,7 @@ app.get('/api/animes', async (req, res) => {
     }
 });
 
-// 2. RUTA COMODÍN PARA CARGAR TU PWA SIEMPRE
+// Ruta comodín para cargar tu PWA
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
