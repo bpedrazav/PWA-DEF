@@ -1,10 +1,11 @@
 const express = require('express');
+const path = require('path');
 const axios = require('axios');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Habilitar CORS manualmente sin requerir el paquete 'cors' extra
+// Configuración de CORS
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -13,13 +14,14 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-// //////////////////////////////////////////////////////////////////
+// 1. SERVIR LOS ARCHIVOS ESTÁTICOS DE TU PWA (HTML, CSS, JS, imágenes)
+app.use(express.static(__dirname));
+
 // API KEY - TMDB
-// //////////////////////////////////////////////////////////////////
 const API_KEY = 'ff822aef912d0a0aca2e8024982bb608';
 
 // //////////////////////////////////////////////////////////////////
-// 1. ENDPOINT DE PELÍCULAS
+// ENDPOINT PELÍCULAS
 // //////////////////////////////////////////////////////////////////
 app.get('/api/peliculas', async (req, res) => {
     const page = parseInt(req.query.page) || 1;
@@ -52,7 +54,7 @@ app.get('/api/peliculas', async (req, res) => {
 });
 
 // //////////////////////////////////////////////////////////////////
-// 2. ENDPOINT DE SERIES
+// ENDPOINT SERIES
 // //////////////////////////////////////////////////////////////////
 app.get('/api/series', async (req, res) => {
     const page = parseInt(req.query.page) || 1;
@@ -85,7 +87,7 @@ app.get('/api/series', async (req, res) => {
 });
 
 // //////////////////////////////////////////////////////////////////
-// 3. ENDPOINT DE ANIMES
+// ENDPOINT ANIMES
 // //////////////////////////////////////////////////////////////////
 app.get('/api/animes', async (req, res) => {
     const page = parseInt(req.query.page) || 1;
@@ -117,9 +119,9 @@ app.get('/api/animes', async (req, res) => {
     }
 });
 
-// Endpoint raíz para comprobar que el servidor está activo
-app.get('/', (req, res) => {
-    res.send('API FlojerApp activa.');
+// 2. RUTA COMODÍN PARA CARGAR TU PWA SIEMPRE
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
