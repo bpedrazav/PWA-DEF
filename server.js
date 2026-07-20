@@ -1,20 +1,26 @@
 const express = require('express');
-const cors = require('cors');
 const path = require('path');
 const axios = require('axios');
+
+// Middleware CORS manual para evitar dependencias externas si fallan
+const corsMiddleware = (req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+};
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(cors());
+// Configuración básica
+app.use(corsMiddleware);
 app.use(express.json());
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname))); // Sirve index.html y assets
 
 // TU API KEY DE TMDB
 const API_KEY = 'f745ccfefed83ac1edca42526a0888'; 
 
-// --- ENDPOINT UNIFICADO Y CON BÚSQUEDA REAL ---
+// --- ENDPOINT UNIFICADO CON BÚSQUEDA REAL ---
 app.get('/api/entretenimiento', async (req, res) => {
     const page = req.query.page || 1;
     const search = req.query.search || '';
@@ -27,7 +33,6 @@ app.get('/api/entretenimiento', async (req, res) => {
         if (search) {
             // MODO BÚSQUEDA
             if (type === 'anime') {
-                // Buscar TV + Keyword Animation (210024) + Origen JP
                 url = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&language=es-MX&query=${encodeURIComponent(search)}&with_keywords=210024&with_origin_country=JP&page=${page}`;
             } else if (type === 'series') {
                 url = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&language=es-MX&query=${encodeURIComponent(search)}&page=${page}`;
@@ -64,7 +69,6 @@ app.get('/api/entretenimiento', async (req, res) => {
                 ? `https://image.tmdb.org/t/p/w500${item.poster_path}` 
                 : "https://via.placeholder.com/500x750?text=No+Image",
             fecha: isMovie ? (item.release_date || "N/A") : (item.first_air_date || "N/A"),
-            // URLs directas para evitar popups de redirección
             streamUrl: isMovie 
                 ? `https://vidsrc.to/embed/movie/${item.id}` 
                 : `https://vidsrc.to/embed/tv/${item.id}/1/1`,
