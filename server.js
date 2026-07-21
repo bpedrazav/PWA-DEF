@@ -11,6 +11,21 @@ app.use(express.json());
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
+// ==========================================
+// CONFIGURACIÓN DE SERVIDORES DE STREAMING (FALLBACK)
+// ==========================================
+const PROVIDERS = [
+  (type, id) => `https://vidsrc.icu/embed/${type}/${id}`,
+  (type, id) => `https://vidsrc.pro/embed/${type}/${id}`,
+  (type, id) => `https://embed.su/embed/${type}/${id}`,
+  (type, id) => `https://player.autoembed.cc/embed/${type}/${id}`
+];
+
+// Devuelve el proveedor principal por defecto
+const getStreamerUrl = (type, id, index = 0) => {
+  return PROVIDERS[index] ? PROVIDERS[index](type, id) : PROVIDERS[0](type, id);
+};
+
 // Función auxiliar para realizar peticiones a TMDB
 const fetchTMDB = async (url, params = {}) => {
   const res = await axios.get(`${TMDB_BASE_URL}${url}`, {
@@ -23,6 +38,33 @@ const fetchTMDB = async (url, params = {}) => {
   });
   return res.data;
 };
+
+// ==========================================
+// ENDPOINT PARA VERIFICAR O CAMBIAR DE SERVIDOR
+// ==========================================
+app.get('/api/resolve-stream', async (req, res) => {
+  const { type = 'movie', id } = req.query;
+
+  if (!id) {
+    return res.status(400).json({ success: false, message: 'ID es requerido' });
+  }
+
+  // Prueba los servidores en orden hasta encontrar uno activo
+  for (const getUrl of PROVIDERS) {
+    const testUrl = getUrl(type, id);
+    try {
+      const response = await axios.head(testUrl, { timeout: 3000 });
+      if (response.status === 200) {
+        return res.json({ success: true, url: testUrl });
+      }
+    } catch (e) {
+      // Si falla, ignora y prueba el siguiente
+    }
+  }
+
+  // Si ninguno responde, devuelve el primario como último recurso
+  res.json({ success: true, url: PROVIDERS[0](type, id) });
+});
 
 // ==========================================
 // ENDPOINT DE BÚSQUEDA GLOBAL (LUPA)
@@ -55,7 +97,7 @@ app.get('/api/search', async (req, res) => {
             overview: m.overview || 'Sin descripción disponible.',
             type: type,
             year: (m.release_date || m.first_air_date || '').substring(0, 4),
-            streamer: `https://vidsrc.icu/embed/${type}/${m.id}`
+            streamer: getStreamerUrl(type, m.id)
           };
         })
     });
@@ -84,7 +126,7 @@ app.get('/api/peliculas', async (req, res) => {
       overview: m.overview || 'Sin descripción disponible.',
       type: 'movie',
       year: (m.release_date || '').substring(0, 4),
-      streamer: `https://vidsrc.icu/embed/movie/${m.id}`
+      streamer: getStreamerUrl('movie', m.id)
     }));
 
     res.json({
@@ -118,7 +160,7 @@ app.get('/api/series', async (req, res) => {
       overview: m.overview || 'Sin descripción disponible.',
       type: 'tv',
       year: (m.first_air_date || '').substring(0, 4),
-      streamer: `https://vidsrc.icu/embed/tv/${m.id}`
+      streamer: getStreamerUrl('tv', m.id)
     }));
 
     res.json({
@@ -153,7 +195,7 @@ app.get('/api/anime', async (req, res) => {
       overview: m.overview || 'Sin descripción disponible.',
       type: 'tv',
       year: (m.first_air_date || '').substring(0, 4),
-      streamer: `https://vidsrc.icu/embed/tv/${m.id}`
+      streamer: getStreamerUrl('tv', m.id)
     }));
 
     res.json({
