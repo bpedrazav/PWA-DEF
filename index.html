@@ -5863,9 +5863,11 @@
         const type = (category === 'series' || category === 'anime' || item.type === 'tv' || item.media_type === 'tv') ? 'tv' : 'movie';
         try {
           const res = await fetch(`/api/external-ids/${type}/${item.id}`);
-          const data = await res.json();
-          if (data.success && data.imdb_id) {
-            this.currentItem.imdbId = data.imdb_id;
+          if (res.ok) {
+            const data = await res.json();
+            if (data.success && data.imdb_id) {
+              this.currentItem.imdbid = data.imdb_id;
+            }
           }
         } catch (err) {
           console.warn('No se pudo obtener IMDb ID:', err);
