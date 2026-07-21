@@ -5627,17 +5627,17 @@
       currentItem: null,
       serverIndex: 0,
       servers: [
-        // 1. VidSrc.net (El que te funcionó perfecto en la pestaña externa)
-        (id, type, s = 1, e = 1, imdbId) => `https://vidsrc.net/embed/${type}/${imdbId || id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        // 1. VidLink Pro (El más rápido y limpio, mapeado con season/episode)
+        (id, type, s = 1, e = 1) => `https://vidlink.pro/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
 
-        // 2. VidLink Pro (Opción rápida y limpia)
-        (id, type, s = 1, e = 1, imdbId) => `https://vidlink.pro/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        // 2. VidSrc.vip (Reemplazo activo de vidsrc.net)
+        (id, type, s = 1, e = 1) => `https://vidsrc.vip/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
 
-        // 3. VidSrc.cc (Respaldo v2 ultra estable)
-        (id, type, s = 1, e = 1, imdbId) => `https://vidsrc.cc/v2/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        // 3. VidSrc.icu (Respaldo estable con soporte TMDB)
+        (id, type, s = 1, e = 1) => `https://vidsrc.icu/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
 
-        // 4. Embed.su (Excelente servidor alternativo)
-        (id, type, s = 1, e = 1, imdbId) => `https://embed.su/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`
+        // 4. AutoEmbed (Excelente alternativa global para películas y series)
+        (id, type, s = 1, e = 1) => `https://player.autoembed.cc/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`
       ],
       init() {
         this.cacheDOM();
@@ -5947,7 +5947,7 @@
             this.serverIndex++;
             this.tryLoadServer(id, type, s, e, imdbId);
           }
-        }, 6000);
+        }, 12000); // 12 segundos le da tiempo de sobra para cargar y hacer buffer
       },
 
       closePlayer() {
