@@ -5627,17 +5627,17 @@
       currentItem: null,
       serverIndex: 0,
       servers: [
-        // 1. VidLink Pro (El más rápido y limpio, mapeado con season/episode)
-        (id, type, s = 1, e = 1) => `https://vidlink.pro/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        // 1. VidSrc Pro (El mejor balance: rápido, iframe estable y subtítulos)
+        (id, type, s = 1, e = 1) => type === 'movie' ? `https://vidsrc.pro/embed/movie/${id}` : `https://vidsrc.pro/embed/tv/${id}/${s}/${e}`,
 
-        // 2. VidSrc.vip (Reemplazo activo de vidsrc.net)
-        (id, type, s = 1, e = 1) => `https://vidsrc.vip/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        // 2. 2Embed (Excelente opción en español con baja publicidad)
+        (id, type, s = 1, e = 1) => type === 'movie' ? `https://www.2embed.cc/embed/${id}` : `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}`,
 
-        // 3. VidSrc.icu (Respaldo estable con soporte TMDB)
-        (id, type, s = 1, e = 1) => `https://vidsrc.icu/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        // 3. VidSrc Me (Respaldo histórico muy estable)
+        (id, type, s = 1, e = 1) => type === 'movie' ? `https://vidsrc.me/embed/movie?tmdb=${id}` : `https://vidsrc.me/embed/tv?tmdb=${id}&season=${s}&episode=${e}`,
 
-        // 4. AutoEmbed (Excelente alternativa global para películas y series)
-        (id, type, s = 1, e = 1) => `https://player.autoembed.cc/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`
+        // 4. MultiEmbed (Servidor alternativo de respaldo)
+        (id, type, s = 1, e = 1) => type === 'movie' ? `https://multiembed.mov/directstream.php?video_id=${id}` : `https://multiembed.mov/directstream.php?video_id=${id}&s=${s}&e=${e}`
       ],
       init() {
         this.cacheDOM();
@@ -5977,7 +5977,10 @@
         <button id="load-episode" class="btn-primary">Cargar Episodio</button>
       </div>
       <div class="player-container-modal">
-        <iframe id="media-player" src="" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+        <iframe id="mediaPlayer" src="" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen
+          mozallowfullscreen referrerpolicy="origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-presentation">
+        </iframe>
         <div id="player-error-modal" class="player-error-modal hidden">
           <p>No se pudo cargar el reproductor.</p>
         </div>
