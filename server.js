@@ -8,241 +8,266 @@ const PORT = process.env.PORT || 10000;
 app.use(express.json());
 
 // Clave API de TMDB desde variables de entorno
-const TMDB_API_KEY = process.env.TMDB_API_KEY;
+const TMDB_API_KEY = process.env.TMDB_API_KEY || 'TU_API_KEY_AQUI';
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
 // ==========================================
-// CONFIGURACIÓN DE SERVIDORES DE STREAMING (DOMINIOS ACTIVOS)
+// CONFIGURACIÓN DE SERVIDORES DE STREAMING
 // ==========================================
 const PROVIDERS = [
-    (type, id) => `https://vidlink.pro/${type}/${id}`,
-    (type, id) => `https://vidsrc.cc/v2/embed/${type}/${id}`,
-    (type, id) => `https://vidsrc.vip/embed/${type}/${id}`,
-    (type, id) => `https://vidsrc.net/embed/${type}/${id}`
+  {
+    id: 1,
+    name: 'vidsrc.vip',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://vidsrc.vip/embed/movie/${id}`
+        : `https://vidsrc.vip/embed/tv/${id}/${s}/${e}`
+  },
+  {
+    id: 2,
+    name: 'vidsrc.in',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://vidsrc.in/embed/movie/${id}`
+        : `https://vidsrc.in/embed/tv/${id}/${s}/${e}`
+  },
+  {
+    id: 3,
+    name: 'vidsrc.pm',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://vidsrc.pm/embed/movie/${id}`
+        : `https://vidsrc.pm/embed/tv/${id}/${s}/${e}`
+  },
+  {
+    id: 4,
+    name: 'multiembed',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://multiembed.mov/directstream.php?video_id=${id}`
+        : `https://multiembed.mov/directstream.php?video_id=${id}&s=${s}&e=${e}`
+  }
 ];
 
-// Devuelve el proveedor principal por defecto
-const getStreamerUrl = (type, id, index = 0) => {
-    return PROVIDERS[index] ? PROVIDERS[index](type, id) : PROVIDERS[0](type, id);
+// Devolver el proveedor principal por defecto
+const getStreamUrl = (type, id, season = 1, episode = 1, index = 0) => {
+  const provider = PROVIDERS[index] || PROVIDERS[0];
+  return provider.url(type, id, season, episode);
 };
 
-// Función auxiliar para realizar peticiones a TMDB
+// ==========================================
+// FUNCIÓN AUXILIAR PARA PETICIONES A TMDB
+// ==========================================
 const fetchTMDB = async (url, params = {}) => {
-    const res = await axios.get(`${TMDB_BASE_URL}${url}`, {
-        params: {
-            api_key: TMDB_API_KEY,
-            language: 'es-MX',
-            ...params
-        },
-        timeout: 8000
-    });
-    return res.data;
+  const res = await axios({
+    method: 'GET',
+    url: url,
+    params: {
+      api_key: TMDB_API_KEY,
+      language: 'es-MX',
+      ...params
+    },
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Accept-Language': 'es-ES,es;q=0.9,en;q=0.8'
+    },
+    timeout: 8000
+  });
+  return res.data;
 };
 
 // ==========================================
-// ENDPOINT PARA OBTENER IDS EXTERNOS (IMDb ID)
+// ENDPOINTS DE LA API
 // ==========================================
-app.get('/api/external-ids/:type/:id', async (req, res) => {
-    const { type, id } = req.params;
-    if (!id) {
-        return res.status(400).json({ success: false, message: 'ID es requerido' });
-    }
 
+// Endpoint para obtener servidores activos disponibles
+app.get('/api/get-stream', async (req, res) => {
+  const { id, type = 'movie', s = 1, e = 1 } = req.query;
+
+  if (!id) {
+    return res.status(400).json({ success: false, message: 'ID es requerido' });
+  }
+
+  // Recorrer los proveedores hasta encontrar uno disponible
+  for (let provider of PROVIDERS) {
+    const streamUrl = provider.url(type, id, s, e);
     try {
-        const tmdbType = (type === 'tv' || type === 'anime') ? 'tv' : 'movie';
-        const data = await fetchTMDB(`/${tmdbType}/${id}/external_ids`);
-        res.json({
-            success: true,
-            tmdb_id: id,
-            imdb_id: data.imdb_id || null
-        });
-    } catch (error) {
-        console.error('Error en /api/external-ids:', error.message);
-        res.status(500).json({ success: false, error: error.message, imdb_id: null });
+      const response = await axios.get(streamUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        },
+        timeout: 4000
+      });
+
+      if (response.status === 200) {
+        return res.json({ success: true, stream: streamUrl, provider: provider.name });
+      }
+    } catch (err) {
+      // Si falla, ignora y prueba el siguiente
+      console.warn(`[Stream Check] Proveedor ${provider.name} falló para ID ${id}. Probando siguiente...`);
     }
+  }
+
+  // Si ninguno responde, devuelve el primero como último recurso
+  res.json({
+    success: false,
+    message: 'Ningún servidor respondió a la verificación previa',
+    fallbackStream: getStreamUrl(type, id, s, e, 0)
+  });
 });
 
-// ==========================================
-// ENDPOINT PARA VERIFICAR O CAMBIAR DE SERVIDOR
-// ==========================================
-app.get('/api/resolve-stream', async (req, res) => {
-    const { type = 'movie', id } = req.query;
+// Endpoint de búsqueda global (Lupa)
+app.get('/api/buscar', async (req, res) => {
+  const { query, page = 1 } = req.query;
 
-    if (!id) {
-        return res.status(400).json({ success: false, message: 'ID es requerido' });
-    }
+  if (!query) {
+    return res.status(400).json({ success: false, message: 'Query requerida' });
+  }
 
-    // Prueba los servidores en orden hasta encontrar uno activo
-    for (const getUrl of PROVIDERS) {
-        const testUrl = getUrl(type, id);
-        try {
-            const response = await axios.head(testUrl, { timeout: 3000 });
-            if (response.status === 200) {
-                return res.json({ success: true, url: testUrl });
-            }
-        } catch (e) {
-            // Si falla, ignora y prueba el siguiente
-        }
-    }
+  try {
+    const data = await fetchTMDB(`${TMDB_BASE_URL}/search/multi`, { query, page });
+    const items = data.results
+      .filter(item => item.media_type === 'movie' || item.media_type === 'tv')
+      .map(item => {
+        const isMovie = item.media_type === 'movie';
+        return {
+          id: item.id,
+          title: isMovie ? item.title : item.name,
+          poster: item.poster_path
+            ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
+            : 'https://via.placeholder.com/500x750?text=Sin+Imagen',
+          type: isMovie ? 'movie' : 'tv',
+          overview: item.overview || 'Sin descripción disponible.',
+          year: (isMovie ? item.release_date : item.first_air_date)
+            ? (isMovie ? item.release_date : item.first_air_date).substring(0, 4)
+            : '',
+          stream: getStreamUrl(isMovie ? 'movie' : 'tv', item.id)
+        };
+      });
 
-    // Si ninguno responde, devuelve el primario como último recurso
-    res.json({ success: true, url: PROVIDERS[0](type, id) });
+    res.json({
+      success: true,
+      data: items,
+      total_pages: data.total_pages,
+      page: data.page
+    });
+  } catch (error) {
+    console.error('Error en /api/buscar:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
 });
 
-// ==========================================
-// ENDPOINT DE BÚSQUEDA GLOBAL (LUPA)
-// ==========================================
-app.get('/api/search', async (req, res) => {
-    const { query, page = 1 } = req.query;
-    if (!query) {
-        return res.status(400).json({ success: false, message: 'Query requerida' });
-    }
-
-    try {
-        const data = await fetchTMDB('/search/multi', { query, page });
-        const items = data.results || [];
-
-        res.json({
-            success: true,
-            page: data.page,
-            total_pages: data.total_pages,
-            total_results: data.total_results,
-            data: items
-                .filter(m => m.media_type === 'movie' || m.media_type === 'tv')
-                .map(m => {
-                    const type = m.media_type === 'movie' ? 'movie' : 'tv';
-                    return {
-                        id: m.id,
-                        title: m.title || m.name,
-                        poster: m.poster_path
-                            ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                            : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
-                        overview: m.overview || 'Sin descripción disponible.',
-                        type: type,
-                        year: (m.release_date || m.first_air_date || '').substring(0, 4),
-                        streamer: getStreamerUrl(type, m.id)
-                    };
-                })
-        });
-    } catch (error) {
-        console.error('Error en /api/search:', error.message);
-        res.status(500).json({ success: false, error: error.message });
-    }
-});
-
-// ==========================================
-// PELÍCULAS
-// ==========================================
+// Endpoint para Películas
 app.get('/api/peliculas', async (req, res) => {
-    const page = req.query.page || 1;
-    try {
-        const data = await fetchTMDB('/discover/movie', {
-            page,
-            sort_by: 'popularity.desc'
-        });
-        const peliculas = data.results.map(m => ({
-            id: m.id,
-            title: m.title,
-            poster: m.poster_path
-                ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
-            overview: m.overview || 'Sin descripción disponible.',
-            type: 'movie',
-            year: (m.release_date || '').substring(0, 4),
-            streamer: getStreamerUrl('movie', m.id)
-        }));
+  const { page = 1 } = req.query;
 
-        res.json({
-            success: true,
-            page: data.page,
-            total_pages: data.total_pages,
-            data: peliculas
-        });
-    } catch (error) {
-        console.error('Error en /api/peliculas:', error.message);
-        res.status(500).json({ success: false, error: error.message });
-    }
+  try {
+    const data = await fetchTMDB(`${TMDB_BASE_URL}/discover/movie`, {
+      page,
+      sort_by: 'popularity.desc'
+    });
+
+    const peliculas = data.results.map(movie => ({
+      id: movie.id,
+      title: movie.title,
+      poster: movie.poster_path
+        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+        : 'https://via.placeholder.com/500x750?text=Sin+Imagen',
+      type: 'movie',
+      overview: movie.overview || 'Sin descripción disponible.',
+      year: movie.release_date ? movie.release_date.substring(0, 4) : '',
+      stream: getStreamUrl('movie', movie.id)
+    }));
+
+    res.json({
+      success: true,
+      data: peliculas,
+      total_pages: data.total_pages,
+      page: data.page
+    });
+  } catch (error) {
+    console.error('Error en /api/peliculas:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
 });
 
-// ==========================================
-// SERIES
-// ==========================================
+// Endpoint para Series
 app.get('/api/series', async (req, res) => {
-    const page = req.query.page || 1;
-    try {
-        const data = await fetchTMDB('/discover/tv', {
-            page,
-            sort_by: 'popularity.desc'
-        });
-        const series = data.results.map(m => ({
-            id: m.id,
-            title: m.name,
-            poster: m.poster_path
-                ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
-            overview: m.overview || 'Sin descripción disponible.',
-            type: 'tv',
-            year: (m.first_air_date || '').substring(0, 4),
-            streamer: getStreamerUrl('tv', m.id)
-        }));
+  const { page = 1 } = req.query;
 
-        res.json({
-            success: true,
-            page: data.page,
-            total_pages: data.total_pages,
-            data: series
-        });
-    } catch (error) {
-        console.error('Error en /api/series:', error.message);
-        res.status(500).json({ success: false, error: error.message });
-    }
+  try {
+    const data = await fetchTMDB(`${TMDB_BASE_URL}/discover/tv`, {
+      page,
+      sort_by: 'popularity.desc'
+    });
+
+    const series = data.results.map(show => ({
+      id: show.id,
+      title: show.name,
+      poster: show.poster_path
+        ? `https://image.tmdb.org/t/p/w500${show.poster_path}`
+        : 'https://via.placeholder.com/500x750?text=Sin+Imagen',
+      type: 'tv',
+      overview: show.overview || 'Sin descripción disponible.',
+      year: show.first_air_date ? show.first_air_date.substring(0, 4) : '',
+      stream: getStreamUrl('tv', show.id)
+    }));
+
+    res.json({
+      success: true,
+      data: series,
+      total_pages: data.total_pages,
+      page: data.page
+    });
+  } catch (error) {
+    console.error('Error en /api/series:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
 });
 
-// ==========================================
-// ANIME
-// ==========================================
-app.get('/api/anime', async (req, res) => {
-    const page = req.query.page || 1;
-    try {
-        const data = await fetchTMDB('/discover/tv', {
-            page,
-            with_original_language: 'ja',
-            sort_by: 'popularity.desc'
-        });
-        const animes = data.results.map(m => ({
-            id: m.id,
-            title: m.name,
-            poster: m.poster_path
-                ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
-            overview: m.overview || 'Sin descripción disponible.',
-            type: 'tv',
-            year: (m.first_air_date || '').substring(0, 4),
-            streamer: getStreamerUrl('tv', m.id)
-        }));
+// Endpoint para Animes
+app.get('/api/animes', async (req, res) => {
+  const { page = 1 } = req.query;
 
-        res.json({
-            success: true,
-            page: data.page,
-            total_pages: data.total_pages,
-            data: animes
-        });
-    } catch (error) {
-        console.error('Error en /api/anime:', error.message);
-        res.status(500).json({ success: false, error: error.message });
-    }
+  try {
+    const data = await fetchTMDB(`${TMDB_BASE_URL}/discover/tv`, {
+      page,
+      with_original_language: 'ja',
+      sort_by: 'popularity.desc'
+    });
+
+    const animes = data.results.map(anime => ({
+      id: anime.id,
+      title: anime.name,
+      poster: anime.poster_path
+        ? `https://image.tmdb.org/t/p/w500${anime.poster_path}`
+        : 'https://via.placeholder.com/500x750?text=Sin+Imagen',
+      type: 'tv',
+      overview: anime.overview || 'Sin descripción disponible.',
+      year: anime.first_air_date ? anime.first_air_date.substring(0, 4) : '',
+      stream: getStreamUrl('tv', anime.id)
+    }));
+
+    res.json({
+      success: true,
+      data: animes,
+      total_pages: data.total_pages,
+      page: data.page
+    });
+  } catch (error) {
+    console.error('Error en /api/animes:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
 });
 
-// ==========================================
-// SERVIR ARCHIVOS ESTÁTICOS DEL FRONTEND
-// ==========================================
-app.use(express.static(__dirname));
+// Servir archivos estáticos del Frontend
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
 });
 
-// Escuchar puerto
+// Iniciar servidor
 app.listen(PORT, () => {
-    console.log(`[OK] Servidor corriendo en puerto ${PORT}`);
+  console.log(`🚀 [OK] Servidor corriendo en el puerto ${PORT}`);
 });
