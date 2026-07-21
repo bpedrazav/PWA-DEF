@@ -15,37 +15,95 @@ const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 // CONFIGURACIÓN DE SERVIDORES DE STREAMING
 // ==========================================
 const PROVIDERS = [
+  // Red VidSrc (Principal)
   {
     id: 1,
-    name: 'vidsrc.vip',
+    name: 'vidsrc.pro',
     url: (type, id, s = 1, e = 1) =>
       type === 'movie'
-        ? `https://vidsrc.vip/embed/movie/${id}`
-        : `https://vidsrc.vip/embed/tv/${id}/${s}/${e}`
+        ? `https://vidsrc.pro/embed/movie/${id}`
+        : `https://vidsrc.pro/embed/tv/${id}/${s}/${e}`
   },
+  // Red MultiEmbed (Independiente)
   {
     id: 2,
-    name: 'vidsrc.in',
-    url: (type, id, s = 1, e = 1) =>
-      type === 'movie'
-        ? `https://vidsrc.in/embed/movie/${id}`
-        : `https://vidsrc.in/embed/tv/${id}/${s}/${e}`
-  },
-  {
-    id: 3,
-    name: 'vidsrc.pm',
-    url: (type, id, s = 1, e = 1) =>
-      type === 'movie'
-        ? `https://vidsrc.pm/embed/movie/${id}`
-        : `https://vidsrc.pm/embed/tv/${id}/${s}/${e}`
-  },
-  {
-    id: 4,
     name: 'multiembed',
     url: (type, id, s = 1, e = 1) =>
       type === 'movie'
         ? `https://multiembed.mov/directstream.php?video_id=${id}`
         : `https://multiembed.mov/directstream.php?video_id=${id}&s=${s}&e=${e}`
+  },
+  // Red AutoEmbed (Infraestructura separada)
+  {
+    id: 3,
+    name: 'autoembed',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://player.autoembed.cc/embed/movie/${id}`
+        : `https://player.autoembed.cc/embed/tv/${id}/${s}/${e}`
+  },
+  // Red 2Embed (Muy estable para pelis/series en español/sub)
+  {
+    id: 4,
+    name: '2embed',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://www.2embed.cc/embed/${id}`
+        : `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}`
+  },
+  // Red Smashystream
+  {
+    id: 5,
+    name: 'smashystream',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://embed.smashystream.com/playere.php?tmdb=${id}`
+        : `https://embed.smashystream.com/playere.php?tmdb=${id}&s=${s}&e=${e}`
+  },
+  // Red VidSrc me (Mirror alternativo)
+  {
+    id: 6,
+    name: 'vidsrc.me',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://vidsrc.me/embed/movie?tmdb=${id}`
+        : `https://vidsrc.me/embed/tv?tmdb=${id}&season=${s}&episode=${e}`
+  },
+  // Red NontonGo
+  {
+    id: 7,
+    name: 'nontongo',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://www.NontonGo.win/embed/movie/${id}`
+        : `https://www.NontonGo.win/embed/tv/${id}/${s}/${e}`
+  },
+  // Red MovieAPI
+  {
+    id: 8,
+    name: 'movieapi',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://movieapi.club/movie/${id}`
+        : `https://movieapi.club/tv/${id}-${s}-${e}`
+  },
+  // Red SuperEmbed
+  {
+    id: 9,
+    name: 'superembed',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://seapi.link/auto.php?video_id=${id}`
+        : `https://seapi.link/auto.php?video_id=${id}&s=${s}&e=${e}`
+  },
+  // Red VidSrc.in
+  {
+    id: 10,
+    name: 'vidsrc.in',
+    url: (type, id, s = 1, e = 1) =>
+      type === 'movie'
+        ? `https://vidsrc.in/embed/movie/${id}`
+        : `https://vidsrc.in/embed/tv/${id}/${s}/${e}`
   }
 ];
 
@@ -260,11 +318,13 @@ app.get('/api/animes', async (req, res) => {
   }
 });
 
-// Servir archivos estáticos del Frontend
-app.use(express.static(path.join(__dirname, '../frontend')));
+// ==========================================
+// ARCHIVOS ESTÁTICOS Y SPA (RAÍZ DEL PROYECTO)
+// ==========================================
+app.use(express.static(path.join(__dirname)));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Iniciar servidor
