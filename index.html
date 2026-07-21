@@ -5809,7 +5809,7 @@
       playItem(item) {
         this.guardarEnHistorial(item);
 
-        // Abrir modal y configurar info básica
+        // Abrir modal y configurar info básica usando elementos existentes
         const modal = document.getElementById('player-modal');
         const titleEl = document.getElementById('player-title');
         const synopsisEl = document.getElementById('player-synopsis');
@@ -5848,84 +5848,44 @@
             }
           }
 
-          // Cargar primer episodio automáticamente usando TU LISTA DE SERVIDORES
+          // Cargar primer episodio automáticamente usando TU URL del backend
           const s = seasonSelect ? seasonSelect.value : 1;
           const e = episodeSelect ? episodeSelect.value : 1;
-          this.tryLoadServer(item.id, 'tv', s, e);
+          const streamUrl = item.streamer || item.streamUrl || `https://vidsrc.me/embed/tv/${item.id}?season=${s}&episode=${e}`;
+          if (mediaPlayer) mediaPlayer.src = streamUrl;
 
           // Bind events para cambiar episodio/temporada
           if (seasonSelect) {
             seasonSelect.onchange = () => {
-              this.serverIndex = 0;
-              this.tryLoadServer(item.id, 'tv', seasonSelect.value, episodeSelect.value);
+              const newS = seasonSelect.value;
+              const newE = episodeSelect.value;
+              const url = item.streamer || item.streamUrl || `https://vidsrc.me/embed/tv/${item.id}?season=${newS}&episode=${newE}`;
+              if (mediaPlayer) mediaPlayer.src = url;
             };
           }
           if (episodeSelect) {
             episodeSelect.onchange = () => {
-              this.serverIndex = 0;
-              this.tryLoadServer(item.id, 'tv', seasonSelect.value, episodeSelect.value);
+              const newS = seasonSelect.value;
+              const newE = episodeSelect.value;
+              const url = item.streamer || item.streamUrl || `https://vidsrc.me/embed/tv/${item.id}?season=${newS}&episode=${newE}`;
+              if (mediaPlayer) mediaPlayer.src = url;
             };
           }
           const loadEpisodeBtn = document.getElementById('load-episode');
           if (loadEpisodeBtn) {
             loadEpisodeBtn.onclick = () => {
-              this.serverIndex = 0;
-              this.tryLoadServer(item.id, 'tv', seasonSelect.value, episodeSelect.value);
+              const newS = seasonSelect.value;
+              const newE = episodeSelect.value;
+              const url = item.streamer || item.streamUrl || `https://vidsrc.me/embed/tv/${item.id}?season=${newS}&episode=${newE}`;
+              if (mediaPlayer) mediaPlayer.src = url;
             };
           }
         } else {
           if (episodeControls) episodeControls.classList.add('hidden');
-          // Para películas, cargar directamente con TU LISTA DE SERVIDORES
-          this.serverIndex = 0;
-          this.tryLoadServer(item.id, 'movie', 1, 1);
+          // Para películas, cargar directamente con TU URL del backend
+          const streamUrl = item.streamer || item.streamUrl || `https://vidsrc.me/embed/movie/${item.id}`;
+          if (mediaPlayer) mediaPlayer.src = streamUrl;
         }
-      },
-
-      populateEpisodeSelectors() {
-        this.seasonSelect.innerHTML = '';
-        for (let i = 1; i <= 10; i++) {
-          const opt = document.createElement('option');
-          opt.value = i; opt.textContent = `Temporada ${i}`;
-          if (i === 1) opt.selected = true;
-          this.seasonSelect.appendChild(opt);
-        }
-        this.episodeSelect.innerHTML = '';
-        for (let i = 1; i <= 50; i++) { // Hasta 50 episodios
-          const opt = document.createElement('option');
-          opt.value = i; opt.textContent = `Episodio ${i}`;
-          if (i === 1) opt.selected = true;
-          this.episodeSelect.appendChild(opt);
-        }
-      },
-
-      updatePlayerSource() {
-        if (!this.currentItem) return;
-        const season = this.seasonSelect.value;
-        const episode = this.episodeSelect.value;
-        this.serverIndex = 0; // Reiniciar fallbacks al cambiar episodio
-        this.tryLoadServer(this.currentItem.id, 'tv', season, episode);
-      },
-
-      // Lógica de Fallback Automático con 25+ servidores
-      tryLoadServer(id, type, s, e) {
-        if (this.serverIndex >= this.servers.length) {
-          this.mediaPlayer.src = '';
-          this.playerSynopsis.textContent = '️ Ningún servidor respondió. Intenta nuevamente en unos minutos.';
-          return;
-        }
-
-        const url = this.servers[this.serverIndex](id, type, s, e);
-        console.log(`[Servidor ${this.serverIndex + 1}/${this.servers.length}] Probando: ${url.substring(0, 60)}...`);
-        this.mediaPlayer.src = url;
-
-        // Temporizador agresivo: 4 segundos por servidor
-        this.loadTimeout = setTimeout(() => {
-          if (this.mediaPlayer.src === url && this.serverIndex < this.servers.length - 1) {
-            console.warn(`[Servidor ${this.serverIndex + 1}] Falló o tardó >4s. Saltando al siguiente...`);
-            this.serverIndex++;
-            this.tryLoadServer(id, type, s, e);
-          }
-        }, 4000);
       },
 
       closePlayer() {
