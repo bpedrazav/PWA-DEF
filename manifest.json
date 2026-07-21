@@ -1,6 +1,6 @@
 {
-  "name": "HaceDetodo",
-  "short_name": "HaceDetodo",
+  "name": "FlojerApp",
+  "short_name": "FlojerApp",
   "description": "Fútbol, IPTV, Universidad y Finanzas",
   "start_url": "/PWA-DEF/",
   "scope": "/PWA-DEF/",
