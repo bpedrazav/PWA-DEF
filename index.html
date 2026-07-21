@@ -5627,17 +5627,10 @@
       currentItem: null,
       serverIndex: 0,
       servers: [
-        // 1. VidSrc Pro (El mejor balance: rápido, iframe estable y subtítulos)
-        (id, type, s = 1, e = 1) => type === 'movie' ? `https://vidsrc.pro/embed/movie/${id}` : `https://vidsrc.pro/embed/tv/${id}/${s}/${e}`,
-
-        // 2. 2Embed (Excelente opción en español con baja publicidad)
-        (id, type, s = 1, e = 1) => type === 'movie' ? `https://www.2embed.cc/embed/${id}` : `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}`,
-
-        // 3. VidSrc Me (Respaldo histórico muy estable)
-        (id, type, s = 1, e = 1) => type === 'movie' ? `https://vidsrc.me/embed/movie?tmdb=${id}` : `https://vidsrc.me/embed/tv?tmdb=${id}&season=${s}&episode=${e}`,
-
-        // 4. MultiEmbed (Servidor alternativo de respaldo)
-        (id, type, s = 1, e = 1) => type === 'movie' ? `https://multiembed.mov/directstream.php?video_id=${id}` : `https://multiembed.mov/directstream.php?video_id=${id}&s=${s}&e=${e}`
+        (id, type, s, e) => `https://vidlink.pro/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        (id, type, s, e) => `https://vidsrc.cc/v2/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        (id, type, s, e) => `https://vidsrc.vip/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        (id, type, s, e) => `https://vidsrc.net/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`
       ],
       init() {
         this.cacheDOM();
@@ -5846,32 +5839,14 @@
         pagination.classList.remove('hidden');
       },
 
-      async openPlayer(item, category) {
+      openPlayer(item, category) {
         this.currentItem = item;
         this.currentCategory = category;
         this.serverIndex = 0; // Reiniciar índice de servidores
 
-        // Ocultar modal de error previo si estuviera visible
-        const errorModal = document.getElementById('player-error-modal');
-        if (errorModal) errorModal.classList.add('hidden');
-
         const title = item.title || item.name || 'Contenido sin título';
         this.playerTitle.textContent = title;
         this.playerSynopsis.textContent = item.overview || item.sinopsis || 'Sin sinopsis disponible.';
-
-        // OBTENER IMDB ID EN SEGUNDO PLANO
-        const type = (category === 'series' || category === 'anime' || item.type === 'tv' || item.media_type === 'tv') ? 'tv' : 'movie';
-        try {
-          const res = await fetch(`/api/external-ids/${type}/${item.id}`);
-          if (res.ok) {
-            const data = await res.json();
-            if (data.success && data.imdb_id) {
-              this.currentItem.imdbid = data.imdb_id;
-            }
-          }
-        } catch (err) {
-          console.warn('No se pudo obtener IMDb ID:', err);
-        }
 
         const isSeries = category === 'series' || category === 'anime' || item.type === 'tv' || item.media_type === 'tv';
 
@@ -5913,43 +5888,38 @@
         const episode = this.episodeSelect.value;
         const id = this.currentItem.id;
         const type = (this.currentItem.type === 'tv' || this.currentItem.media_type === 'tv') ? 'tv' : 'movie';
-        const imdbId = this.currentItem.imdbId || null;
 
         // Intentar cargar el servidor actual
-        this.tryLoadServer(id, type, season, episode, imdbId);
+        this.tryLoadServer(id, type, season, episode);
       },
 
       loadMovieStream(item) {
         const id = item.id;
         const type = 'movie';
-        const imdbId = item.imdbId || null;
-        this.tryLoadServer(id, type, 1, 1, imdbId);
+        this.tryLoadServer(id, type, 1, 1);
       },
 
-      tryLoadServer(id, type, s, e, imdbId) {
+      tryLoadServer(id, type, s, e) {
         if (this.serverIndex >= this.servers.length) {
           // Si se acabaron los servidores, mostrar error amigable
-          if (this.mediaPlayer) this.mediaPlayer.src = '';
-          if (this.playerSynopsis) {
-            this.playerSynopsis.textContent = '⚠️ Ningún servidor respondió. Intenta nuevamente en unos minutos o busca otro título.';
-          }
+          this.mediaPlayer.src = '';
+          this.playerSynopsis.textContent = '⚠️ Ningún servidor respondió. Intenta nuevamente en unos minutos o busca otro título.';
           return;
         }
 
-        const url = this.servers[this.serverIndex](id, type, s, e, imdbId);
+        const url = this.servers[this.serverIndex](id, type, s, e);
         console.log(`Probando servidor ${this.serverIndex + 1}: ${url}`);
-        if (this.mediaPlayer) this.mediaPlayer.src = url;
+        this.mediaPlayer.src = url;
 
         // Temporizador de seguridad: si en 6 segundos no hay contenido visible, probar el siguiente
-        clearTimeout(this.serverTimeout);
-        this.serverTimeout = setTimeout(() => {
-          // Verificación simple: si el iframe sigue con esa url, cambiar
-          if (this.mediaPlayer && this.serverIndex < this.servers.length - 1) {
+        setTimeout(() => {
+          // Verificación simple: si el iframe sigue vacío o con error, cambiar
+          if (this.mediaPlayer.src === url && this.serverIndex < this.servers.length - 1) {
             console.warn(`Servidor ${this.serverIndex + 1} falló o tardó demasiado. Probando siguiente...`);
             this.serverIndex++;
-            this.tryLoadServer(id, type, s, e, imdbId);
+            this.tryLoadServer(id, type, s, e);
           }
-        }, 12000); // 12 segundos le da tiempo de sobra para cargar y hacer buffer
+        }, 6000);
       },
 
       closePlayer() {
@@ -5979,10 +5949,7 @@
         <button id="load-episode" class="btn-primary">Cargar Episodio</button>
       </div>
       <div class="player-container-modal">
-        <iframe id="mediaPlayer" src="" width="100%" height="100%" frameborder="0"
-          allow="autoplay; encrypted-media; fullscreen" allowfullscreen webkitallowfullscreen mozallowfullscreen
-          referrerpolicy="origin">
-        </iframe>
+        <iframe id="media-player" src="" frameborder="0" allowfullscreen></iframe>
         <div id="player-error-modal" class="player-error-modal hidden">
           <p>No se pudo cargar el reproductor.</p>
         </div>
