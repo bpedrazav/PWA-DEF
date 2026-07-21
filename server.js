@@ -12,13 +12,13 @@ const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
 // ==========================================
-// CONFIGURACIÓN DE SERVIDORES DE STREAMING (FALLBACK)
+// CONFIGURACIÓN DE SERVIDORES DE STREAMING (DOMINIOS ACTIVOS)
 // ==========================================
 const PROVIDERS = [
-  (type, id) => `https://vidsrc.icu/embed/${type}/${id}`,
-  (type, id) => `https://vidsrc.pro/embed/${type}/${id}`,
-  (type, id) => `https://embed.su/embed/${type}/${id}`,
-  (type, id) => `https://player.autoembed.cc/embed/${type}/${id}`
+  (type, id) => `https://vidlink.pro/${type}/${id}`,
+  (type, id) => `https://vidsrc.cc/v2/embed/${type}/${id}`,
+  (type, id) => `https://vidsrc.vip/embed/${type}/${id}`,
+  (type, id) => `https://vidsrc.net/embed/${type}/${id}`
 ];
 
 // Devuelve el proveedor principal por defecto
