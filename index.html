@@ -5619,58 +5619,65 @@
     applyTheme(initialFlojerPrefs.theme || 'dark');
     if (initialFlojerPrefs.language) document.documentElement.lang = initialFlojerPrefs.language;
     applyLanguageUi(initialFlojerPrefs.language || 'es');
-    // MÓDULO ENTRETENIMIENTO - Adaptado a ESTRUCTURA ACTUAL + 25 Servidores de Respaldo
+    // MÓDULO ENTRETENIMIENTO CORREGIDO - Con Fallbacks, Nombres OK y Búsqueda Global
     const EntertainmentModule = {
       currentCategory: 'peliculas',
       currentPage: 1,
       totalPages: 1,
+      currentItem: null,
+      serverIndex: 0,
 
-      // Lista masiva de servidores de respaldo (25+)
+      // Lista de servidores de respaldo ordenados por estabilidad
       servers: [
-        (id, type, s, e) => `https://vidsrc.me/embed/${type === 'tv' ? 'tv' : 'movie'}?tmdb=${id}${type === 'tv' ? `&season=${s}&episode=${e}` : ''}`,
-        (id, type, s, e) => `https://autoembed.cc/api/player?tmdbId=${id}&type=${type === 'tv' ? 'tv' : 'movie'}${type === 'tv' ? `&s=${s}&e=${e}` : ''}`,
-        (id, type, s, e) => `https://multiembed.mov/?video_id=${id}&tmdb=1${type === 'tv' ? `&s=${s}&e=${e}` : ''}`,
-        (id, type, s, e) => `https://www.2embed.cc/embed/${type === 'tv' ? 'tv' : 'movie'}?id=${id}${type === 'tv' ? `&season=${s}&episode=${e}` : ''}`,
-        (id, type, s, e) => `https://smashystream.com/playere.php?tmdb=${id}${type === 'tv' ? `&season=${s}&episode=${e}` : ''}`,
-        (id, type, s, e) => `https://play2.1000mbps.com/${type === 'tv' ? 'tv' : 'movie'}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
-        (id, type, s, e) => `https://moviesapi.club/movie/${id}${type === 'tv' ? `-s-${s}-e-${e}` : ''}`,
-        (id, type, s, e) => `https://www.rgshows.me/player/${type === 'tv' ? 'tv' : 'movie'}/?id=${id}${type === 'tv' ? `&season=${s}&episode=${e}` : ''}`,
-        (id, type, s, e) => `https://player.videasy.net/${type === 'tv' ? 'tv' : 'movie'}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
-        (id, type, s, e) => `https://embed.su/embed/${type === 'tv' ? 'tv' : 'movie'}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
-        (id, type, s, e) => `https://www.nepu.to/v/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
-        (id, type, s, e) => `https://streamtape.com/e/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
-        (id, type, s, e) => `https://doodstream.com/e/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
-        (id, type, s, e) => `https://mixdrop.co/e/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
-        (id, type, s, e) => `https://upstream.to/embed-${id}.html`,
-        (id, type, s, e) => `https://voe.sx/e/${id}`,
-        (id, type, s, e) => `https://filemoon.sx/e/${id}`,
-        (id, type, s, e) => `https://streamwish.to/e/${id}`,
-        (id, type, s, e) => `https://lulustream.com/e/${id}`,
-        (id, type, s, e) => `https://vtube.to/v/${id}`,
-        (id, type, s, e) => `https://eplayvid.net/e/${id}`,
-        (id, type, s, e) => `https://vidcloud.icu/embed/${type === 'tv' ? 'tv' : 'movie'}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
-        (id, type, s, e) => `https://rabbitstream.net/embed-2/${id}${type === 'tv' ? `?s=${s}&e=${e}` : ''}`,
-        (id, type, s, e) => `https://dokicloud.one/embed-4/${id}${type === 'tv' ? `?s=${s}&e=${e}` : ''}`,
-        (id, type, s, e) => `https://asianload.io/embed-${id}.html`
+        (id, type, s, e) => `https://vidsrc.xyz/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        (id, type, s, e) => `https://2embed.to/embed/tmdb/${type}?id=${id}${type === 'tv' ? `&s=${s}&e=${e}` : ''}`,
+        (id, type, s, e) => `https://multiembed.to/directstream.php?video_id=${id}&tmdb=1${type === 'tv' ? `&s=${s}&e=${e}` : ''}`,
+        (id, type, s, e) => `https://www.rgshows.me/player/${type}/?id=${id}${type === 'tv' ? `&season=${s}&episode=${e}` : ''}`
       ],
 
       init() {
         this.cacheDOM();
         this.bindEvents();
-        this.loadCategory(this.currentCategory);
+        this.loadCategory('peliculas', 1);
       },
 
       cacheDOM() {
-        // Elementos de la interfaz única (adaptado a tu estructura actual)
-        this.grid = document.getElementById('entertainment-grid');
-        this.tabs = document.querySelectorAll('.iptv-tabs .iptv-tab');
-        this.searchInput = document.getElementById('search-entertainment');
-        this.pagination = document.getElementById('entertainment-pagination');
-        this.prevBtn = document.getElementById('prev-page');
-        this.nextBtn = document.getElementById('next-page');
-        this.pageInfo = document.getElementById('page-info');
-
-        // Elementos del modal reproductor
+        this.tabs = document.querySelectorAll('#tab-anime .iptv-tab');
+        this.panels = {
+          peliculas: document.getElementById('ent-peliculas'),
+          series: document.getElementById('ent-series'),
+          anime: document.getElementById('ent-anime')
+        };
+        this.grids = {
+          peliculas: document.getElementById('entertainment-grid'),
+          series: document.getElementById('entertainment-grid-series'),
+          anime: document.getElementById('entertainment-grid-anime')
+        };
+        this.paginations = {
+          peliculas: document.getElementById('entertainment-pagination'),
+          series: document.getElementById('entertainment-pagination-series'),
+          anime: document.getElementById('entertainment-pagination-anime')
+        };
+        this.prevBtns = {
+          peliculas: document.getElementById('prev-page'),
+          series: document.getElementById('prev-page-series'),
+          anime: document.getElementById('prev-page-anime')
+        };
+        this.nextBtns = {
+          peliculas: document.getElementById('next-page'),
+          series: document.getElementById('next-page-series'),
+          anime: document.getElementById('next-page-anime')
+        };
+        this.pageInfos = {
+          peliculas: document.getElementById('page-info'),
+          series: document.getElementById('page-info-series'),
+          anime: document.getElementById('page-info-anime')
+        };
+        this.searchInputs = {
+          peliculas: document.getElementById('search-entertainment'),
+          series: document.getElementById('search-entertainment-series'),
+          anime: document.getElementById('search-entertainment-anime')
+        };
         this.modal = document.getElementById('player-modal');
         this.closeModalBtn = document.getElementById('close-player');
         this.playerTitle = document.getElementById('player-title');
@@ -5683,253 +5690,255 @@
       },
 
       bindEvents() {
-        // Manejo de pestañas (Películas / Historial)
         this.tabs.forEach(tab => {
           tab.addEventListener('click', (e) => {
             this.tabs.forEach(t => t.classList.remove('active'));
             e.target.classList.add('active');
-            this.currentCategory = e.target.dataset.ent;
+            const category = e.target.dataset.ent;
+            Object.keys(this.panels).forEach(key => {
+              this.panels[key].style.display = key === category ? 'block' : 'none';
+            });
+            this.currentCategory = category;
             this.currentPage = 1;
-
-            if (this.currentCategory === 'historial') {
-              this.renderHistorial();
-            } else {
-              this.loadCategory(this.currentCategory);
-            }
+            Object.values(this.searchInputs).forEach(input => { if (input) input.value = ''; });
+            this.loadCategory(category, 1);
           });
         });
 
-        // Búsqueda global con debounce
-        if (this.searchInput) {
+        Object.entries(this.searchInputs).forEach(([cat, input]) => {
+          if (!input) return;
           let debounceTimer;
-          this.searchInput.addEventListener('input', (e) => {
+          input.addEventListener('input', (e) => {
             clearTimeout(debounceTimer);
             const query = e.target.value.trim();
             debounceTimer = setTimeout(() => {
               if (query.length >= 2) {
-                this.searchGlobal(query);
+                this.searchGlobal(query, cat);
               } else if (query.length === 0) {
-                this.loadCategory(this.currentCategory);
+                this.loadCategory(cat, 1);
               }
             }, 400);
           });
-        }
+        });
 
-        // Paginación
-        if (this.prevBtn) {
-          this.prevBtn.addEventListener('click', () => {
-            if (this.currentPage > 1) {
-              this.currentPage--;
-              this.loadCategory(this.currentCategory);
-            }
-          });
-        }
-        if (this.nextBtn) {
-          this.nextBtn.addEventListener('click', () => {
-            if (this.currentPage < this.totalPages) {
-              this.currentPage++;
-              this.loadCategory(this.currentCategory);
-            }
-          });
-        }
+        Object.keys(this.prevBtns).forEach(cat => {
+          if (this.prevBtns[cat]) {
+            this.prevBtns[cat].addEventListener('click', () => {
+              if (this.currentPage > 1) {
+                this.currentPage--;
+                this.loadCategory(this.currentCategory, this.currentPage);
+              }
+            });
+          }
+          if (this.nextBtns[cat]) {
+            this.nextBtns[cat].addEventListener('click', () => {
+              if (this.currentPage < this.totalPages) {
+                this.currentPage++;
+                this.loadCategory(this.currentCategory, this.currentPage);
+              }
+            });
+          }
+        });
 
-        // Modal y controles de episodio
         this.closeModalBtn.addEventListener('click', () => this.closePlayer());
         this.modal.addEventListener('click', (e) => {
           if (e.target === this.modal) this.closePlayer();
         });
         this.loadEpisodeBtn.addEventListener('click', () => this.updatePlayerSource());
+
+        // Detectar cambio manual de temporada/episodio
         this.seasonSelect.addEventListener('change', () => this.updatePlayerSource());
         this.episodeSelect.addEventListener('change', () => this.updatePlayerSource());
       },
 
-      async searchGlobal(query) {
-        this.grid.innerHTML = '<div class="loading-spinner">Buscando en el catálogo...</div>';
+      async searchGlobal(query, category) {
+        const grid = this.grids[category];
+        const pagination = this.paginations[category];
+        grid.innerHTML = '<div class="loading-spinner">Buscando "' + query + '"...</div>';
+        if (pagination) pagination.classList.add('hidden');
         try {
-          const res = await fetch(`/api/search?query=${encodeURIComponent(query)}`);
-          const resData = await res.json();
-          if (resData.success && resData.data.length > 0) {
-            this.renderGrid(resData.data);
-            if (this.pagination) this.pagination.classList.add('hidden');
+          const response = await fetch(`/api/search?query=${encodeURIComponent(query)}&type=${category}`);
+          const contentType = response.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) throw new Error("No JSON");
+          const data = await response.json();
+          if (data.success && data.data && data.data.length > 0) {
+            this.renderGrid(category, data.data);
+            if (pagination) pagination.classList.add('hidden');
           } else {
-            this.grid.innerHTML = '<p class="empty-msg">No se encontraron resultados.</p>';
+            grid.innerHTML = '<p class="empty-msg">No se encontraron resultados.</p>';
           }
-        } catch (err) {
-          this.grid.innerHTML = '<p class="empty-msg">Error al buscar.</p>';
+        } catch (error) {
+          console.error("Error búsqueda:", error);
+          grid.innerHTML = '<div class="error-state"><p>Error al buscar.</p><button onclick="EntertainmentModule.loadCategory(\'' + category + '\', 1)" class="btn-primary" style="margin-top:1rem;">Volver al catálogo</button></div>';
         }
       },
 
-      async loadCategory(category) {
-        if (category === 'historial') return this.renderHistorial();
-
-        this.grid.innerHTML = '<div class="loading-spinner">Cargando catálogo...</div>';
+      async loadCategory(category, page) {
+        const grid = this.grids[category];
+        const pagination = this.paginations[category];
+        grid.innerHTML = '<div class="loading-spinner">Cargando catálogo...</div>';
+        if (pagination) pagination.classList.add('hidden');
         try {
-          const res = await fetch(`/api/${category}?page=${this.currentPage}`);
-          const resData = await res.json();
-
-          if (resData.success && resData.data.length > 0) {
-            this.totalPages = resData.total_pages || 1;
-            this.renderGrid(resData.data);
-            this.updatePagination();
+          const response = await fetch(`https://flojerapp.onrender.com/api/${category}?page=${page}`);
+          const contentType = response.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) throw new Error("No JSON");
+          const data = await response.json();
+          if (data.success && data.data) {
+            this.totalPages = data.total_pages || 1;
+            this.renderGrid(category, data.data);
+            this.updatePagination(category);
           } else {
-            this.grid.innerHTML = '<p class="empty-msg">No hay contenido disponible.</p>';
+            grid.innerHTML = '<p class="empty-msg">Sin contenido.</p>';
           }
-        } catch (err) {
-          this.grid.innerHTML = '<p class="empty-msg">Error al conectar con el servidor.</p>';
+        } catch (error) {
+          console.error("Error cargando:", error);
+          grid.innerHTML = '<div class="error-state"><p>Error al cargar ' + category + '. ¿Servidor online?</p><button onclick="EntertainmentModule.loadCategory(\'' + category + '\',' + page + ')" class="btn-primary" style="margin-top:1rem;">Reintentar</button></div>';
         }
       },
 
-      renderGrid(items) {
+      renderGrid(category, items) {
+        const grid = this.grids[category];
         if (!items || items.length === 0) {
-          this.grid.innerHTML = '<p class="empty-msg">Sin contenido para mostrar.</p>';
+          grid.innerHTML = '<p class="empty-msg">Sin contenido.</p>';
           return;
         }
-
-        this.grid.innerHTML = items.map(item => {
-          const title = (item.title || item.name || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
-          const poster = item.poster || 'https://via.placeholder.com/500x750?text=Sin+Imagen';
-          const type = item.type || item.media_type || 'movie';
-          // Fallback seguro si el backend no envía streamer
-          const streamer = item.streamer || `https://vidsrc.me/embed/${type === 'tv' ? 'tv' : 'movie'}?tmdb=${item.id}`;
-
+        grid.innerHTML = items.map(item => {
+          // CORRECCIÓN DE NOMBRES: Lee title, name o fallback
+          const title = item.title || item.name || item.original_title || 'Sin título';
+          const poster = item.poster || item.poster_path || 'https://via.placeholder.com/300x450?text=Sin+Portada';
+          const year = item.year || (item.release_date || '').substring(0, 4) || (item.first_air_date || '').substring(0, 4) || '';
+          const id = item.id;
+          const safeTitle = title.replace(/'/g, "\\'").replace(/"/g, '&quot;');
           return `
-            <div class="media-card" data-id="${item.id}">
+            <div class="media-card" data-id="${id}" data-category="${category}">
                 <div class="media-poster">
-                    <img src="${poster}" alt="${title}" loading="lazy" onerror="this.src='https://via.placeholder.com/500x750?text=Sin+Imagen'" />
-                    <button class="play-btn" onclick="EntertainmentModule.playItem({id: '${item.id}', title: '${title}', streamer: '${streamer}', type: '${type}'})">&#9654;</button>
+                    <img src="${poster}" alt="${safeTitle}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x450?text=Error'">
+                    <div class="media-overlay"><button class="play-btn">▶ Reproducir</button></div>
                 </div>
                 <div class="media-info">
-                    <h4 class="media-title">${item.title || item.name}</h4>
+                    <h4 class="media-title">${title}</h4>
+                    <span class="media-date">${year}</span>
                 </div>
             </div>`;
         }).join('');
+        grid.querySelectorAll('.media-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const id = parseInt(card.dataset.id);
+            const itemData = items.find(i => i.id === id);
+            if (itemData) this.openPlayer(itemData, category);
+          });
+        });
       },
 
-      // REEMPLAZA SOLO ESTA FUNCIÓN DENTRO DE EntertainmentModule:
-      playItem(item) {
-        this.guardarEnHistorial(item);
+      updatePagination(category) {
+        const pagination = this.paginations[category];
+        const prevBtn = this.prevBtns[category];
+        const nextBtn = this.nextBtns[category];
+        const pageInfo = this.pageInfos[category];
+        if (!pagination) return;
+        pageInfo.textContent = `Página ${this.currentPage} de ${this.totalPages}`;
+        if (prevBtn) prevBtn.disabled = this.currentPage <= 1;
+        if (nextBtn) nextBtn.disabled = this.currentPage >= this.totalPages;
+        pagination.classList.remove('hidden');
+      },
 
-        // Abrir modal y configurar info básica usando elementos existentes
-        const modal = document.getElementById('player-modal');
-        const titleEl = document.getElementById('player-title');
-        const synopsisEl = document.getElementById('player-synopsis');
-        const episodeControls = document.getElementById('episode-controls');
-        const mediaPlayer = document.getElementById('media-player');
+      openPlayer(item, category) {
+        this.currentItem = item;
+        this.currentCategory = category;
+        this.serverIndex = 0; // Reiniciar índice de servidores
 
-        if (modal) modal.classList.remove('hidden');
-        if (titleEl) titleEl.textContent = item.title || item.name || 'Contenido sin título';
-        if (synopsisEl) synopsisEl.textContent = item.synopsis || 'Sin sinopsis disponible.';
-        document.body.style.overflow = 'hidden';
+        const title = item.title || item.name || 'Contenido sin título';
+        this.playerTitle.textContent = title;
+        this.playerSynopsis.textContent = item.overview || item.sinopsis || 'Sin sinopsis disponible.';
 
-        // Detectar si es serie o película
-        const isSeries = (item.type === 'tv' || item.media_type === 'tv');
+        const isSeries = category === 'series' || category === 'anime' || item.type === 'tv' || item.media_type === 'tv';
 
         if (isSeries) {
-          if (episodeControls) episodeControls.classList.remove('hidden');
-
-          // Poblar selectores si están vacíos
-          const seasonSelect = document.getElementById('season-select');
-          const episodeSelect = document.getElementById('episode-select');
-
-          if (seasonSelect && seasonSelect.options.length === 0) {
-            for (let i = 1; i <= 10; i++) {
-              const opt = document.createElement('option');
-              opt.value = i; opt.textContent = `Temporada ${i}`;
-              if (i === 1) opt.selected = true;
-              seasonSelect.appendChild(opt);
-            }
-          }
-          if (episodeSelect && episodeSelect.options.length === 0) {
-            for (let i = 1; i <= 50; i++) {
-              const opt = document.createElement('option');
-              opt.value = i; opt.textContent = `Episodio ${i}`;
-              if (i === 1) opt.selected = true;
-              episodeSelect.appendChild(opt);
-            }
-          }
-
-          // Cargar primer episodio automáticamente usando TU URL del backend
-          const s = seasonSelect ? seasonSelect.value : 1;
-          const e = episodeSelect ? episodeSelect.value : 1;
-          const streamUrl = item.streamer || item.streamUrl || `https://vidsrc.me/embed/tv/${item.id}?season=${s}&episode=${e}`;
-          if (mediaPlayer) mediaPlayer.src = streamUrl;
-
-          // Bind events para cambiar episodio/temporada
-          if (seasonSelect) {
-            seasonSelect.onchange = () => {
-              const newS = seasonSelect.value;
-              const newE = episodeSelect.value;
-              const url = item.streamer || item.streamUrl || `https://vidsrc.me/embed/tv/${item.id}?season=${newS}&episode=${newE}`;
-              if (mediaPlayer) mediaPlayer.src = url;
-            };
-          }
-          if (episodeSelect) {
-            episodeSelect.onchange = () => {
-              const newS = seasonSelect.value;
-              const newE = episodeSelect.value;
-              const url = item.streamer || item.streamUrl || `https://vidsrc.me/embed/tv/${item.id}?season=${newS}&episode=${newE}`;
-              if (mediaPlayer) mediaPlayer.src = url;
-            };
-          }
-          const loadEpisodeBtn = document.getElementById('load-episode');
-          if (loadEpisodeBtn) {
-            loadEpisodeBtn.onclick = () => {
-              const newS = seasonSelect.value;
-              const newE = episodeSelect.value;
-              const url = item.streamer || item.streamUrl || `https://vidsrc.me/embed/tv/${item.id}?season=${newS}&episode=${newE}`;
-              if (mediaPlayer) mediaPlayer.src = url;
-            };
-          }
+          this.episodeControls.classList.remove('hidden');
+          this.populateEpisodeSelectors();
+          this.updatePlayerSource();
         } else {
-          if (episodeControls) episodeControls.classList.add('hidden');
-          // Para películas, cargar directamente con TU URL del backend
-          const streamUrl = item.streamer || item.streamUrl || `https://vidsrc.me/embed/movie/${item.id}`;
-          if (mediaPlayer) mediaPlayer.src = streamUrl;
+          this.episodeControls.classList.add('hidden');
+          this.loadMovieStream(item);
+        }
+
+        this.modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      },
+
+      populateEpisodeSelectors() {
+        this.seasonSelect.innerHTML = '';
+        for (let i = 1; i <= 10; i++) {
+          const opt = document.createElement('option');
+          opt.value = i; opt.textContent = `Temporada ${i}`;
+          if (i === 1) opt.selected = true;
+          this.seasonSelect.appendChild(opt);
+        }
+        this.episodeSelect.innerHTML = '';
+        // AUMENTADO A 50 EPISODIOS PARA SERIES LARGAS
+        for (let i = 1; i <= 50; i++) {
+          const opt = document.createElement('option');
+          opt.value = i; opt.textContent = `Episodio ${i}`;
+          if (i === 1) opt.selected = true;
+          this.episodeSelect.appendChild(opt);
         }
       },
 
+      // LÓGICA DE FALLBACK AUTOMÁTICO
+      updatePlayerSource() {
+        if (!this.currentItem) return;
+        const season = this.seasonSelect.value;
+        const episode = this.episodeSelect.value;
+        const id = this.currentItem.id;
+        const type = (this.currentItem.type === 'tv' || this.currentItem.media_type === 'tv') ? 'tv' : 'movie';
+
+        // Intentar cargar el servidor actual
+        this.tryLoadServer(id, type, season, episode);
+      },
+
+      loadMovieStream(item) {
+        const id = item.id;
+        const type = 'movie';
+        this.tryLoadServer(id, type, 1, 1);
+      },
+
+      tryLoadServer(id, type, s, e) {
+        if (this.serverIndex >= this.servers.length) {
+          // Si se acabaron los servidores, mostrar error amigable
+          this.mediaPlayer.src = '';
+          this.playerSynopsis.textContent = '⚠️ Ningún servidor respondió. Intenta nuevamente en unos minutos o busca otro título.';
+          return;
+        }
+
+        const url = this.servers[this.serverIndex](id, type, s, e);
+        console.log(`Probando servidor ${this.serverIndex + 1}: ${url}`);
+        this.mediaPlayer.src = url;
+
+        // Temporizador de seguridad: si en 6 segundos no hay contenido visible, probar el siguiente
+        setTimeout(() => {
+          // Verificación simple: si el iframe sigue vacío o con error, cambiar
+          if (this.mediaPlayer.src === url && this.serverIndex < this.servers.length - 1) {
+            console.warn(`Servidor ${this.serverIndex + 1} falló o tardó demasiado. Probando siguiente...`);
+            this.serverIndex++;
+            this.tryLoadServer(id, type, s, e);
+          }
+        }, 6000);
+      },
+
       closePlayer() {
-        clearTimeout(this.loadTimeout); // Limpiar timeout pendiente
         this.mediaPlayer.src = '';
         this.modal.classList.add('hidden');
         document.body.style.overflow = '';
         this.currentItem = null;
         this.serverIndex = 0;
-      },
-
-      guardarEnHistorial(item) {
-        let historial = JSON.parse(localStorage.getItem('pwa_watch_history') || '[]');
-        historial = [item, ...historial.filter(h => h.id !== item.id)];
-        if (historial.length > 20) historial = historial.slice(0, 20);
-        localStorage.setItem('pwa_watch_history', JSON.stringify(historial));
-      },
-
-      renderHistorial() {
-        const historial = JSON.parse(localStorage.getItem('pwa_watch_history') || '[]');
-        if (this.pagination) this.pagination.classList.add('hidden');
-        if (historial.length === 0) {
-          this.grid.innerHTML = '<p class="empty-msg">Tu historial está vacío.</p>';
-          return;
-        }
-        this.renderGrid(historial);
-      },
-
-      updatePagination() {
-        if (!this.pagination) return;
-        this.pagination.classList.remove('hidden');
-        if (this.pageInfo) this.pageInfo.textContent = `Página ${this.currentPage} de ${this.totalPages}`;
-        if (this.prevBtn) this.prevBtn.disabled = this.currentPage === 1;
-        if (this.nextBtn) this.nextBtn.disabled = this.currentPage >= this.totalPages;
       }
     };
 
-    // Inicializar cuando el DOM esté listo
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => EntertainmentModule.init());
     } else {
       EntertainmentModule.init();
     }
-
   </script>
   <!-- Modal del Reproductor Multimedia -->
   <div id="player-modal" class="modal hidden">
