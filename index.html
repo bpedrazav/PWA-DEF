@@ -5619,18 +5619,19 @@
     applyTheme(initialFlojerPrefs.theme || 'dark');
     if (initialFlojerPrefs.language) document.documentElement.lang = initialFlojerPrefs.language;
     applyLanguageUi(initialFlojerPrefs.language || 'es');
-    // ─── MÓDULO ENTRETENIMIENTO MEJORADO (REPRODUCTOR EN PWA) ────
+    // MÓDULO ENTRETENIMIENTO CORREGIDO - Con Fallbacks, Nombres OK y Búsqueda Global
     const EntertainmentModule = {
       currentCategory: 'peliculas',
       currentPage: 1,
       totalPages: 1,
       currentItem: null,
-      currentSeason: 1,
-      currentEpisode: 1,
-      maxSeasons: 0,
-      maxEpisodes: 0,
-      providerIndex: 0,
-
+      serverIndex: 0,
+      servers: [
+        (id, type, s, e) => `https://vidlink.pro/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        (id, type, s, e) => `https://vidsrc.cc/v2/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        (id, type, s, e) => `https://vidsrc.vip/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        (id, type, s, e) => `https://vidsrc.net/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`
+      ],
       init() {
         this.cacheDOM();
         this.bindEvents();
@@ -5683,9 +5684,6 @@
         this.episodeSelect = document.getElementById('episode-select');
         this.loadEpisodeBtn = document.getElementById('load-episode');
         this.mediaPlayer = document.getElementById('media-player');
-        this.playerWrapper = document.querySelector('.player-container-modal');
-        this.playerError = document.getElementById('player-error-modal');
-        this.providerInfo = document.getElementById('provider-info');
       },
 
       bindEvents() {
@@ -5743,13 +5741,11 @@
         this.modal.addEventListener('click', (e) => {
           if (e.target === this.modal) this.closePlayer();
         });
-        this.loadEpisodeBtn.addEventListener('click', () => this.loadEpisode());
+        this.loadEpisodeBtn.addEventListener('click', () => this.updatePlayerSource());
 
-        // Eventos del reproductor para manejar errores
-        this.mediaPlayer.addEventListener('error', () => {
-          this.showError('Error al cargar el reproductor. Intentando con otro proveedor...');
-          this.tryNextProvider();
-        });
+        // Detectar cambio manual de temporada/episodio
+        this.seasonSelect.addEventListener('change', () => this.updatePlayerSource());
+        this.episodeSelect.addEventListener('change', () => this.updatePlayerSource());
       },
 
       async searchGlobal(query, category) {
@@ -5793,7 +5789,7 @@
           }
         } catch (error) {
           console.error("Error cargando:", error);
-          grid.innerHTML = '<div class="error-state"><p>Error al cargar ' + category + '.</p><button onclick="EntertainmentModule.loadCategory(\'' + category + '\',' + page + ')" class="btn-primary" style="margin-top:1rem;">Reintentar</button></div>';
+          grid.innerHTML = '<div class="error-state"><p>Error al cargar ' + category + '. ¿Servidor online?</p><button onclick="EntertainmentModule.loadCategory(\'' + category + '\',' + page + ')" class="btn-primary" style="margin-top:1rem;">Reintentar</button></div>';
         }
       },
 
@@ -5804,23 +5800,23 @@
           return;
         }
         grid.innerHTML = items.map(item => {
+          // CORRECCIÓN DE NOMBRES: Lee title, name o fallback
           const title = item.title || item.name || item.original_title || 'Sin título';
           const poster = item.poster || item.poster_path || 'https://via.placeholder.com/300x450?text=Sin+Portada';
           const year = item.year || (item.release_date || '').substring(0, 4) || (item.first_air_date || '').substring(0, 4) || '';
           const id = item.id;
           const safeTitle = title.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-          const isSeries = category === 'series' || category === 'anime';
           return `
-                <div class="media-card" data-id="${id}" data-category="${category}" data-title="${safeTitle}" data-is-series="${isSeries}">
-                    <div class="media-poster">
-                        <img src="${poster}" alt="${safeTitle}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x450?text=Error'">
-                        <div class="media-overlay"><button class="play-btn">▶ Reproducir</button></div>
-                    </div>
-                    <div class="media-info">
-                        <h4 class="media-title">${title}</h4>
-                        <span class="media-date">${year}</span>
-                    </div>
-                </div>`;
+            <div class="media-card" data-id="${id}" data-category="${category}">
+                <div class="media-poster">
+                    <img src="${poster}" alt="${safeTitle}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x450?text=Error'">
+                    <div class="media-overlay"><button class="play-btn">▶ Reproducir</button></div>
+                </div>
+                <div class="media-info">
+                    <h4 class="media-title">${title}</h4>
+                    <span class="media-date">${year}</span>
+                </div>
+            </div>`;
         }).join('');
         grid.querySelectorAll('.media-card').forEach(card => {
           card.addEventListener('click', () => {
@@ -5843,206 +5839,97 @@
         pagination.classList.remove('hidden');
       },
 
-      async openPlayer(item, category) {
+      openPlayer(item, category) {
         this.currentItem = item;
         this.currentCategory = category;
-        this.providerIndex = 0;
-        this.playerError.classList.add('hidden');
+        this.serverIndex = 0; // Reiniciar índice de servidores
 
         const title = item.title || item.name || 'Contenido sin título';
         this.playerTitle.textContent = title;
         this.playerSynopsis.textContent = item.overview || item.sinopsis || 'Sin sinopsis disponible.';
 
-        const isSeries = category === 'series' || category === 'anime';
+        const isSeries = category === 'series' || category === 'anime' || item.type === 'tv' || item.media_type === 'tv';
 
         if (isSeries) {
           this.episodeControls.classList.remove('hidden');
-          await this.fetchSeriesDetails(item.id);
-          this.loadEpisode();
+          this.populateEpisodeSelectors();
+          this.updatePlayerSource();
         } else {
           this.episodeControls.classList.add('hidden');
-          this.loadMovie(item.id);
+          this.loadMovieStream(item);
         }
 
         this.modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
       },
 
-      async fetchSeriesDetails(id) {
-        try {
-          const response = await fetch(`/api/tv-details/${id}`);
-          const data = await response.json();
-          if (data.success && data.seasons.length > 0) {
-            this.maxSeasons = data.total_seasons;
-            this.seasonSelect.innerHTML = '';
-            data.seasons.forEach(s => {
-              const opt = document.createElement('option');
-              opt.value = s.season_number;
-              opt.textContent = `Temporada ${s.season_number} (${s.episode_count} eps)`;
-              opt.dataset.episodes = s.episode_count;
-              this.seasonSelect.appendChild(opt);
-            });
-            this.seasonSelect.onchange = () => {
-              const selected = this.seasonSelect.options[this.seasonSelect.selectedIndex];
-              this.maxEpisodes = parseInt(selected.dataset.episodes) || 10;
-              this.currentSeason = parseInt(this.seasonSelect.value);
-              this.populateEpisodes(this.maxEpisodes);
-              this.loadEpisode();
-            };
-            const firstSeason = data.seasons[0];
-            this.maxEpisodes = firstSeason.episode_count;
-            this.currentSeason = firstSeason.season_number;
-            this.populateEpisodes(this.maxEpisodes);
-          }
-        } catch (error) {
-          console.error('Error obteniendo detalles de serie:', error);
-          this.maxSeasons = 10;
-          this.currentSeason = 1;
-          this.maxEpisodes = 24;
-          this.populateEpisodes(24);
-        }
-      },
-
-      populateEpisodes(maxEpisodes) {
-        this.episodeSelect.innerHTML = '';
-        for (let i = 1; i <= Math.min(maxEpisodes, 50); i++) {
+      populateEpisodeSelectors() {
+        this.seasonSelect.innerHTML = '';
+        for (let i = 1; i <= 10; i++) {
           const opt = document.createElement('option');
-          opt.value = i;
-          opt.textContent = `Episodio ${i}`;
+          opt.value = i; opt.textContent = `Temporada ${i}`;
+          if (i === 1) opt.selected = true;
+          this.seasonSelect.appendChild(opt);
+        }
+        this.episodeSelect.innerHTML = '';
+        // AUMENTADO A 50 EPISODIOS PARA SERIES LARGAS
+        for (let i = 1; i <= 50; i++) {
+          const opt = document.createElement('option');
+          opt.value = i; opt.textContent = `Episodio ${i}`;
+          if (i === 1) opt.selected = true;
           this.episodeSelect.appendChild(opt);
         }
-        this.currentEpisode = 1;
-        this.episodeSelect.value = 1;
       },
 
-      loadEpisode() {
+      // LÓGICA DE FALLBACK AUTOMÁTICO
+      updatePlayerSource() {
         if (!this.currentItem) return;
+        const season = this.seasonSelect.value;
+        const episode = this.episodeSelect.value;
         const id = this.currentItem.id;
-        const season = parseInt(this.seasonSelect.value) || 1;
-        const episode = parseInt(this.episodeSelect.value) || 1;
-        this.currentSeason = season;
-        this.currentEpisode = episode;
-        this.loadSeriesStream(id, season, episode);
+        const type = (this.currentItem.type === 'tv' || this.currentItem.media_type === 'tv') ? 'tv' : 'movie';
+
+        // Intentar cargar el servidor actual
+        this.tryLoadServer(id, type, season, episode);
       },
 
-      async loadMovie(id) {
-        this.showLoading('Cargando película...');
-        try {
-          const response = await fetch(`/api/stream-url?type=movie&id=${id}&provider_index=${this.providerIndex}`);
-          const data = await response.json();
-          if (data.success) {
-            this.providerIndex = data.providerIndex || 0;
-            this.loadPlayer(data.url);
-            this.updateProviderInfo(data.provider, data.hasSubtitles);
-          } else {
-            this.showError('No se pudo obtener el stream');
+      loadMovieStream(item) {
+        const id = item.id;
+        const type = 'movie';
+        this.tryLoadServer(id, type, 1, 1);
+      },
+
+      tryLoadServer(id, type, s, e) {
+        if (this.serverIndex >= this.servers.length) {
+          // Si se acabaron los servidores, mostrar error amigable
+          this.mediaPlayer.src = '';
+          this.playerSynopsis.textContent = '⚠️ Ningún servidor respondió. Intenta nuevamente en unos minutos o busca otro título.';
+          return;
+        }
+
+        const url = this.servers[this.serverIndex](id, type, s, e);
+        console.log(`Probando servidor ${this.serverIndex + 1}: ${url}`);
+        this.mediaPlayer.src = url;
+
+        // Temporizador de seguridad: si en 6 segundos no hay contenido visible, probar el siguiente
+        setTimeout(() => {
+          // Verificación simple: si el iframe sigue vacío o con error, cambiar
+          if (this.mediaPlayer.src === url && this.serverIndex < this.servers.length - 1) {
+            console.warn(`Servidor ${this.serverIndex + 1} falló o tardó demasiado. Probando siguiente...`);
+            this.serverIndex++;
+            this.tryLoadServer(id, type, s, e);
           }
-        } catch (error) {
-          console.error('Error cargando película:', error);
-          this.showError('Error al cargar el stream');
-        }
-      },
-
-      async loadSeriesStream(id, season, episode) {
-        this.showLoading(`Cargando T${season} E${episode}...`);
-        try {
-          const response = await fetch(`/api/stream-url?type=tv&id=${id}&season=${season}&episode=${episode}&provider_index=${this.providerIndex}`);
-          const data = await response.json();
-          if (data.success) {
-            this.providerIndex = data.providerIndex || 0;
-            this.loadPlayer(data.url);
-            this.updateProviderInfo(data.provider, data.hasSubtitles);
-          } else {
-            this.showError('No se pudo obtener el stream');
-          }
-        } catch (error) {
-          console.error('Error cargando serie:', error);
-          this.showError('Error al cargar el stream');
-        }
-      },
-
-     loadPlayer(url) {
-    this.mediaPlayer.src = url;
-    this.mediaPlayer.style.display = 'block';
-    this.playerError.classList.add('hidden');
-    this.updateProviderInfo('Directo', true);
-    const loadingEl = this.playerWrapper.querySelector('.loading-overlay');
-    if (loadingEl) loadingEl.remove();
-    showToast('▶️ Presiona play para reproducir', 3000);
-},
-
-      showLoading(message) {
-        this.playerWrapper.innerHTML = `
-            <div class="loading-overlay" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;background:#0a0a0a;color:var(--txt2);gap:12px;">
-                <div class="spinner" style="width:32px;height:32px;border:2px solid var(--elevated);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;"></div>
-                <p style="font-size:14px;">${message}</p>
-            </div>
-        `;
-      },
-
-      showError(message) {
-        this.playerError.classList.remove('hidden');
-        this.playerError.innerHTML = `
-            <p>${message}</p>
-            <button class="btn-primary" onclick="EntertainmentModule.retryLoad()">Reintentar</button>
-            <button class="btn-secondary" onclick="EntertainmentModule.tryNextProvider()">Cambiar proveedor</button>
-        `;
-        this.mediaPlayer.style.display = 'none';
-      },
-
-      updateProviderInfo(provider, hasSubtitles) {
-        const info = document.getElementById('provider-info');
-        if (info) {
-          info.innerHTML = `
-                <span style="font-size:11px;color:var(--txt2);">
-                    📡 ${provider} ${hasSubtitles ? '🔤 Subtítulos disponibles' : ''}
-                </span>
-            `;
-        }
-      },
-
-      tryNextProvider() {
-        this.providerIndex++;
-        this.playerError.classList.add('hidden');
-        this.mediaPlayer.style.display = 'block';
-        if (this.currentCategory === 'peliculas' || this.currentCategory === 'movie') {
-          this.loadMovie(this.currentItem.id);
-        } else {
-          this.loadSeriesStream(this.currentItem.id, this.currentSeason, this.currentEpisode);
-        }
-      },
-
-      retryLoad() {
-        this.playerError.classList.add('hidden');
-        this.mediaPlayer.style.display = 'block';
-        if (this.currentCategory === 'peliculas' || this.currentCategory === 'movie') {
-          this.loadMovie(this.currentItem.id);
-        } else {
-          this.loadSeriesStream(this.currentItem.id, this.currentSeason, this.currentEpisode);
-        }
+        }, 6000);
       },
 
       closePlayer() {
+        this.mediaPlayer.src = '';
         this.modal.classList.add('hidden');
         document.body.style.overflow = '';
-        this.mediaPlayer.src = '';
-        this.mediaPlayer.style.display = 'block';
         this.currentItem = null;
-        this.playerError.classList.add('hidden');
-        this.playerWrapper.innerHTML = `
-            <iframe id="media-player" src="" frameborder="0" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>
-            <div id="player-error-modal" class="player-error-modal hidden">
-                <p>No se pudo cargar el reproductor.</p>
-            </div>
-        `;
-        this.mediaPlayer = document.getElementById('media-player');
-        this.mediaPlayer.addEventListener('error', () => {
-          this.showError('Error al cargar el reproductor. Intentando con otro proveedor...');
-          this.tryNextProvider();
-        });
+        this.serverIndex = 0;
       }
     };
-
 
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => EntertainmentModule.init());
@@ -6061,16 +5948,10 @@
         <label>Episodio: <select id="episode-select"></select></label>
         <button id="load-episode" class="btn-primary">Cargar Episodio</button>
       </div>
-      <div id="provider-info" style="margin-bottom:8px;font-size:11px;color:var(--txt2);text-align:center;"></div>
       <div class="player-container-modal">
-        <iframe id="media-player" src="" frameborder="0" allowfullscreen
-          style="width:100%;height:100%;border:none;"></iframe>
+        <iframe id="media-player" src="" frameborder="0" allowfullscreen></iframe>
         <div id="player-error-modal" class="player-error-modal hidden">
           <p>No se pudo cargar el reproductor.</p>
-          <button class="btn-primary" onclick="EntertainmentModule.retryLoad()"
-            style="margin-top:8px;">Reintentar</button>
-          <button class="btn-secondary" onclick="EntertainmentModule.tryNextProvider()" style="margin-top:8px;">Cambiar
-            proveedor</button>
         </div>
       </div>
     </div>
