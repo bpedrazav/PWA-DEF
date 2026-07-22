@@ -1,32 +1,59 @@
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
+const cheerio = require('cheerio');
 
 const app = express();
 const PORT = process.env.PORT || 10000;
 
 app.use(express.json());
 
-// Clave API de TMDB desde variables de entorno
+// ─── CLAVE API DE TMDB ──────────────────────────────────────────
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
-// ==========================================
-// CONFIGURACIÓN DE SERVIDORES DE STREAMING (DOMINIOS ACTIVOS)
-// ==========================================
-const PROVIDERS = [
-    (type, id) => `https://vidlink.pro/${type}/${id}`,
-    (type, id) => `https://vidsrc.cc/v2/embed/${type}/${id}`,
-    (type, id) => `https://vidsrc.vip/embed/${type}/${id}`,
-    (type, id) => `https://vidsrc.net/embed/${type}/${id}`
+// ─── PROVEEDORES DE STREAMING CON PRIORIDAD ────────────────────
+// Ordenados por calidad y disponibilidad de subtítulos
+const STREAM_PROVIDERS = [
+    {
+        name: 'vidlink',
+        url: (type, id, s, e) => `https://vidlink.pro/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        hasSubtitles: true,
+        priority: 1
+    },
+    {
+        name: 'vidsrc.cc',
+        url: (type, id, s, e) => `https://vidsrc.cc/v2/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        hasSubtitles: true,
+        priority: 2
+    },
+    {
+        name: 'vidsrc.vip',
+        url: (type, id, s, e) => `https://vidsrc.vip/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        hasSubtitles: true,
+        priority: 3
+    },
+    {
+        name: 'embed.su',
+        url: (type, id, s, e) => `https://embed.su/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        hasSubtitles: true,
+        priority: 4
+    },
+    {
+        name: 'vidsrc.net',
+        url: (type, id, s, e) => `https://vidsrc.net/embed/${type}/${id}${type === 'tv' ? `/${s}/${e}` : ''}`,
+        hasSubtitles: false,
+        priority: 5
+    },
+    {
+        name: 'multiembed',
+        url: (type, id, s, e) => `https://multiembed.mov/?video_id=${id}${type === 'tv' ? `&s=${s}&e=${e}` : ''}`,
+        hasSubtitles: true,
+        priority: 6
+    }
 ];
 
-// Devuelve el proveedor principal por defecto
-const getStreamerUrl = (type, id, index = 0) => {
-    return PROVIDERS[index] ? PROVIDERS[index](type, id) : PROVIDERS[0](type, id);
-};
-
-// Función auxiliar para realizar peticiones a TMDB
+// ─── FUNCIÓN AUXILIAR PARA TMDB ────────────────────────────────
 const fetchTMDB = async (url, params = {}) => {
     const res = await axios.get(`${TMDB_BASE_URL}${url}`, {
         params: {
@@ -39,36 +66,308 @@ const fetchTMDB = async (url, params = {}) => {
     return res.data;
 };
 
-// ==========================================
-// ENDPOINT PARA VERIFICAR O CAMBIAR DE SERVIDOR
-// ==========================================
-app.get('/api/resolve-stream', async (req, res) => {
-    const { type = 'movie', id } = req.query;
+// ════════════════════════════════════════════════════════════════════
+//  ENDPOINTS DE CATÁLOGO
+// ════════════════════════════════════════════════════════════════════
+
+// ─── OBTENER DETALLES DE SERIE (temporadas y episodios) ──────
+app.get('/api/tv-details/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const data = await axios.get(`${TMDB_BASE_URL}/tv/${id}`, {
+            params: {
+                api_key: TMDB_API_KEY,
+                language: 'es-MX'
+            },
+            timeout: 8000
+        });
+
+        const seasons = data.data.seasons || [];
+        const seasonDetails = [];
+
+        for (const season of seasons) {
+            if (season.season_number === 0) continue; // Especiales
+            const epData = await axios.get(`${TMDB_BASE_URL}/tv/${id}/season/${season.season_number}`, {
+                params: {
+                    api_key: TMDB_API_KEY,
+                    language: 'es-MX'
+                },
+                timeout: 8000
+            });
+            seasonDetails.push({
+                season_number: season.season_number,
+                episode_count: epData.data.episodes?.length || 0,
+                episodes: epData.data.episodes?.map(e => ({
+                    episode_number: e.episode_number,
+                    name: e.name,
+                    still_path: e.still_path ? `https://image.tmdb.org/t/p/w300${e.still_path}` : null
+                })) || []
+            });
+        }
+
+        res.json({
+            success: true,
+            name: data.data.name,
+            seasons: seasonDetails,
+            total_seasons: seasonDetails.length,
+            total_episodes: seasonDetails.reduce((acc, s) => acc + s.episode_count, 0)
+        });
+    } catch (error) {
+        console.error('Error en /api/tv-details:', error.message);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// ─── OBTENER URL DE STREAMING CON VERIFICACIÓN ─────────────────
+app.get('/api/stream-url', async (req, res) => {
+    const { type = 'movie', id, season = 1, episode = 1, provider_index = 0 } = req.query;
 
     if (!id) {
         return res.status(400).json({ success: false, message: 'ID es requerido' });
     }
 
-    // Prueba los servidores en orden hasta encontrar uno activo
-    for (const getUrl of PROVIDERS) {
-        const testUrl = getUrl(type, id);
+    const providers = STREAM_PROVIDERS;
+    const startIdx = parseInt(provider_index) || 0;
+
+    // Probar proveedores desde el índice actual
+    for (let i = startIdx; i < providers.length; i++) {
+        const p = providers[i];
+        const url = p.url(type, id, season, episode);
         try {
-            const response = await axios.head(testUrl, { timeout: 3000 });
-            if (response.status === 200) {
-                return res.json({ success: true, url: testUrl });
+            const response = await axios.head(url, {
+                timeout: 3000,
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1'
+                }
+            });
+            if (response.status === 200 || response.status === 302 || response.status === 301) {
+                return res.json({
+                    success: true,
+                    provider: p.name,
+                    url: url,
+                    hasSubtitles: p.hasSubtitles,
+                    providerIndex: i,
+                    message: `Streaming via ${p.name}`
+                });
             }
         } catch (e) {
-            // Si falla, ignora y prueba el siguiente
+            // Intentar con el siguiente
+            continue;
         }
     }
 
-    // Si ninguno responde, devuelve el primario como último recurso
-    res.json({ success: true, url: PROVIDERS[0](type, id) });
+    // Fallback: devolver el mejor proveedor disponible
+    res.json({
+        success: true,
+        provider: providers[0].name,
+        url: providers[0].url(type, id, season, episode),
+        hasSubtitles: providers[0].hasSubtitles,
+        providerIndex: 0,
+        message: 'Usando proveedor por defecto'
+    });
 });
 
-// ==========================================
-// ENDPOINT DE BÚSQUEDA GLOBAL (LUPA)
-// ==========================================
+// ─── PROXY PARA ELIMINAR ANUNCIOS Y POPUPS ─────────────────────
+// Este endpoint carga el contenido del reproductor y elimina scripts maliciosos
+app.get('/api/clean-player', async (req, res) => {
+    const { url } = req.query;
+    if (!url) {
+        return res.status(400).json({ success: false, message: 'URL requerida' });
+    }
+
+    try {
+        const response = await axios.get(url, {
+            timeout: 15000,
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'es-MX,es;q=0.9,en;q=0.8'
+            }
+        });
+
+        // Usar Cheerio para limpiar el HTML
+        const $ = cheerio.load(response.data);
+
+        // ─── ELIMINAR SCRIPTS DE ANUNCIOS ────────────────────
+        const adScriptPatterns = ['ads', 'adserver', 'doubleclick', 'googlead', 'googletag', 'adservice', 'adnxs', 'taboola', 'outbrain', 'popup', 'popunder', 'adblock', 'advertisement', 'advert'];
+        $('script').each((i, el) => {
+            const src = $(el).attr('src') || '';
+            const content = $(el).html() || '';
+            const shouldRemove = adScriptPatterns.some(p => 
+                src.toLowerCase().includes(p) || 
+                content.toLowerCase().includes(p) ||
+                content.includes('window.open') ||
+                content.includes('alert(') ||
+                content.includes('confirm(')
+            );
+            if (shouldRemove) {
+                $(el).remove();
+            }
+        });
+
+        // ─── ELIMINAR IFRAMES DE ANUNCIOS ────────────────────
+        $('iframe').each((i, el) => {
+            const src = $(el).attr('src') || '';
+            const adPatterns = ['ads', 'adserver', 'doubleclick', 'googlead', 'googletag', 'adnxs'];
+            if (adPatterns.some(p => src.toLowerCase().includes(p))) {
+                $(el).remove();
+            }
+        });
+
+        // ─── ELIMINAR DIVS DE ANUNCIOS ──────────────────────
+        $('[class*="ad" i], [id*="ad" i]').each((i, el) => {
+            const className = $(el).attr('class') || '';
+            const id = $(el).attr('id') || '';
+            const adPatterns = ['ad', 'ads', 'advertisement', 'advert', 'banner', 'promo'];
+            if (adPatterns.some(p => className.toLowerCase().includes(p) || id.toLowerCase().includes(p))) {
+                $(el).remove();
+            }
+        });
+
+        // ─── ELIMINAR ENLACES DE ANUNCIOS ────────────────────
+        $('a[target="_blank"]').each((i, el) => {
+            const href = $(el).attr('href') || '';
+            if (href.includes('click') || href.includes('ad') || href.includes('go')) {
+                $(el).remove();
+            }
+        });
+
+        // ─── EXTRAER EL REPRODUCTOR ──────────────────────────
+        let playerContent = '';
+        const playerSelectors = [
+            'video', 
+            '.video-container', 
+            '.player-container', 
+            '#player', 
+            '.player', 
+            '#video-container', 
+            '.jwplayer', 
+            '.video-js',
+            'iframe[src*="player"]',
+            'iframe[src*="embed"]',
+            '#video-player',
+            '.embed-container'
+        ];
+        
+        playerSelectors.forEach(selector => {
+            if (!playerContent) {
+                $(selector).each((i, el) => {
+                    playerContent += $.html(el);
+                });
+            }
+        });
+
+        // Si no encontramos el reproductor, tomar todo el body
+        if (!playerContent) {
+            // Intentar encontrar cualquier iframe o video
+            $('iframe, video').each((i, el) => {
+                if (!playerContent) {
+                    playerContent = $.html(el);
+                }
+            });
+        }
+
+        if (!playerContent) {
+            playerContent = $('body').html();
+        }
+
+        // ─── CONSTRUIR HTML LIMPIO ────────────────────────────
+        const cleanHtml = `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html, body { 
+            width:100%; 
+            height:100%; 
+            overflow:hidden;
+            background:#000; 
+            display:flex; 
+            align-items:center; 
+            justify-content:center;
+        }
+        video, iframe { 
+            width:100% !important; 
+            height:100% !important; 
+            max-width:100% !important;
+            max-height:100vh !important;
+            border:none !important; 
+            background:#000; 
+            display:block !important;
+            object-fit:contain !important;
+        }
+        .video-container, .player-container, #player, .player, #video-container,
+        .jwplayer, .video-js, .embed-container {
+            width:100% !important; 
+            height:100% !important; 
+            max-height:100vh !important;
+        }
+        .jwplayer .jw-media, .video-js .vjs-tech,
+        .jwplayer video, .video-js video {
+            width:100% !important; 
+            height:100% !important; 
+            object-fit:contain !important;
+        }
+        .jwplayer .jw-embed { width:100% !important; height:100% !important; }
+        /* Ocultar elementos de anuncios */
+        .ad, .ads, .ad-container, .advertisement, .banner, .promo,
+        [class*="ad" i], [id*="ad" i] { display:none !important; }
+        .jwplayer .jw-title, .jwplayer .jw-controls, .jwplayer .jw-overlay { z-index:10; }
+        /* Asegurar que el reproductor esté centrado */
+        .jwplayer { position:relative !important; }
+        .jwplayer .jw-media { position:relative !important; }
+        /* Ocultar elementos de overlay de anuncios */
+        .jwplayer .jw-ads { display:none !important; }
+        .jwplayer .jw-overlay { display:none !important; }
+        /* Scrollbars ocultos */
+        ::-webkit-scrollbar { display:none; }
+        /* Modo oscuro forzado */
+        .jwplayer .jw-controlbar { background:rgba(0,0,0,0.8) !important; }
+        .jwplayer .jw-background-color { background:#000 !important; }
+    </style>
+</head>
+<body>
+    ${playerContent || '<div style="color:#fff;display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;font-size:16px;">Cargando reproductor...</div>'}
+    <script>
+        // Eliminar ventanas emergentes
+        window.open = function() { return null; };
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A' && e.target.target === '_blank') {
+                e.preventDefault();
+                return false;
+            }
+        });
+        // Intentar iniciar reproducción automática
+        setTimeout(function() {
+            const video = document.querySelector('video');
+            if (video) {
+                video.play().catch(function() {});
+                video.setAttribute('playsinline', 'true');
+                video.setAttribute('webkit-playsinline', 'true');
+            }
+            // Clic en cualquier botón de play
+            document.querySelectorAll('.jwplayer .jw-icon-playback, .jwplayer .jw-icon-display, .vjs-big-play-button, .play-button').forEach(function(btn) {
+                btn.click();
+            });
+        }, 1000);
+    </script>
+</body>
+</html>`;
+
+        res.send(cleanHtml);
+    } catch (error) {
+        console.error('Error en /api/clean-player:', error.message);
+        // Redirigir al original si falla
+        res.redirect(url);
+    }
+});
+
+// ─── BÚSQUEDA GLOBAL ────────────────────────────────────────────
 app.get('/api/search', async (req, res) => {
     const { query, page = 1 } = req.query;
     if (!query) {
@@ -93,11 +392,11 @@ app.get('/api/search', async (req, res) => {
                         title: m.title || m.name,
                         poster: m.poster_path
                             ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                            : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
+                            : 'https://via.placeholder.com/500x750?text=Sin+Imagen',
                         overview: m.overview || 'Sin descripción disponible.',
                         type: type,
                         year: (m.release_date || m.first_air_date || '').substring(0, 4),
-                        streamer: getStreamerUrl(type, m.id)
+                        streamer: STREAM_PROVIDERS[0].url(type, m.id, 1, 1)
                     };
                 })
         });
@@ -107,9 +406,7 @@ app.get('/api/search', async (req, res) => {
     }
 });
 
-// ==========================================
-// PELÍCULAS
-// ==========================================
+// ─── PELÍCULAS ──────────────────────────────────────────────────
 app.get('/api/peliculas', async (req, res) => {
     const page = req.query.page || 1;
     try {
@@ -122,11 +419,11 @@ app.get('/api/peliculas', async (req, res) => {
             title: m.title,
             poster: m.poster_path
                 ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
+                : 'https://via.placeholder.com/500x750?text=Sin+Imagen',
             overview: m.overview || 'Sin descripción disponible.',
             type: 'movie',
             year: (m.release_date || '').substring(0, 4),
-            streamer: getStreamerUrl('movie', m.id)
+            streamer: STREAM_PROVIDERS[0].url('movie', m.id, 1, 1)
         }));
 
         res.json({
@@ -141,9 +438,7 @@ app.get('/api/peliculas', async (req, res) => {
     }
 });
 
-// ==========================================
-// SERIES
-// ==========================================
+// ─── SERIES ─────────────────────────────────────────────────────
 app.get('/api/series', async (req, res) => {
     const page = req.query.page || 1;
     try {
@@ -156,11 +451,11 @@ app.get('/api/series', async (req, res) => {
             title: m.name,
             poster: m.poster_path
                 ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
+                : 'https://via.placeholder.com/500x750?text=Sin+Imagen',
             overview: m.overview || 'Sin descripción disponible.',
             type: 'tv',
             year: (m.first_air_date || '').substring(0, 4),
-            streamer: getStreamerUrl('tv', m.id)
+            streamer: STREAM_PROVIDERS[0].url('tv', m.id, 1, 1)
         }));
 
         res.json({
@@ -175,9 +470,7 @@ app.get('/api/series', async (req, res) => {
     }
 });
 
-// ==========================================
-// ANIME
-// ==========================================
+// ─── ANIME ──────────────────────────────────────────────────────
 app.get('/api/anime', async (req, res) => {
     const page = req.query.page || 1;
     try {
@@ -191,11 +484,11 @@ app.get('/api/anime', async (req, res) => {
             title: m.name,
             poster: m.poster_path
                 ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
+                : 'https://via.placeholder.com/500x750?text=Sin+Imagen',
             overview: m.overview || 'Sin descripción disponible.',
             type: 'tv',
             year: (m.first_air_date || '').substring(0, 4),
-            streamer: getStreamerUrl('tv', m.id)
+            streamer: STREAM_PROVIDERS[0].url('tv', m.id, 1, 1)
         }));
 
         res.json({
@@ -210,16 +503,41 @@ app.get('/api/anime', async (req, res) => {
     }
 });
 
-// ==========================================
-// SERVIR ARCHIVOS ESTÁTICOS DEL FRONTEND
-// ==========================================
+// ─── ESTADÍSTICAS DEL CATÁLOGO ────────────────────────────────
+app.get('/api/stats', async (req, res) => {
+    try {
+        // Obtener conteos
+        const [movies, series, anime] = await Promise.all([
+            fetchTMDB('/discover/movie', { sort_by: 'popularity.desc' }),
+            fetchTMDB('/discover/tv', { sort_by: 'popularity.desc' }),
+            fetchTMDB('/discover/tv', { with_original_language: 'ja', sort_by: 'popularity.desc' })
+        ]);
+
+        res.json({
+            success: true,
+            movies: movies.total_results || 0,
+            series: series.total_results || 0,
+            anime: anime.total_results || 0,
+            providers: STREAM_PROVIDERS.map(p => p.name),
+            timestamp: new Date().toISOString()
+        });
+    } catch (error) {
+        console.error('Error en /api/stats:', error.message);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// ─── SERVIR ARCHIVOS ESTÁTICOS ─────────────────────────────────
 app.use(express.static(__dirname));
 
+// ─── FALLBACK PARA SPA ─────────────────────────────────────────
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Escuchar puerto
+// ─── INICIAR SERVIDOR ──────────────────────────────────────────
 app.listen(PORT, () => {
     console.log(`[OK] Servidor corriendo en puerto ${PORT}`);
+    console.log(`[OK] Proveedores de streaming: ${STREAM_PROVIDERS.map(p => p.name).join(', ')}`);
+    console.log(`[OK] Clean Player: activado (elimina anuncios y popups)`);
 });
