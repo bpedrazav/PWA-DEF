@@ -5962,11 +5962,11 @@
       },
 
       loadPlayer(url) {
-        const cleanUrl = `/api/clean-player?url=${encodeURIComponent(url)}`;
-        this.mediaPlayer.src = cleanUrl;
+        // Carga directa - el script en el iframe manejará los popups
+        this.mediaPlayer.src = url;
         this.mediaPlayer.style.display = 'block';
         this.playerError.classList.add('hidden');
-
+        this.updateProviderInfo('Directo', true);
         const loadingEl = this.playerWrapper.querySelector('.loading-overlay');
         if (loadingEl) loadingEl.remove();
       },
