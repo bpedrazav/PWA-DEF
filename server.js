@@ -13,7 +13,6 @@ const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
 // ─── PROVEEDORES DE STREAMING CON PRIORIDAD ────────────────────
-// Ordenados por calidad y disponibilidad de subtítulos
 const STREAM_PROVIDERS = [
     {
         name: 'vidlink',
@@ -86,7 +85,7 @@ app.get('/api/tv-details/:id', async (req, res) => {
         const seasonDetails = [];
 
         for (const season of seasons) {
-            if (season.season_number === 0) continue; // Especiales
+            if (season.season_number === 0) continue;
             const epData = await axios.get(`${TMDB_BASE_URL}/tv/${id}/season/${season.season_number}`, {
                 params: {
                     api_key: TMDB_API_KEY,
@@ -129,7 +128,6 @@ app.get('/api/stream-url', async (req, res) => {
     const providers = STREAM_PROVIDERS;
     const startIdx = parseInt(provider_index) || 0;
 
-    // Probar proveedores desde el índice actual
     for (let i = startIdx; i < providers.length; i++) {
         const p = providers[i];
         const url = p.url(type, id, season, episode);
@@ -151,12 +149,10 @@ app.get('/api/stream-url', async (req, res) => {
                 });
             }
         } catch (e) {
-            // Intentar con el siguiente
             continue;
         }
     }
 
-    // Fallback: devolver el mejor proveedor disponible
     res.json({
         success: true,
         provider: providers[0].name,
@@ -168,7 +164,6 @@ app.get('/api/stream-url', async (req, res) => {
 });
 
 // ─── PROXY PARA ELIMINAR ANUNCIOS Y POPUPS ─────────────────────
-// Este endpoint carga el contenido del reproductor y elimina scripts maliciosos
 app.get('/api/clean-player', async (req, res) => {
     const { url } = req.query;
     if (!url) {
@@ -185,10 +180,9 @@ app.get('/api/clean-player', async (req, res) => {
             }
         });
 
-        // Usar Cheerio para limpiar el HTML
         const $ = cheerio.load(response.data);
 
-        // ─── ELIMINAR SCRIPTS DE ANUNCIOS ────────────────────
+        // Eliminar scripts de anuncios
         const adScriptPatterns = ['ads', 'adserver', 'doubleclick', 'googlead', 'googletag', 'adservice', 'adnxs', 'taboola', 'outbrain', 'popup', 'popunder', 'adblock', 'advertisement', 'advert'];
         $('script').each((i, el) => {
             const src = $(el).attr('src') || '';
@@ -205,7 +199,7 @@ app.get('/api/clean-player', async (req, res) => {
             }
         });
 
-        // ─── ELIMINAR IFRAMES DE ANUNCIOS ────────────────────
+        // Eliminar iframes de anuncios
         $('iframe').each((i, el) => {
             const src = $(el).attr('src') || '';
             const adPatterns = ['ads', 'adserver', 'doubleclick', 'googlead', 'googletag', 'adnxs'];
@@ -214,7 +208,7 @@ app.get('/api/clean-player', async (req, res) => {
             }
         });
 
-        // ─── ELIMINAR DIVS DE ANUNCIOS ──────────────────────
+        // Eliminar divs de anuncios
         $('[class*="ad" i], [id*="ad" i]').each((i, el) => {
             const className = $(el).attr('class') || '';
             const id = $(el).attr('id') || '';
@@ -224,7 +218,7 @@ app.get('/api/clean-player', async (req, res) => {
             }
         });
 
-        // ─── ELIMINAR ENLACES DE ANUNCIOS ────────────────────
+        // Eliminar enlaces de anuncios
         $('a[target="_blank"]').each((i, el) => {
             const href = $(el).attr('href') || '';
             if (href.includes('click') || href.includes('ad') || href.includes('go')) {
@@ -232,7 +226,7 @@ app.get('/api/clean-player', async (req, res) => {
             }
         });
 
-        // ─── EXTRAER EL REPRODUCTOR ──────────────────────────
+        // Extraer el reproductor
         let playerContent = '';
         const playerSelectors = [
             'video', 
@@ -257,9 +251,7 @@ app.get('/api/clean-player', async (req, res) => {
             }
         });
 
-        // Si no encontramos el reproductor, tomar todo el body
         if (!playerContent) {
-            // Intentar encontrar cualquier iframe o video
             $('iframe, video').each((i, el) => {
                 if (!playerContent) {
                     playerContent = $.html(el);
@@ -271,7 +263,6 @@ app.get('/api/clean-player', async (req, res) => {
             playerContent = $('body').html();
         }
 
-        // ─── CONSTRUIR HTML LIMPIO ────────────────────────────
         const cleanHtml = `
 <!DOCTYPE html>
 <html>
@@ -314,19 +305,14 @@ app.get('/api/clean-player', async (req, res) => {
             object-fit:contain !important;
         }
         .jwplayer .jw-embed { width:100% !important; height:100% !important; }
-        /* Ocultar elementos de anuncios */
         .ad, .ads, .ad-container, .advertisement, .banner, .promo,
         [class*="ad" i], [id*="ad" i] { display:none !important; }
         .jwplayer .jw-title, .jwplayer .jw-controls, .jwplayer .jw-overlay { z-index:10; }
-        /* Asegurar que el reproductor esté centrado */
         .jwplayer { position:relative !important; }
         .jwplayer .jw-media { position:relative !important; }
-        /* Ocultar elementos de overlay de anuncios */
         .jwplayer .jw-ads { display:none !important; }
         .jwplayer .jw-overlay { display:none !important; }
-        /* Scrollbars ocultos */
         ::-webkit-scrollbar { display:none; }
-        /* Modo oscuro forzado */
         .jwplayer .jw-controlbar { background:rgba(0,0,0,0.8) !important; }
         .jwplayer .jw-background-color { background:#000 !important; }
     </style>
@@ -334,7 +320,6 @@ app.get('/api/clean-player', async (req, res) => {
 <body>
     ${playerContent || '<div style="color:#fff;display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;font-size:16px;">Cargando reproductor...</div>'}
     <script>
-        // Eliminar ventanas emergentes
         window.open = function() { return null; };
         document.addEventListener('click', function(e) {
             if (e.target.tagName === 'A' && e.target.target === '_blank') {
@@ -342,7 +327,6 @@ app.get('/api/clean-player', async (req, res) => {
                 return false;
             }
         });
-        // Intentar iniciar reproducción automática
         setTimeout(function() {
             const video = document.querySelector('video');
             if (video) {
@@ -350,7 +334,6 @@ app.get('/api/clean-player', async (req, res) => {
                 video.setAttribute('playsinline', 'true');
                 video.setAttribute('webkit-playsinline', 'true');
             }
-            // Clic en cualquier botón de play
             document.querySelectorAll('.jwplayer .jw-icon-playback, .jwplayer .jw-icon-display, .vjs-big-play-button, .play-button').forEach(function(btn) {
                 btn.click();
             });
@@ -362,7 +345,6 @@ app.get('/api/clean-player', async (req, res) => {
         res.send(cleanHtml);
     } catch (error) {
         console.error('Error en /api/clean-player:', error.message);
-        // Redirigir al original si falla
         res.redirect(url);
     }
 });
@@ -506,7 +488,6 @@ app.get('/api/anime', async (req, res) => {
 // ─── ESTADÍSTICAS DEL CATÁLOGO ────────────────────────────────
 app.get('/api/stats', async (req, res) => {
     try {
-        // Obtener conteos
         const [movies, series, anime] = await Promise.all([
             fetchTMDB('/discover/movie', { sort_by: 'popularity.desc' }),
             fetchTMDB('/discover/tv', { sort_by: 'popularity.desc' }),
