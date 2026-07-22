@@ -5962,14 +5962,10 @@
       },
 
       loadPlayer(url) {
-    // Carga directa - permitimos anuncios pero evitamos popups
-    // El script en el iframe bloqueará solo ventanas emergentes
-    this.mediaPlayer.src = url;
-    this.mediaPlayer.style.display = 'block';
-    this.playerError.classList.add('hidden');
-    this.updateProviderInfo('Directo', true);
-    const loadingEl = this.playerWrapper.querySelector('.loading-overlay');
-    if (loadingEl) loadingEl.remove();
+    // Abrir en nueva ventana - siempre funciona
+    window.open(url, '_blank');
+    this.closePlayer();
+    showToast('📺 Reproductor abierto en nueva pestaña');
 },
 
       showLoading(message) {
