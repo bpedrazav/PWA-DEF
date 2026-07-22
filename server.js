@@ -1,225 +1,115 @@
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
-
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-// Clave API de TMDB desde variables de entorno
-const TMDB_API_KEY = process.env.TMDB_API_KEY;
-const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
-
-// ==========================================
-// CONFIGURACIÓN DE SERVIDORES DE STREAMING (DOMINIOS ACTIVOS)
-// ==========================================
-const PROVIDERS = [
-    (type, id) => `https://vidlink.pro/${type}/${id}`,
-    (type, id) => `https://vidsrc.cc/v2/embed/${type}/${id}`,
-    (type, id) => `https://vidsrc.vip/embed/${type}/${id}`,
-    (type, id) => `https://vidsrc.net/embed/${type}/${id}`
-];
-
-// Devuelve el proveedor principal por defecto
-const getStreamerUrl = (type, id, index = 0) => {
-    return PROVIDERS[index] ? PROVIDERS[index](type, id) : PROVIDERS[0](type, id);
-};
-
-// Función auxiliar para realizar peticiones a TMDB
-const fetchTMDB = async (url, params = {}) => {
-    const res = await axios.get(`${TMDB_BASE_URL}${url}`, {
-        params: {
-            api_key: TMDB_API_KEY,
-            language: 'es-MX',
-            ...params
-        },
-        timeout: 8000
-    });
-    return res.data;
-};
-
-// ==========================================
-// ENDPOINT PARA VERIFICAR O CAMBIAR DE SERVIDOR
-// ==========================================
-app.get('/api/resolve-stream', async (req, res) => {
-    const { type = 'movie', id } = req.query;
-
-    if (!id) {
-        return res.status(400).json({ success: false, message: 'ID es requerido' });
-    }
-
-    // Prueba los servidores en orden hasta encontrar uno activo
-    for (const getUrl of PROVIDERS) {
-        const testUrl = getUrl(type, id);
-        try {
-            const response = await axios.head(testUrl, { timeout: 3000 });
-            if (response.status === 200) {
-                return res.json({ success: true, url: testUrl });
-            }
-        } catch (e) {
-            // Si falla, ignora y prueba el siguiente
-        }
-    }
-
-    // Si ninguno responde, devuelve el primario como último recurso
-    res.json({ success: true, url: PROVIDERS[0](type, id) });
-});
-
-// ==========================================
-// ENDPOINT DE BÚSQUEDA GLOBAL (LUPA)
-// ==========================================
-app.get('/api/search', async (req, res) => {
-    const { query, page = 1 } = req.query;
-    if (!query) {
-        return res.status(400).json({ success: false, message: 'Query requerida' });
-    }
-
-    try {
-        const data = await fetchTMDB('/search/multi', { query, page });
-        const items = data.results || [];
-
-        res.json({
-            success: true,
-            page: data.page,
-            total_pages: data.total_pages,
-            total_results: data.total_results,
-            data: items
-                .filter(m => m.media_type === 'movie' || m.media_type === 'tv')
-                .map(m => {
-                    const type = m.media_type === 'movie' ? 'movie' : 'tv';
-                    return {
-                        id: m.id,
-                        title: m.title || m.name,
-                        poster: m.poster_path
-                            ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                            : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
-                        overview: m.overview || 'Sin descripción disponible.',
-                        type: type,
-                        year: (m.release_date || m.first_air_date || '').substring(0, 4),
-                        streamer: getStreamerUrl(type, m.id)
-                    };
-                })
-        });
-    } catch (error) {
-        console.error('Error en /api/search:', error.message);
-        res.status(500).json({ success: false, error: error.message });
-    }
-});
-
-// ==========================================
-// PELÍCULAS
-// ==========================================
-app.get('/api/peliculas', async (req, res) => {
-    const page = req.query.page || 1;
-    try {
-        const data = await fetchTMDB('/discover/movie', {
-            page,
-            sort_by: 'popularity.desc'
-        });
-        const peliculas = data.results.map(m => ({
-            id: m.id,
-            title: m.title,
-            poster: m.poster_path
-                ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
-            overview: m.overview || 'Sin descripción disponible.',
-            type: 'movie',
-            year: (m.release_date || '').substring(0, 4),
-            streamer: getStreamerUrl('movie', m.id)
-        }));
-
-        res.json({
-            success: true,
-            page: data.page,
-            total_pages: data.total_pages,
-            data: peliculas
-        });
-    } catch (error) {
-        console.error('Error en /api/peliculas:', error.message);
-        res.status(500).json({ success: false, error: error.message });
-    }
-});
-
-// ==========================================
-// SERIES
-// ==========================================
-app.get('/api/series', async (req, res) => {
-    const page = req.query.page || 1;
-    try {
-        const data = await fetchTMDB('/discover/tv', {
-            page,
-            sort_by: 'popularity.desc'
-        });
-        const series = data.results.map(m => ({
-            id: m.id,
-            title: m.name,
-            poster: m.poster_path
-                ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
-            overview: m.overview || 'Sin descripción disponible.',
-            type: 'tv',
-            year: (m.first_air_date || '').substring(0, 4),
-            streamer: getStreamerUrl('tv', m.id)
-        }));
-
-        res.json({
-            success: true,
-            page: data.page,
-            total_pages: data.total_pages,
-            data: series
-        });
-    } catch (error) {
-        console.error('Error en /api/series:', error.message);
-        res.status(500).json({ success: false, error: error.message });
-    }
-});
-
-// ==========================================
-// ANIME
-// ==========================================
-app.get('/api/anime', async (req, res) => {
-    const page = req.query.page || 1;
-    try {
-        const data = await fetchTMDB('/discover/tv', {
-            page,
-            with_original_language: 'ja',
-            sort_by: 'popularity.desc'
-        });
-        const animes = data.results.map(m => ({
-            id: m.id,
-            title: m.name,
-            poster: m.poster_path
-                ? `https://image.tmdb.org/t/p/w500${m.poster_path}`
-                : 'https://via.placeholder.com/500x750?text=Sin-Imagen',
-            overview: m.overview || 'Sin descripción disponible.',
-            type: 'tv',
-            year: (m.first_air_date || '').substring(0, 4),
-            streamer: getStreamerUrl('tv', m.id)
-        }));
-
-        res.json({
-            success: true,
-            page: data.page,
-            total_pages: data.total_pages,
-            data: animes
-        });
-    } catch (error) {
-        console.error('Error en /api/anime:', error.message);
-        res.status(500).json({ success: false, error: error.message });
-    }
-});
-
-// ==========================================
-// SERVIR ARCHIVOS ESTÁTICOS DEL FRONTEND
-// ==========================================
+// Sirve tu PWA/index.html desde la raíz sin mover nada
 app.use(express.static(__dirname));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+const API_KEY = 'f745ccfefedb83e1edca042526da0868';
+
+// =========================================================================
+// 1. ENDPOINT DE PELÍCULAS MASIVAS (CON MULTI-SERVIDOR)
+// =========================================================================
+app.get('/api/peliculas', async (req, res) => {
+  const page = req.query.page || 1;
+  console.log(`[Peliculas] Solicitando página ${page}...`);
+  try {
+    const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=es-MX&sort_by=popularity.desc&page=${page}`, {
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+      timeout: 6000
+    });
+    if (response.data && response.data.results) {
+      const peliculas = response.data.results.map(p => ({
+        id: p.id,
+        titulo: p.title,
+        sinopsis: p.overview || "Sin sinopsis disponible.",
+        poster: p.poster_path ? `https://image.tmdb.org/t/p/w500${p.poster_path}` : "https://via.placeholder.com/500x750?text=No+Image",
+        fecha: p.release_date || "N/A",
+        // Enviamos ambas opciones para que el frontend pueda alternar si fallan los subtítulos
+        streamUrl: `https://vidsrc.to/embed/movie/${p.id}`, 
+        streamUrlBackup: `https://multiembed.to/embed/tmdb/movie/${p.id}`
+      }));
+      return res.json({ success: true, page: parseInt(page), total_pages: response.data.total_pages, data: peliculas });
+    }
+    throw new Error("Estructura inválida");
+  } catch (error) {
+    console.log(`[Peliculas] Error:`, error.message);
+    res.json({ success: true, page: 1, total_pages: 1, data: [] });
+  }
 });
 
-// Escuchar puerto
+// =========================================================================
+// 2. ENDPOINT DE SERIES MASIVAS (CON MULTI-SERVIDOR)
+// =========================================================================
+app.get('/api/series', async (req, res) => {
+  const page = req.query.page || 1;
+  console.log(`[Series] Solicitando página ${page}...`);
+  try {
+    const response = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&language=es-MX&sort_by=popularity.desc&page=${page}`, {
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+      timeout: 6000
+    });
+    if (response.data && response.data.results) {
+      const series = response.data.results.map(s => ({
+        id: s.id,
+        titulo: s.name,
+        sinopsis: s.overview || "Sin sinopsis disponible.",
+        poster: s.poster_path ? `https://image.tmdb.org/t/p/w500${s.poster_path}` : "https://via.placeholder.com/500x750?text=No+Image",
+        fecha: s.first_air_date || "N/A",
+        // Temporada 1, Episodio 1 por defecto para la carga inicial
+        streamUrl: `https://vidsrc.to/embed/tv/${s.id}/1/1`,
+        streamUrlBackup: `https://multiembed.to/embed/tmdb/tv/${s.id}?s=1&e=1`
+      }));
+      return res.json({ success: true, page: parseInt(page), total_pages: response.data.total_pages, data: series });
+    }
+    throw new Error("Estructura inválida");
+  } catch (error) {
+    console.log(`[Series] Error:`, error.message);
+    res.json({ success: true, page: 1, total_pages: 1, data: [] });
+  }
+});
+
+// =========================================================================
+// 3. ENDPOINT DE ANIMES MASIVOS (CON MULTI-SERVIDOR REVERTIDO POR DEFECTO)
+// =========================================================================
+app.get('/api/animes', async (req, res) => {
+  const page = req.query.page || 1;
+  console.log(`[Animes] Solicitando página ${page}...`);
+  try {
+    // Filtrado por género Animación (16) y origen Japón (JP)
+    const response = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&language=es-MX&sort_by=popularity.desc&with_genres=16&with_origin_country=JP&page=${page}`, {
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+      timeout: 6000
+    });
+    if (response.data && response.data.results) {
+      const animes = response.data.results.map(a => ({
+        id: a.id,
+        titulo: a.name,
+        sinopsis: a.overview || "Sin sinopsis disponible.",
+        poster: a.poster_path ? `https://image.tmdb.org/t/p/w500${a.poster_path}` : "https://via.placeholder.com/500x750?text=No+Image",
+        fecha: a.first_air_date || "N/A",
+        // Estrategia inteligente: Para Anime ponemos MULTIEMBED como servidor principal porque cuida mejor los subtítulos en español
+        streamUrl: `https://multiembed.to/embed/tmdb/tv/${a.id}?s=1&e=1`,
+        streamUrlBackup: `https://vidsrc.to/embed/tv/${a.id}/1/1`
+      }));
+      return res.json({ success: true, page: parseInt(page), total_pages: response.data.total_pages, data: animes });
+    }
+    throw new Error("Estructura inválida");
+  } catch (error) {
+    console.log(`[Animes] Error:`, error.message);
+    res.json({ success: true, page: 1, total_pages: 1, data: [] });
+  }
+});
+
+// Ruta comodín para soportar el enrutamiento de la PWA
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 app.listen(PORT, () => {
-    console.log(`[OK] Servidor corriendo en puerto ${PORT}`);
+  console.log(`FlojerApp (Hub Multimedia) corriendo en el puerto ${PORT}`);
 });
