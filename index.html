@@ -579,7 +579,7 @@
       font-weight: 600;
     }
 
-    .ms-team-big.right {}
+    
 
     .ms-team-logo {
       width: 40px;
@@ -5890,4 +5890,72 @@
   </div>
 </body>
 
+<script>
+    // Referencias al DOM
+    const searchInput = document.querySelector('#search-input'); // Asegúrate de que tu input tenga este ID
+    const searchBtn = document.querySelector('#search-btn');     // Asegúrate de que tu lupa tenga este ID
+    const contentGrid = document.querySelector('.grid-container'); // El div donde van las portadas
+    const playerModal = document.querySelector('#player-modal');   // Tu modal de reproducción
+    
+    // Estado actual
+    let currentType = 'peliculas'; 
+
+    // Función para cargar contenido
+    async function loadContent(type, page = 1) {
+        currentType = type;
+        try {
+            const res = await fetch(`/api/${type}?page=${page}`);
+            const data = await res.json();
+            renderGrid(data.data);
+        } catch (err) { console.error("Error cargando:", err); }
+    }
+
+    // Función de búsqueda (La Lupita)
+    async function performSearch() {
+        const query = searchInput.value;
+        if (!query) return;
+        try {
+            const res = await fetch(`/api/search?query=${encodeURIComponent(query)}`);
+            const data = await res.json();
+            renderGrid(data.data, true); // true indica que son resultados de búsqueda
+        } catch (err) { console.error("Error buscando:", err); }
+    }
+
+    // Renderizado de tarjetas
+    function renderGrid(items, isSearch = false) {
+        contentGrid.innerHTML = '';
+        items.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${item.poster}" alt="${item.title}">
+                <h3>${item.title}</h3>
+            `;
+            card.onclick = () => openPlayer(item.id, item.type);
+            contentGrid.appendChild(card);
+        });
+    }
+
+    // Abrir Reproductor
+    function openPlayer(id, type) {
+        const url = type === 'movie' 
+            ? `https://vidsrc.to/embed/movie/${id}` 
+            : `https://vidsrc.to/embed/tv/${id}/1/1`;
+        
+        // Aquí asumo que tienes un iframe en tu modal
+        const iframe = document.querySelector('#video-frame'); 
+        if(iframe) iframe.src = url;
+        
+        playerModal.style.display = 'flex'; // O la clase que uses para mostrar el modal
+    }
+
+    // Event Listeners
+    if(searchBtn) searchBtn.addEventListener('click', performSearch);
+    if(searchInput) searchInput.addEventListener('keypress', (e) => {
+        if(e.key === 'Enter') performSearch();
+    });
+
+    // Carga inicial
+    loadContent('peliculas');
+</script>
 </html>
