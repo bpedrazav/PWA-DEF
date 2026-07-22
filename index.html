@@ -5961,11 +5961,14 @@
         }
       },
 
-      loadPlayer(url) {
-    // Abrir en nueva ventana - siempre funciona
-    window.open(url, '_blank');
-    this.closePlayer();
-    showToast('📺 Reproductor abierto en nueva pestaña');
+     loadPlayer(url) {
+    this.mediaPlayer.src = url;
+    this.mediaPlayer.style.display = 'block';
+    this.playerError.classList.add('hidden');
+    this.updateProviderInfo('Directo', true);
+    const loadingEl = this.playerWrapper.querySelector('.loading-overlay');
+    if (loadingEl) loadingEl.remove();
+    showToast('▶️ Presiona play para reproducir', 3000);
 },
 
       showLoading(message) {
