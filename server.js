@@ -10,6 +10,51 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 const API_KEY = 'f745ccfefedb83e1edca042526da0868';
+const fs = require('fs');
+const DB_FILE = path.join(__dirname, 'data', 'db.json');
+
+// Asegurar que la carpeta data exista
+if (!fs.existsSync(path.join(__dirname, 'data'))) {
+  fs.mkdirSync(path.join(__dirname, 'data'));
+}
+
+// Inicializar DB si no existe
+if (!fs.existsSync(DB_FILE)) {
+  fs.writeFileSync(DB_FILE, JSON.stringify({}));
+}
+
+// Función helper para leer DB
+const readDB = () => JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
+const writeDB = (data) => fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
+
+// =========================================================================
+// 0. ENDPOINTS DE SINCRONIZACIÓN EN LA NUBE
+// =========================================================================
+app.get('/api/sync/:user', (req, res) => {
+  try {
+    const db = readDB();
+    const user = req.params.user;
+    if (db[user]) {
+      res.json({ success: true, data: db[user] });
+    } else {
+      res.json({ success: false, message: 'Usuario no encontrado' });
+    }
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+app.post('/api/sync/:user', (req, res) => {
+  try {
+    const db = readDB();
+    const user = req.params.user;
+    db[user] = req.body;
+    writeDB(db);
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
 
 // =========================================================================
 // 1. ENDPOINT DE PELÍCULAS MASIVAS (CON MULTI-SERVIDOR)
