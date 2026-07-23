@@ -1,38 +1,932 @@
 {
   "channels": [
     {
-      "name": "Deutsche Welle Europe",
-      "url": "http://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream05/streamPlaylist.m3u8",
-      "logo": null,
+      "name": "C-SPAN (720p)",
+      "url": "http://40.160.24.52/C-SPAN_HD/index.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/C-SPAN_Logo_%282019%29.svg/960px-C-SPAN_Logo_%282019%29.svg.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "C-SPAN 2 (720p)",
+      "url": "http://40.160.24.52/C-SPAN_2/index.m3u8",
+      "logo": "https://i.imgur.com/9B6XIQC.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "RTV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/590642f0a31efa4.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/5aNYcSQ.png?v=1.1.1.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "MDTV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/6cdb3402d11f58d.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/WaFICZ4.png?v=1.0.0.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "BN Channel",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/6183ec225226ccf.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/H5CmoZv.png?v=1.0.0.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "TVRI Nasional HD",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/3f58825fe229a9f.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/Ax67v0u.png?v=1.0.0.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "JTV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/226fe77699e03c6.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/bKLoSVx.png?v=1.1.1.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "MUI TV",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/71b5c8483161297.m3u8",
+      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi866S3gjBEh-2xwbkT0Hryo-cHL87xQYnEGvjuck8gV2auLanTr54aAGj_tXXV1DmT50HFhkfJO5q7WT3N-INtC_f3YeSrvlOFiOVU62qR3j-exk9NPF6m1yCBgCIhgp9bdxkHtkHZljkE4fFpBpGWjfDQfHI1qD-1RVc1PVyTSjbuNNezZPZpX5IzTwx-/s1600/hzPnJaX.png?v=1.0.0.1",
+      "group_title": "Ukhuwah Islamiyah"
+    },
+    {
+      "name": "Elshinta TV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/383fb71f4a76ab2.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/9i6ufQh.png?v=1.0.0.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "TVRI Jawa Timur",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/3f58825fe229a8g.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/1GW0BTz.png?v=1.0.0.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "Inspira TV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/0c913970f4e013e.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/RFYcXrq.png?v=1.0.0.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "TVKU",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/29afb26faff1ccd.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/VLR16Or.png?v=1.0.0.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "duta TV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/3254f236ad3e872.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/pzwi2WE.png?v=1.0.0.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "Garuda TV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/b825800cf4d3aaa.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/HM01rkg.png?v=1.1.1.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "Sakti TV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/3202e9487d9cd5c.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/e4ZNl62.png?v=1.0.0.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "Surabaya TV 🇮🇩",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/86555c60e79d212.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/eqluvkr.png?v=1.0.0.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "SCTV",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/2b8fc230e8f847a.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/TYpz6Yv.png?v=1.0.0.1",
+      "group_title": "Dens.tv"
+    },
+    {
+      "name": "Metro TV HD",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/6183ec225226ccc.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/cjgZtZy.png?v=1.0.0.1",
+      "group_title": "Dens.tv"
+    },
+    {
+      "name": "TVOne",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/0976f879a0c4548.m3u8",
+      "logo": "https://cdn4.mbahnunungonline.net/img/CTqyhF2.png?v=1.0.0.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "Nusantara TV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/378a642ff00fed8.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/tQ6itG9.png?v=1.0.0.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "TV2 HD",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/my/Tv2/index.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/JVfkufE.png?v=1.0.0.1",
+      "group_title": "🇲🇾 Malaysia"
+    },
+    {
+      "name": "Indosiar",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/575eeb9f08dc8db.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/CiYAcVe.png?v=1.0.0.1",
+      "group_title": "Dens.tv"
+    },
+    {
+      "name": "MOJI",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/d4ff175b1e2d419.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/lFAUBcK.png?v=1.1.1.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "My Cinema Europe",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/Mov/42f8fc7226dc12a1.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/WnZe5JF.png?v=1.0.0.1",
+      "group_title": "Movies"
+    },
+    {
+      "name": "Indosiar HD",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/575eeb9f08dc8db.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/k3IqSHs.png?v=1.1.1.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "Kompas TV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/ae5f9d6bcd610b6.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/Dksg1b8.png?v=1.0.0.1",
+      "group_title": "Dens.tv"
+    },
+    {
+      "name": "NHK World Japan",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/ns/29fe33a8dc20fa3.m3u8",
+      "logo": "https://thumbs2.imgbox.com/7c/41/Vn8TdKTG_t.png?v=1.0.0.1",
       "group_title": "News"
     },
     {
-      "name": "美国 红牛运动",
-      "url": "http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8",
-      "logo": null,
-      "group_title": "电视台"
+      "name": "AlJazeera Arabic",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/ar/f5f5c18cf037918b.m3u8",
+      "logo": "https://thumbs2.imgbox.com/4d/9d/4DNDSG7x_t.png?v=1.0.0.1",
+      "group_title": "News"
     },
     {
-      "name": "KBSV/AssyriaSat",
-      "url": "http://66.242.170.53/hls/live/temp/index.m3u8",
+      "name": "Trans 7",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/cdd283c9d3d43b5.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/sWeXuef.png?v=1.1.1.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "Metro TV HD",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/6183ec225226ccc.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/Qdzsb1v.png?v=1.0.0.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "Channel Jowo",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/1de333734b1b7e0.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/JxtgBmg.png?v=1.0.0.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "TVRI Sport",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/3f58825fe229a8h.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/g3hWHhA.png?v=1.1.1.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "Jawa Pos TV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/459caa984301138.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/iBrOoMG.png?v=1.0.0.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "DENS Food Channel",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/dfc160946781414.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/sE1nCEC.png?v=1.0.0.1",
+      "group_title": "Lifestyle"
+    },
+    {
+      "name": "Music Information Channel",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/0c913970f4e0137.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/R3BrQZs.png?v=1.0.0.1",
+      "group_title": "Music"
+    },
+    {
+      "name": "[美国]White Plains Community Media",
+      "url": "http://stream.swagit.com/live-edge/whiteplainsny/smil:std-4x3-1-b/chunklist_w1456643228_b512000.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "台视新闻台",
-      "url": "http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8",
-      "logo": "http://n.ysyz.top:99/buyaolian/tsxw.png",
-      "group_title": "港澳台"
+      "name": "美·红牛运动",
+      "url": "http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8",
+      "logo": null,
+      "group_title": "世界"
     },
     {
-      "name": "民视新闻台",
-      "url": "http://38.64.72.148:80/hls/modn/list/4012/chunklist0.m3u8",
-      "logo": "http://n.ysyz.top:99/buyaolian/msxw.png",
-      "group_title": "港澳台"
+      "name": "TV1 HD",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/my/Tv1/index.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/BCopt1L.png?v=1.1.1.1",
+      "group_title": "🇲🇾 Malaysia"
+    },
+    {
+      "name": "MOJI",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/d4ff175b1e2d419.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/sSAf4Kz.png?v=1.0.0.1",
+      "group_title": "Dens.tv"
+    },
+    {
+      "name": "Sonstige: Red Bull TV",
+      "url": "http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8",
+      "logo": null,
+      "group_title": "世界"
+    },
+    {
+      "name": "DAAI TV",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/id/0525ed2747e3162.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/1eaZ3bd.png?v=1.1.1.1",
+      "group_title": "Local"
+    },
+    {
+      "name": "Berita RTM",
+      "url": "http://khano.nng.cloudns.us/live/m3u8/my/BeritaRTM/index.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/twIcy62.png?v=1.0.0.1",
+      "group_title": "🇲🇾 Malaysia"
+    },
+    {
+      "name": "PGA TOUR [HD]",
+      "url": "http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5de94dacb394a300099fa22a/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=713&deviceId=5de94dacb394a300099fa22a&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "BTV",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/270f72deeb5843f.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/borDppE.png?v=1.0.0.1",
+      "group_title": "Dens.tv"
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_513/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "春晚1999",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQxNTRfMF8z_b_B0b5e52bc003285ef66ec0cbb2be08556.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d57ed33080661409da995~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340076&x-signature=PNd%2BJYQufVpwMsFFoquQKxAnL9U%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "[美国]WHOH TV - Hastings-On-Hudson - NY (360p)",
+      "url": "http://stream.swagit.com/live-edge/hastingsonhudsonny/smil:std-4x3-1-a/playlist.m3u8",
+      "logo": null,
+      "group_title": "美国Local听力磨耳朵"
+    },
+    {
+      "name": "NewsmaxTV",
+      "url": "http://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8",
+      "logo": null,
+      "group_title": "世界"
+    },
+    {
+      "name": "Al Jazeera English",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/ns/f5f5c18cf037919.m3u8",
+      "logo": "https://thumbs2.imgbox.com/fa/8a/w5za9Ci0_t.png?v=1.0.0.1",
+      "group_title": "News"
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_501/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_502/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_511/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Z Bollywood",
+      "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeebollywood/default/manifest.mpd",
+      "logo": "https://warningfm.github.io/v3/img/8RckLVA.png?v=8.8.4.4",
+      "group_title": "🇮🇳 Hindi"
+    },
+    {
+      "name": "TVONE",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/0976f879a0c4548.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/UqGSTVT.png?v=1.0.0.1",
+      "group_title": "Dens.tv"
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_516/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "春晚2017",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQ2NDhfMF8z_b_B6527b0c2ce3dda1d9b3f34edd4fdb9aa.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "Discovery Kids",
+      "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Discoverykids2/default/manifest.mpd",
+      "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/RzedYhFG.png",
+      "group_title": "Dish TV"
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d339db7e49c224a6aa981~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340022&x-signature=O395blnPO%2BoNi%2FuMQKh61aFr%2FPI%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d14ad17febf0442e985c3~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340056&x-signature=DDN3NLbzaoIFQr3SHtS9s5iPlmo%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dc17bfa9ab05d47a08a70~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340066&x-signature=%2F8tAPgCKvxqYfxi39FUT2NuQd3g%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d83525d50ec16467ea023~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340079&x-signature=c3BsdmcuMfvsaVTG5Fni80bxzRg%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0db0c9a36e3e434bec8c91~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340126&x-signature=2jUXeJN4AZAAW2Nv17RQCYjJecM%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "新加坡中文台",
+      "url": "https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_4.m3u8?zshijd",
+      "logo": null,
+      "group_title": "世界"
+    },
+    {
+      "name": "Probasi TV",
+      "url": "http://158.69.24.53:8080/probashi_tv/index.m3u8",
+      "logo": null,
+      "group_title": "Bangladeshi"
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_465/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_507/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_515/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_521/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "春晚2001",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQyMDFfMF8z_b_B70592cb7c4054e9cabb675e849bbf4bd.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "A&R Canal Adventista (720p)",
+      "url": "http://51.222.9.192:3589/stream/play.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "京津冀之声",
+      "url": "https://brtv-radiolive.rbc.cn/alive/fm1006.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Red Bull TV",
+      "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/4YIBApo.png?v=1.0.0.1",
+      "group_title": "Sports"
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dc90aeec3d578490c95f1~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339968&x-signature=jQY3dZTj%2FWCeIsz6PWx8Xrzf%2Bo4%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d9e645b8446834df0afa5~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339978&x-signature=xcGlbrQiBm8ohwdMNof798TVBoc%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d8ee2f2cad6c4491eb82d~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339978&x-signature=Swe0zpMmPH8z4DFzGXNQJaVn%2BVI%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dc978942547134a448203~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340078&x-signature=BSuGrjS3Agyw4brwn5D14Z%2BRMfA%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0daed607f21dd44796bc20~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340079&x-signature=VYDstu97wG0uzPRcpo2nJ%2BPnHjg%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d116f4febc8ec45a6bcbd~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340093&x-signature=wRE8doO5aNHC7cWVu91%2B0TcbMBI%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d1b139185b7b44a478954~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340176&x-signature=NZQmhP236ZrwqvZiHtk6vIi5idY%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://d11a69xzkl9ifh.cloudfront.net/output-mediaconvert/big%20buck%20bunny%20sampleaac-audio_000000005.cmfa#EXT-X-ENDLIST",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_466/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_491/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_496/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_517/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "春晚1993",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/22/BMjAyMzAxMTMyMjEwMDNfNDAzMDAxOTlfOTM1MTIzMzYwODJfMF8z_b_B647d10e431b4cc5e48e6c77347d69021.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "春晚2000",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/21/BMjAyMzAxMTMyMTE4MzRfNDAzMDAxOTlfOTM1MDY4ODIxMTNfMF8z_b_Bdddf4e7ef0ff6cfd477857bb40e78419.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "春晚2003",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/14/23/BMjAyMzAxMTQyMzQxNDdfNDAzMDAxOTlfOTM2MTU0MTk1NDFfMF8z_b_B182749d2cd2ea9323639254af385f24b.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "春晚2005",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQyMzhfMF8z_b_B35ad7cc86aec8fc9e5ddfb31fc7bed63.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "Belgrade Pop music radio",
+      "url": "http://192.99.8.192:3074/stream.mp3",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Pinole Community Television (PCTV) Channel 26 (Pinole CA) (480p)",
+      "url": "https://cdn3.wowza.com/5/cXdyRHF0Z3kxN0k2/pinole/G0032_004/playlist.m3u8",
+      "logo": "https://i.imgur.com/3tMAQU7.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "Bellator MMA",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ebc8688f3697d00072f7cf8/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c26f5a6-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=0e97a69e-3355-4217-b6fb-8952f0ad1803",
+      "logo": "https://i.imgur.com/VBKoLHk.png",
+      "group_title": "Sports"
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d0abcc416639c439db3c6~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339961&x-signature=jVEfdka%2BxGLywrOLjyrZ08jjq4Y%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d631a76ac22f148eebae3~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339968&x-signature=bx0Z49tl%2F1R070o9syz6BsyHcro%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d4404fac6ad754f3eb6a9~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340014&x-signature=Y%2BvVnu%2B1wwZjDDHYPew8dqlOjPE%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d014d8143cfc64fb684db~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340133&x-signature=nia%2BgWN3tOLqO3FUtGDUn3QmboY%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_468/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_474/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_478/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_485/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_495/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_499/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_520/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "春晚2004",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/21/BMjAyMzAxMTMyMTE4MzRfNDAzMDAxOTlfOTM1MDY4ODIxOTVfMF8z_b_B86c4430b82ff5a7f4e8132f6ee558536.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d4151722ca6f9402b9b3a~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340000&x-signature=b9YPDKCITGQcrABXn5HL%2FbOf%2F0s%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d718d80716f2e4420b666~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340034&x-signature=9J4p7MAMGIh5yT9QxYHHOJQuXFs%3D",
+      "logo": null,
+      "group_title": null
     },
     {
       "name": "France 24 Arabic",
       "url": "https://static.france24.com/live/F24_AR_HI_HLS/live_tv.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/a2fe2363b2b3fb38fc84ad43de14af8c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://d11a69xzkl9ifh.cloudfront.net/output-mediaconvert/big%20buck%20bunny%20sampleaac-audio_000000002.cmfa",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://d11a69xzkl9ifh.cloudfront.net/output-mediaconvert/big%20buck%20bunny%20sampleaac-audio_000000004.cmfa",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_475/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_488/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_508/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_510/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_514/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_518/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "红牛REDBULL TV",
+      "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8",
+      "logo": "https://img.redbull.com/images/w_220/q_auto,f_auto/redbullcom/2021/3/8/v1viztxjab9e9a6of4by/redbulltv",
+      "group_title": "世界"
+    },
+    {
+      "name": "2020央视春晚",
+      "url": "https://alimov2.a.kwimgs.com/upic/2022/01/30/17/BMjAyMjAxMzAxNzA5NDdfNDAzMDAxOTlfNjYxNzQ2MDAyMTFfMF8z_b_B5d51d9564c5670dc66faeba20aa7af3f.mp4",
+      "logo": "",
+      "group_title": "网络"
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d25c715e5b6a641039a71~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339958&x-signature=vPCqWd9jp%2FWqiebvkMYQHZ0TyeA%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d9556937271f547f8bcc1~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339970&x-signature=ApWNzPjb5EnHVfjEuafujpdjvas%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d102eb461c3db470ba7e9~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339989&x-signature=e9DdzYhV5hFC2gctaJNPoKa5Xaw%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d0e230019dac4407ead4a~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340118&x-signature=dfnpUrYYKebwBj8o9GUZa%2B52OFg%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d727b7c7083c14ead9dc5~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340123&x-signature=FqizYg9smHOUZ9AZBHXZy0H1F%2Fo%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d796fcda6106344ca8279~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340130&x-signature=GPOCCQzNgFWHJrgo%2FelqQjyV%2B3c%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d78fd0f5d4978492a9dfc~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340175&x-signature=mhZYoNewvDO87sTaYvnpikYCBBQ%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "BTV",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/270f72deeb5843h.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/iKHK6tC.png?v=1.0.0.1",
+      "group_title": "🇮🇩 Nasional"
+    },
+    {
+      "name": "PromarTV (1080p) [Not 24/7]",
+      "url": "http://vcp1.myplaytv.com:1935/promar/promar/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_470/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_472/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_484/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_494/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_498/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Radio MIG",
+      "url": "http://185.171.67.81:8000/radio-mig",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dda0a7d8dabfd4a83b6b0~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339935&x-signature=k4TssD91xZM5TbGGgtlT0TyHS0c%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d19db5f0d0cba493d9b87~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340029&x-signature=IxPzt1eG6QQ7P%2FfOjEqggoKrOhQ%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0df18a80fffc0b434b9be9~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340141&x-signature=yjcfFDCKnnvPGbn13P%2BFO6njVNg%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dd0d2fc4e91854fa08c7f~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340149&x-signature=wl8krRkZisWojFB2SbUgkYQD1jo%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "[美国]KidsFlix",
+      "url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=50&amp;live=1&amp;app_bundle=com.plexapp.desktop",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Bloomberg",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/ns/29fe33a8dc20fa3.m3u8",
+      "logo": "https://thumbs2.imgbox.com/9a/98/5HnKe9J4_t.png?v=1.0.0.1",
+      "group_title": "News"
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_469/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_479/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_489/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_504/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_512/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d584ce9211ce846e59d14~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339989&x-signature=2mK5LYzqQTAVKOUjTIL0tT0NzYE%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d498a084e40324f528850~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340099&x-signature=lFSgi420HuZ8tqHyvUKHalVpm2Q%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d0a8e9bdceda34a21bc2e~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340159&x-signature=L9yW2Y6%2F6nBF3VqDfbGlxDGoZzs%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d000370ec8caa4da8a952~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340175&x-signature=LRXUdNRCmZmYUHuIyf5WWzIv0M8%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_463/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_471/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_476/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_481/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_490/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_497/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_506/193039199_mp4_h264_aac_hd_7.ts",
       "logo": null,
       "group_title": null
     },
@@ -43,20 +937,422 @@
       "group_title": null
     },
     {
-      "name": "青海卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/qhws.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/青海卫视.png",
-      "group_title": "📡卫视频道"
+      "name": ".833333",
+      "url": "https://8cinema.xyz/29dbc39c2e849c37b5fd1c447269960d.html",
+      "logo": null,
+      "group_title": null
     },
     {
-      "name": "Zee Cinema HD",
-      "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8",
-      "logo": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Zee%20Cinema.png",
-      "group_title": "Indian"
+      "name": ".933333",
+      "url": "https://8cinema.xyz/e5e135f92b0f9f8a3ae9debe8387456e.html",
+      "logo": null,
+      "group_title": null
     },
     {
-      "name": "ANDYS 80S - The Rarest New Wave 80s Music - Make  REQUESTS at  ANDYS80S.com - S",
-      "url": "http://208.85.242.69:9844/stream/1",
+      "name": ".4",
+      "url": "https://8cinema.xyz/8e0219d662a589af810fbae9e37a694c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/0e301e50558c5b980d6a03653e487cee.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".933333",
+      "url": "https://8cinema.xyz/3d24919dbdb2ab084d3633bc69aa1aa1.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/4b09f036f9645ff33a2bde3c6bee165b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".3",
+      "url": "https://8cinema.xyz/439a053807f4d68c2a6664599d05e14f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_464/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_482/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_487/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_519/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "春晚2008",
+      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQzNTNfMF8z_b_Bd7346962e61bd7b84e11a1fa6e4616f9.mp4",
+      "logo": null,
+      "group_title": "历年春晚"
+    },
+    {
+      "name": "Star Trek",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5efbd39f8c4ce900075d7698/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2bd7a1-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=d71afd5b-b301-46b0-bf30-b8f1833c66d5&serverSideAds=false&checkedby:iptvcat.com",
+      "logo": "",
+      "group_title": "Star Trek"
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0de5fdd9081e4c4e3481b5~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340063&x-signature=E%2Fckx1u3sQoaiJZmj1qqbJoMGjw%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0df633f76323104f7997d6~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340117&x-signature=lYaxcgs7OV34dXvjiTji%2BOiaZiY%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".233333",
+      "url": "https://8cinema.xyz/22d110ef8428e397d7d0c90485215fd0.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/32a8d0215d9e4dca14f25d66b445be51.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".4",
+      "url": "https://8cinema.xyz/4d04c86a91a4ed395c28702a26bb431c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".1",
+      "url": "https://8cinema.xyz/0c885c880aa1ec74909948c89101e680.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://filmovie.github.io/by/vods/khanzab%20(2023)/khanzab.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_467/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".000",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_480/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_505/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "RED BULL TV FHD",
+      "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8",
+      "logo": null,
+      "group_title": "电视台"
+    },
+    {
+      "name": "Port St Lucie PSL TV (Port St Lucie FL) (360p)",
+      "url": "https://cdn3.wowza.com/5/UWpORHhLSEs5SkJs/psl/G0262_003/playlist.m3u8",
+      "logo": "https://i.imgur.com/kzdRmTN.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "RTHK Radio 2",
+      "url": "https://rthkradio2-live.akamaized.net/hls/live/2040078/radio2/index_64_a.m3u8",
+      "logo": "https://radiospinner.com/media/logos/180/81188/logo_RraVP5VmFw.png",
+      "group_title": null
+    },
+    {
+      "name": "Power 103.7 FM",
+      "url": "http://01.solumedia.com.ar:8298/stream",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Red Bull HD",
+      "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8?denmstv.m3u8",
+      "logo": "http://epg.do.am/logo2/redbull.png",
+      "group_title": "⚽️ Спортивные"
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d42d98a8600df408db341~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339975&x-signature=eYXWL1Dpz3YcJ2FXUO1VYxgImtg%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d679c590b3e5c4599bb65~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340044&x-signature=qYZkEjPuSQtPjKmmp%2BiKao0XEwU%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d165a5a70bb334ad7b8a0~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340070&x-signature=IBLK%2B1PniFbbI7QofKw0AfSksdI%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d0e976ca104314ed7b12f~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340167&x-signature=GFh4IWu3ZMqQNgmTswN6ypNfJkw%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".466667",
+      "url": "https://8cinema.xyz/1b124264fba6cbf6b1562211df0fe4d2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".4",
+      "url": "https://8cinema.xyz/f13a37521825c07fa248a6235740b2f2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/6d0d8fe7b6f06a0edca5b8d59a45d748.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/b9a9539db71d56a54b812d75a9569a9d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/1aa93bf27ba9210d4130f92ddea1b1e3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".833333",
+      "url": "https://8cinema.xyz/9a3180320be4fa774199d6c41beff11d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".433333",
+      "url": "https://8cinema.xyz/6ee8bbec5efa688ba0b55f47f42f8edb.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/86b0b9a2835c8e01963993520ce92e41.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/9678ce4993f69f34f2750b962db4f2ef.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/4c68e213925e35226965513cf0cda703.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".666667",
+      "url": "https://8cinema.xyz/a716288a2dcd16d58ecffb16ddd439fd.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/986d7f4762206a4f585b3cb23a971598.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".881267",
+      "url": "https://iwpm.xyz/08664ff961c1dad17a12786214528ff2.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Al Arabiya",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/ar/b8b58e25df2b3ce.m3u8",
+      "logo": "https://thumbs2.imgbox.com/8c/77/td4c5ak5_t.png?v=1.0.0.1",
+      "group_title": "News"
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_503/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_522/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d8580a0a2608f47e1825d~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340018&x-signature=6DloZmwklYyCeKmwhMlgKBf4eBM%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0db2e96503e6e94ca481c0~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340119&x-signature=1Ph3mgoaMOwCz3PWrII3OQyHZM4%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/27aff421f17bf04c9fd3a377c1a43297.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".633333",
+      "url": "https://8cinema.xyz/83ecb51b1623205ff013c42950689659.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://8cinema.xyz/3b1808d8181ab1f324dfa39226cb1c90.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".6",
+      "url": "https://8cinema.xyz/821dd8430b706630262a781f4d817249.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".466667",
+      "url": "https://8cinema.xyz/82bc279b2d1359fafbeb81a37192e623.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/cc72acb1e9cc0efc1ec5415be4b54b91.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".233333",
+      "url": "https://8cinema.xyz/66674fc955c7d1030223347b19d51946.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".2",
+      "url": "https://8cinema.xyz/8ddbc388ca4f9f95c191db38fe0289a5.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/1e6cd119ec15520a75d9c2cc998a28c9.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/8fd363330cfea146add97bc68812e66e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/6ddd24e0654d4bd1189e486c0eefab3d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".733333",
+      "url": "https://8cinema.xyz/6667337d81f45c2972bedac8ea97d6f2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".233333",
+      "url": "https://ixpm.xyz/4261e4a196eaf19bddb7347cf28a2119.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".004267",
+      "url": "https://iwpm.xyz/52d4f8945649b6c85bb4c7ce35a8919e.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Reggae Radio RastaMusic.com",
+      "url": "http://204.93.226.26:808/",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://im.gurl.eu.org/file/9df8834d0d318800eddf4.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dd7e1b6bbd4554cc4befe~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339976&x-signature=Nwuhgu2gC3yU0vBoLvUtX%2FokoiM%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d7aa7828d357c4855aede~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340069&x-signature=IVM7k761gT9Sl91Er9%2BaFyR39T8%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d23d06480ab3c47d8bc9b~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340075&x-signature=KLRhiJ8mlBiS%2F3e6mrYzQcOI220%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Canal",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d21d701a20a3a4688af68~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340166&x-signature=bGDNfu4nOjDjUgNGlM5oBjObp4k%3D",
       "logo": null,
       "group_title": null
     },
@@ -67,2072 +1363,476 @@
       "group_title": null
     },
     {
-      "name": "辽宁卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqca/lnwshd.m3u8?auth=test20251009$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/辽宁卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "广东卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/gdwshd.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/广东卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "河南卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/河南卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "陕西卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/snwshd.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dad48e082b21e41baba25~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340080&x-signature=Yeeb4M9ySu1P23LsDENqpctOH%2B0%3D",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/021e7d98b58e1087ecf895dee744220e.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0de3c32c42cfb844d9b06d~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340080&x-signature=VaZooV7AvtcWD7o2Np8g38%2F6y9I%3D",
+      "name": ".466667",
+      "url": "https://8cinema.xyz/0b773032fdf31aeee61d28778d9c84c1.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "France 24 Arabic",
-      "url": "https://static.france24.com/live/F24_AR_LO_HLS/live_web.m3u8",
+      "name": ".966667",
+      "url": "https://8cinema.xyz/7420bce0e50e3caaf4de1bf02349a53d.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "France 24 HD",
-      "url": "https://static.france24.com/live/F24_FR_HI_HLS/live_tv.m3u8",
-      "logo": "https://static.france24.com/meta_og_twcards/jsonld_publisher.png",
-      "group_title": "越南-只待有缘人"
-    },
-    {
-      "name": "天津卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqca/tjwshd.m3u8?auth=test20251009$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/天津卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dc2ca5e8ec7d2448bb384~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340026&x-signature=j4gZ%2BBAeNjSgvj1FeZe6xpYOs0o%3D",
+      "name": ".066667",
+      "url": "https://8cinema.xyz/5acc418892971eb5863f859e664953de.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d4dd36f4230404e2ba9b2~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340046&x-signature=AVY8sZtWVrC8y6AqrVVh3jV9gwo%3D",
+      "name": ".5",
+      "url": "https://8cinema.xyz/613302cd63fc365e4b45fb0f981f545b.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9fc7e79e594ac1defac1c.png",
+      "name": ".533333",
+      "url": "https://8cinema.xyz/d31cba0d28db57e18a0e8ee209d804b4.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6ace41de5327e52ea836e.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/75e8427b2e732a64d579f939e2cf5a59.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/65c75fc6217f09e216ed4.png",
+      "name": ".633333",
+      "url": "https://8cinema.xyz/ce41a1e82f306c1f518c66d04ae22512.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dbf68e09864104cdd99a1~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339995&x-signature=LLFBr%2F3NLQhB3PL%2FSpPdxu%2F0bzQ%3D",
+      "name": ".233333",
+      "url": "https://8cinema.xyz/7b353aaf15dc0a08656b8bc3209946a8.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0db91e934b34454dc09d10~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340017&x-signature=6Cdep0uJdZe4WWVab7l7a5ZlvvA%3D",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/e0b1bd158a2d0453c42787b52d0e79d8.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d5f76b7b1bbf84dac92a7~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340058&x-signature=Xg%2BYbt3hjPW5cxNBUbUoE5vouf4%3D",
+      "name": ".166667",
+      "url": "https://8cinema.xyz/859f82467291ef5fab53e63f8da1548b.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0db984ba220f8148e39d1c~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340136&x-signature=UOzBoGMZKWBvhz75RBraabScOAg%3D",
+      "name": ".933333",
+      "url": "https://8cinema.xyz/3dda8aeb75096f55d68b918c6b961246.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d149574114d254afb8353~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340149&x-signature=TsL4j2NYEdXJ4TW0bwwQ5%2FZlqRw%3D",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/18b8c9292e9ec62e47d75b18ffc71d7c.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d7b53ecc0c9a546e0b2e5~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340026&x-signature=xyI8%2FKlqeMT2WLq9i60jQ0IAHak%3D",
+      "name": ".933333",
+      "url": "https://8cinema.xyz/eb5e5a178e46fe079864451ec09617b0.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d06ec7b6f6efe4e53b470~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340026&x-signature=Bu4q5xM%2FJoxP%2FLGPd1dkD%2BakPuQ%3D",
+      "name": ".7",
+      "url": "https://8cinema.xyz/47e30a63557dc6e04d8769102ce700b7.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0db03fe9e4ff864e8f95d2~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340147&x-signature=i1w8Kbf6yzo8AQ8dCR0hHEPI574%3D",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/c4dfaef83cdbaa9d6d10cd13d93f441a.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/76d152c395f87d377795a.png",
+      "name": ".233333",
+      "url": "https://8cinema.xyz/2303f72002efb89159afd3e7341273ca.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9ee20abf1196ccb60529c.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/36060118337e18a35df4cf479bd5342b.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c37ec1c83fd2b62f2ce48.png",
+      "name": ".433333",
+      "url": "https://8cinema.xyz/9754c9ef55f3fcc656dcc0efe8b8e5be.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8bb9c5f1262ffd54d15bf.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/bdf7a4e1552c6068e0edb8291c14592c.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6bb2680e53b58ee0773ec.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/8b1e38e6ee26440e4ca23bb27acbdb2f.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d1164d3509fcf4b48adc3~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340001&x-signature=MFkHCMB2oL6glYmUwZK3vE6WmoA%3D",
+      "name": ".2",
+      "url": "https://8cinema.xyz/786cb077b7f6a5ac1dc58072ef479131.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d20e36387ea9240fea2d3~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340083&x-signature=EpLRF2RVb5mXi05ABdBWVzebooM%3D",
+      "name": ".433333",
+      "url": "https://ixpm.xyz/f8c48d7fb464c384794deb775757afce.png",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/72559cf66baf97e960ac8.png",
-      "logo": null,
-      "group_title": null
+      "name": "OBS TV",
+      "url": "https://allanf181.github.io/adaptive-streams/streams/kr/OBSGyeonginTV.m3u8",
+      "logo": "https://i.imgur.com/oWB3ApR.png",
+      "group_title": "Korea"
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/52d90bc87f92b1d615568.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7aa7a8f987d59c4823759.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f14791af1eb97cae44c75.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/435846e13d79159c75aa7.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f2544d5fe027a319168f1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d1981664ed9004457909e~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340043&x-signature=yUiPHYv5TmgUZx%2Bboh5oEwUU9vQ%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d638ade572be14c8d8cd0~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340148&x-signature=hck1HCDbj0%2F56lVy6PeppbK8nwE%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c40a57a3bbac684993c0b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6c803f05dd7f53dff3692.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/09f0823015dda8d5e523f.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8c71054ef33f32c7bcc20.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d3956bf7c8e8ca5e16464.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "江西卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/jxwshd.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/江西卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "四川卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/scwshd.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/四川卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "三沙卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/ssws.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/三沙卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "TNT (West)",
-      "url": "https://turnerlive.warnermediacdn.com/hls/live/2023170/tntwest/slate/VIDEO_0_3564000.m3u8",
-      "logo": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11164_dark_360w_270h.png",
+      "name": "TBS West",
+      "url": "https://turnerlive.warnermediacdn.com/hls/live/2023174/tbswest/slate/VIDEO_0_3564000.m3u8",
+      "logo": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11867_dark_360w_270h.png",
       "group_title": "Entertainment"
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/1302526bab1bb6eb5127f.png",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_500/193039199_mp4_h264_aac_hd_7.ts",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://ajmn-gen-vod.akamaized.net/media/v1/hls/v4/clear/665003304001/a1c7cbca-7fe3-4730-a4f5-0f8c66efefb1/8026f38f-ae6a-4b5d-8524-3937bcc72af0/5x/segment134.ts",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_509/193039199_mp4_h264_aac_hd_7.ts",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e36b9c1358adccb155963.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0ddbf9eb2be5234ab8ad32~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340042&x-signature=spR9AtDLTmTQV8Jdxqy6KTk5R78%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d7117ad3a14b84ffbbc37~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340099&x-signature=iwW1qPxE7WmXjAPWLorexI0fark%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d97fcf34920b047378d8e~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340144&x-signature=mbxJgT4As%2FHz2rrDR8L3Fw7Uc4M%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2b92a2e435071231a7528.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/839d51344fc1c0cd43fa4.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f4850c0f14fd8fbcffbdf.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "truTV",
-      "url": "https://turnerlive.warnermediacdn.com/hls/live/2023176/trueast/slate/VIDEO_0_3564000.m3u8",
-      "logo": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10153_dark_360w_270h.png",
-      "group_title": "TV"
-    },
-    {
-      "name": "驚艷",
-      "url": "http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/85.ts",
-      "logo": "",
-      "group_title": "台湾频道"
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e87ae0f275b54bb046127.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/5b20b5fb8a88fa83a3701.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6514cb4d959a8aa65eef7.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d4380372fc16c41f68aa0~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340007&x-signature=2LRXmEJ4SJfW1oB5IC9HLYdFnDA%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d5a4b5c0acdd141b08717~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340027&x-signature=L9tVYDjHG2BXfcs5ofTvDM%2FGaRw%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d1b02d380a2c0407d96a6~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340049&x-signature=mO24ZcI8OxaMpqnqV6WmI91QxTs%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9b9ea82f0e2efdb0c055e.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a447267a09452358077f1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f8637307c1916c65c6650.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/32cccab30569aa840cf3a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b1553dbe396706ec21c29.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/fb08fb680c825a1a8b278.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7195bfb45b879caeccf22.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d5d72c2807b2e6af3b7f1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/db40aea3374923f17c50f.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d4cde08aa1d1621d4cd99.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ee2321fe7b3c38aabf917.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f97801dd3996551e5b823.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/eb024ffd89d68f2810ecb.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/4b0348349a206b631e9cf.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b31e6a6e89fc18ee9bec7.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/0c0e437681b89e6756662.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/993294f7ca8542712aa92.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dba1f29ca79e8410f9f6b~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340012&x-signature=BZDxsX7yXVL08%2BUBlnhXaTHQv4w%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d27382c494e0b4c919659~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340067&x-signature=71dsUh6LudYtxzHEC2xfI%2FqBkFU%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d557365e1c3ce44e79df6~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340177&x-signature=3wGlkNGeahiql2%2FQksjjhIWvXQk%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/81fef02e4c58db0b46389.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/764a3ca9b367eaeb2b5b1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_1920,h_1080,vc_h264:high:4.0,br_8500k/v1518476665/bbb_38s_s0avek.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "NDTV English",
-      "url": "https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/master.m3u8",
-      "logo": "https://i.imgur.com/ldXaLJK.png",
-      "group_title": "News"
-    },
-    {
-      "name": "RTHK Radio Putonghua",
-      "url": "https://rthkradiopth-live.akamaized.net/hls/live/2040082/radiopth/index_64_a.m3u8",
-      "logo": "https://radiospinner.com/media/logos/180/81182/logo_U4KcOpQIQO.png",
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6d068d1245a64d8bd3ff6.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/244cc4ec6f896da1bb712.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/4fe2557b772fae5904f3e.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0db90480ba726d4418b7a5~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339953&x-signature=HdWsEogILoIubkiYDjUp2eXEyrg%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d0da26e82c28e4cdf883e~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340034&x-signature=CSjTjpxLrtDl%2BwBW4aLiNnjJtVQ%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/74f9552f5f277b42fc435.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d797b2b7f9dc2e9a73c94.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f8e489d5f0f44c44a74fb.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/4ebd71916e81dd84469d1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8dc5c28a08f53323104ff.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/827af0240d2f3b66b6d9c.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8bc10f165664bb2ae68ff.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a8c9318eba9946761db23.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/57f01d69cbead2951609e.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ed826ebf83578173f94d8.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dde4fd751ee70494cb8e0~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339997&x-signature=W02y6lq9PHMzw9oXfdcA7J%2Fqj2k%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d9de98d3479e347a398e9~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340088&x-signature=NylxOvI9aeAlnUvBnXH9oC%2FkPRI%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/02a4b12b546daf267b907.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ca9f92d6b9dd391b48675.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d1a6c9433dfb347cac871.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/fa78c27aa69b785e74276.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/608bda103111406b53f50.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a9e64cd3b24c69fdad889.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Turner Classic Movies",
-      "url": "https://turnerlive.warnermediacdn.com/hls/live/2023186/tcmeast/noslate/VIDEO_1_5128000.m3u8",
-      "logo": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12852_dark_360w_270h.png",
-      "group_title": "TV"
-    },
-    {
-      "name": "RTHK Radio 1",
-      "url": "https://rthkradio1-live.akamaized.net/hls/live/2035313/radio1/index_64_a.m3u8",
-      "logo": "https://radiospinner.com/media/logos/180/81186/logo_NRVPDLJGb7.png",
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9ce73719aaabfb7943990.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/614884934cf0f098e14c5.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/cbb4f3d6964dbf87c52dd.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/217517e67db4759c4c666.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ba42fbd53bd680946b984.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/31201b7a4e6229da5cdeb.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://ajmn-gen-vod.akamaized.net/media/v1/hls/v4/clear/665003304001/a1c7cbca-7fe3-4730-a4f5-0f8c66efefb1/8026f38f-ae6a-4b5d-8524-3937bcc72af0/5x/segment189.ts",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f221962dd585bd5d1dcf6.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/0b2ba9888fab1b4771812.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dacff6347f14b41c18cd8~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339933&x-signature=IpJeOGQyV%2B634VbDl3zmgDivxhE%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dcfa861cc97a54b9686b7~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339979&x-signature=q7cWIdc6lzlbTfgUPLordefV2Dw%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d8041de5b50b1465c96c4~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340030&x-signature=WNV%2F4zjBSY6zCMkiG34J5vAp2mA%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/337e3bc3282cd0d4b3cc9.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8ed1de9545ba39bfd65e4.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9572da05828f5ad633195.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/98f14f8db76e1e6f889f0.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9343fe2b945f30ffea3b3.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/968dde509223c61b2df7c.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/95e25b77e442578175c6a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e6aff0bba1ac69dd5f3cd.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c35cda93c5c991f770663.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/fac95d6b6d3d3da915659.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/80fcdbfc4d2545764b863.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8ed416b8d899a3b394356.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/838f2cf4f6d19602e4eb9.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/822c6948136ebbd98ea92.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/796054327f1dd54f72d2b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/032b7785348bab006abdc.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/394dc49cfae75f60d10ec.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a48356c0df1de9fba0a7d.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a62c8e2389a1107ae9d3c.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_480,h_270,vc_h264:baseline:3.0,br_800k/v1518476665/bbb_38s_s0avek.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "RTHK Radio 4",
-      "url": "https://rthkradio4-live.akamaized.net/hls/live/2040080/radio4/index_64_a.m3u8",
-      "logo": "https://radiospinner.com/media/logos/180/81189/logo_WHx8CcnhXQ.png",
-      "group_title": null
-    },
-    {
-      "name": "CBS Sports Golazo",
-      "url": "https://otte.live.fly.ww.aiv-cdn.net/PDX/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd",
-      "logo": "https://raw.githubusercontent.com/premiumcreativeuser/live_events_pu/refs/heads/main/logos/cbs-sports-golazo-network-us.png",
-      "group_title": "Sports"
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f12250912548c6df53b01.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/005381f5b07982f2fc243.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/4b7adef9878719818b2c1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://ajmn-gen-vod.akamaized.net/media/v1/hls/v4/clear/665003304001/a1c7cbca-7fe3-4730-a4f5-0f8c66efefb1/8026f38f-ae6a-4b5d-8524-3937bcc72af0/5x/segment174.ts",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2060ad1f8343316b2d88a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6c9a635d852a9e94b4aab.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0ddee92bc5cdc544608f76~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340030&x-signature=IP2HnvTMgF0FQhlQliCtxTKT34g%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d594db004a379498b89ec~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340160&x-signature=2izXanuGmte9TjR3hq6%2BcKiQhDM%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/0acef69c75d4f86afb6f8.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/51e9362d195e715b3d061.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b8593ba81059e61748d76.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/88441e1bcb67458fd8463.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a4c836ef730afb858309f.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ce417de0747ca28437b45.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7c56ebb8361158ff39a02.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d86e38a552497b6ccecb7.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/30d28a8d1a802eeb87f95.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/688736f2aaaf097715264.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/37ed29b3bf83dbf4e8b9a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "2GB Sydney (1080p)",
-      "url": "https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "TVB星河",
-      "url": "http://cdn6.163189.xyz/163189/tvbxh",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/1705bcb531a8e24536151.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a6c8a86e7d246527cab09.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/86dc82b2bf114b25cdd7a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/10d05e2b62e954c950165.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d5ab07d7d0d1e45cba733~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339985&x-signature=%2BxB4stV3PHVAblVbsUFeu6b%2F0G0%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d84fb70ff540245679324~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340063&x-signature=ZTfvmTjrEFxP9n%2BQLJXcTIKOa8c%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d3b3a7bbaecf74eebb0ba~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340075&x-signature=Trg3GdG925EVhI0WXhq5N4V1xLw%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0db58603f9e37a47a3b431~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340109&x-signature=OlXwofcCWXmjr%2Bw2Dwi5Nq2kOeY%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dca43382211bd4551acc7~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340166&x-signature=KfRIQyehYgSQEuNrV%2FXPsz9Z6dA%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "NASA TV HD",
-      "url": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/574px-NASA_logo.svg.png",
-      "group_title": "越南-只待有缘人"
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7247cee604f7a1362b84f.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e488977e33a5788a4eaf3.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/08eeb1c0ffeec42bd6939.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/232b9965dcad196ee2381.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2bb36545d10609edb3310.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/49345af92dbeeb07d284a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6eef5e61eb137c1f6db9c.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c64a90a024f236a98c1c8.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a83efb34e3e5bbfc76088.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/48d38bff558ec0e146e86.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/5504fa1181d17f42e288e.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/416c4da16d56c4c3128f1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/cd01a681cf6f34a10d081.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://pervm1.xspcdn06.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/1080175.html",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "湖南卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqca/hnwshd.m3u8?auth=test20251009$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/湖南卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "深圳卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/szwshd.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/深圳卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "Canal",
-      "url": "https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_2560,h_1440,vc_h264:high:4.0,br_16m/v1518476665/bbb_38s_s0avek.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_960,h_540,vc_h264:main:3.1,br_3500k/v1518476665/bbb_38s_s0avek.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e16b5b74a218c9ce345ff.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e2e908f5378183060e518.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b283bc2f6dedc69cfc773.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8725cbf57f978e677470c.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d6f001890a8d54c899ddc~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339969&x-signature=3QeFMF4AmsA%2FXzWYyaIOrVVeCOU%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d98661c0f239342989cdb~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340045&x-signature=8LHDgmRZ4R9SoON53QHng2kSAr8%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d47227ea73e084e57b917~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340064&x-signature=zZkQEKcgA%2FiNs%2FBv%2FOrTJKEuwe8%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d84f33e7c54464d868a47~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340071&x-signature=Ge%2BKsAEIy09zBebcy9mlCqVA39Y%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d53e70ff5f58e4d04a7c5~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340072&x-signature=Z178geEhqmyCHbHEyadwTpyL9j8%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2954eda0fea5218bcdde6.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d51c62bedf493669eacee.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6bb6e470812de2c51bc11.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/25e9dc6ee4b7342f9f262.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/792897fe61250b31490f7.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/0256942e5d9cdf75778de.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f7bd277a2de23f36df259.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_1280,h_720,vc_h264:main:3.1,br_5500k/v1518476665/bbb_38s_s0avek.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Red Bull TV",
-      "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8",
-      "logo": "http://epg.do.am/logo2/redbull.png",
-      "group_title": "⚽️ Спортивные"
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/184d2fb09248f95147f0b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/10e98e50e85a8f074643a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/5cf292aacdf56ffb95e54.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/3fe05a00d0fec278d22ea.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/726c0024d696859bfe66b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/253bb4e5131b6587cf65b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dda005e61f7844fe1a0b2~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340028&x-signature=D9huN0BQAxfF4GEZfB9K%2FXbTpmQ%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dffdf9ad7c69d42b1ad9b~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340047&x-signature=us1jSj%2BkA2UBn4EZYtnYmsCqGoo%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d41294361a82b457596b2~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340086&x-signature=dq9KmLnBtYqrHuMlc5tkW%2B7nxtM%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dd02ae3db91f543ccb82b~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340093&x-signature=ClEEpF%2FRf%2BYNqqsBt%2FnudE2C5z8%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d63731aa2f42444f98a5b~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340103&x-signature=PfZSEIjd9deHR3ut%2F%2FOZNljfUmI%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8a062a9bf1a01d8235f04.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c514bc99edca3f0011532.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/bc7f7915a95616a554cca.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2e7cb973e3419333a8470.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f92bf784583d98242e214.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2d707ef008dc652029638.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/5244a7ce3f4a1b38ee96a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ffd06a7a70d184498050b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6ff7005c28716ae24df2f.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a87cf2b70f0a0cc352f04.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c672f54c51432875b574b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/bb8e2cd47f93a2b2b24b9.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6562f91ce2c054f40c1b5.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/cf1aee702532b8edafabb.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/79c6538a4a84bdabcd102.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f09fa2eb667a1dedfb41f.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a81d9504a223798a98f57.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/14ae13ca89376771d4c94.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9aa2f8372c20791099fcc.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/cce9f35080ef86b97de81.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a93d7f660a1608b2b9a7d.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/592d371200f98cea9f8a3.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d21c26ecb8b5141e58380~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340091&x-signature=%2FkbLe3%2F1hzfyIkI5Dne8S35IlU0%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0ddc93394ef22f46d58f31~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340115&x-signature=sgjuq3FKU9rEs%2FwAAHm0d7EelMY%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2ce2c153ad6abdc58b1d4.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/1fbfa83debbe592ae1511.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/0722f495ff9a2c2a71400.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7ed1c04250f27c190ca38.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f126c86e08eef6149b427.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8c11e0412c6d033743e26.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b2d10e2553769591965f7.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2450e490a632f2c22b45e.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7f09fa7b9689adae506ee.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/62ae95238ab7d9f5a1ea0.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/068dde02d3e0a2e128ea1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://pervm1.xspcdn02.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/1080381.html",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "内蒙古卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/nmgws.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/内蒙古卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9a7625cfcfee5e16604e9.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/788809259b8c789105bf4.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/976c7b1864d084e84d458.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/08132674a0428159e3363.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a526adba02bac310f79f5.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8ff920a1e67c8f99a289f.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6ce55ccd1e75ca8f77780.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/1ea32ac2da36e21685bba.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/3ee98d2c38296c4bc1f5b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/0628a684fd2c6fafba743.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/cd66bb6feb9bd494e99f8.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/72d2e3e71158303086a82.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d4fef7fc465f04578ad7a~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340039&x-signature=2QlSxB92jYF%2BWYRyxarFgn9lhxw%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d763712f284344b688d0c~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340053&x-signature=9iIX%2F%2FQnR9sDP5TTWcvKFDvcPJA%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d176d0e8bc39e479883f0~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340061&x-signature=o3lDsFfzpqF0lrxI5r4bnI73ga0%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d2fc38cf5947545b092d4~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340064&x-signature=uPiQa6UJcY5LX0rOtP3uoYZSyeA%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0db270595fb5fd4418899c~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340158&x-signature=DDj9yMf%2BJh6EVCiM%2FQ28yaaEmnQ%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d8c291c9c88584c1e85a3~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340165&x-signature=e17Z%2BfVCAz%2BWN462dN9v7S%2BFOpk%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://pervl2.xspcdn04.sa.com/cdn/down/709491516820c9f43b1249622a98a2fa/720/720323.html",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e18b6dd0e115e73843ac7.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7ebd9f1197f264cf41cde.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ad9f01df707cd131b7c35.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/01c45cb766ed831757950.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/658113ec7615fb2c0c3a8.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/97f5693a9dff6a5efbdd2.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/65b03ad5761c0a2571733.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/0613ab2aeed96d4d2c825.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/3ead15f0d5ccbd0899f9a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/03056daa71e0cfc9c98ea.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "北京卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqbv/bjwshd.m3u8?auth=test20251009$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/北京卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "YouDotGov",
-      "url": "https://reflect-communitytv.cablecast.tv/live-3/live/stream-1/live.m3u8",
-      "logo": "https://i.imgur.com/4Mc7baR.png",
+      "name": "PHXTV",
+      "url": "https://cdn3.wowza.com/5/bGZUOHp2TnhudnM2/phoenix/G1498_006/playlist.m3u8",
+      "logo": "https://i.imgur.com/RkTKR6x.png",
       "group_title": "Legislative"
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/10ee42a36b3ee8e1e8dff.png",
+      "name": "Radio Salta",
+      "url": "http://01.solumedia.com.ar:8348/stream",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c784ee4febe87ff6e2be2.png",
+      "url": "https://im.gurl.eu.org/file/8ae0c6599fe8a8088ef6c.png",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/bc0706c3a1d97da69fad4.png",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d14e0387b332447b29ecd~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339950&x-signature=4TfxC4jf4oJFj2UebnL3iYWDn%2Fk%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2158fbcbf2108dadb10b9.png",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d1511b02999034c46a174~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339979&x-signature=HoFHYwV5s1QGAa%2FnahAzYg2YLgg%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://ajmn-gen-vod.akamaized.net/media/v1/hls/v4/clear/665003304001/a1c7cbca-7fe3-4730-a4f5-0f8c66efefb1/8026f38f-ae6a-4b5d-8524-3937bcc72af0/5x/segment210.ts",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dd7531bcfe4664276b46a~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340121&x-signature=uccAm3yZff937kj6%2F%2F91zFcJ73s%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "ElPingüinoTV",
+      "url": "http://167.114.133.205:1935/live/pinguinotv_720p/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/a242a1dc51b96dd7a98f4e554c539710.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/9fd5cb668aa0c6b3a83816a08c620983.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".466667",
+      "url": "https://8cinema.xyz/9b8a67fa171e5029c9ef0b6675b6e335.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".2",
+      "url": "https://8cinema.xyz/f24904f04a5c3d580b9911751c77f77b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/5767bae85625f32ff6d785cf3658edf8.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".033333",
+      "url": "https://8cinema.xyz/e8b7480cb2a065e8a3528d4e5b72f597.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/74b9d6e0eec5c75d0b97c60032a38834.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".7",
+      "url": "https://8cinema.xyz/61db4a23acf2792e551dad5002e7f566.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".133333",
+      "url": "https://8cinema.xyz/a000974c2ad45205accaf2e0bc9ec313.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/4bf06f8ffb30fb749955eb49c9079da3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/29f9e5fbd17b09bd5a5daca8b394a7a6.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".4",
+      "url": "https://8cinema.xyz/122b8e2a37f2b77357c28e5f2a4c6c55.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/8feedede3b2ec44339c922672fa7705f.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/1d623ff80aac53275daea320a77e5266.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e1ed3c0f4fb81b87ddbb7.png",
+      "url": "https://filmovie.github.io/by/vods/antri.dong.1990/index.m3u8",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ba0aa9d1ce8be231c230a.png",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_473/193039199_mp4_h264_aac_hd_7.ts",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/617d4ddba6b3c9bc86e58.png",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_523/193039199_mp4_h264_aac_hd_7.ts",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d3469b4e4eef94e738249~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340011&x-signature=C3sq%2BH%2BdTQCbeNk3MZ4qnLzk7nw%3D",
+      "url": "https://im.gurl.eu.org/file/c9987c04166d19cccc047.png",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d2c6691beed7d43ed9dce~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340024&x-signature=oVKSss%2FbXflwV%2FRujufVJ2eiqFg%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d807d7e8940254f99a111~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339958&x-signature=2ErvfK5rWHiJG%2FB7U8flLXwzXPc%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dfc5c94a63818453cb72a~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340034&x-signature=UGftpoaGwO28WsPkZusIvtJJ9ok%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d9c0fa2a5fe594fdbb3e2~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339960&x-signature=%2Bh0ddpP%2FMa2vr%2FotpxoqkevRmOw%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".733333",
+      "url": "https://8cinema.xyz/92134573352a421732381407e0157d18.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/2cb7d996a729c8e6f5a05e1ed1d8fe76.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/f993e83e2733e9ecdc433f14d9d6acc4.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".133333",
+      "url": "https://8cinema.xyz/2a83e3881675f531e40acce16113cdfe.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/c831d638fc906100f2141f8b4b511726.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d142193ebcbc04c278b55~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340123&x-signature=IGVQ8VYzwuoceHjXdtgaUQAoO4k%3D",
+      "url": "https://8cinema.xyz/db14daef52eb3623686a65a758e7e84b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/84dc6aa23ba59c23c30ce673fdd4cb8d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/cb357f5f15ebc5931f786cf4b7a6d49c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".133333",
+      "url": "https://8cinema.xyz/ecac0003a5ce7a46df6b012066ae8ff8.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".566667",
+      "url": "https://8cinema.xyz/31116fd9ba1845e9faca6c985b152a1b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".833333",
+      "url": "https://8cinema.xyz/68ad2e6f0c0450175f1939a06f8726c8.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/98b2c41686868b1bc3f6dda5969f8ef5.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/68a3ff49338e866438d27.png",
+      "url": "https://8cinema.xyz/5750528541a4791295c55db5a74c3578.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/027da8cd8a7815b510228dbb686263a3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/0b0f668a578be6045d7fcc385d631d15.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".7",
+      "url": "https://8cinema.xyz/3596aa0f8bb83c9f77919dda2b5618ca.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/7e13340333eba6a624b06b3d4006b7f4.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/5914e1c38a173a7c54809b5a547af782.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/ba43c730c7ceb2349edd1370ba985b7a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".433333",
+      "url": "https://8cinema.xyz/47b6eadfa463758510eb27805c1c9beb.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".7",
+      "url": "https://8cinema.xyz/f3423a20db1fb1c409dc29a22e7575e4.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2efb9b7aeb74e400faffd.png",
+      "url": "https://filmovie.github.io/by/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/05f13360765cc4dae55ae.png",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_477/193039199_mp4_h264_aac_hd_7.ts",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/aef2bb72639ec468d21c3.png",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_492/193039199_mp4_h264_aac_hd_7.ts",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/036f9771e3fdd235f1905.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/4942f33d1bffc41f18895.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/59e938e09521fc6e6a784.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c456b285770923c9ad081.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8a4f394103716c18fb002.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a3386b480f4ebacb3590c.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b338d1da709b414ecf59d.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://ajmn-gen-vod.akamaized.net/media/v1/hls/v4/clear/665003304001/a1c7cbca-7fe3-4730-a4f5-0f8c66efefb1/8026f38f-ae6a-4b5d-8524-3937bcc72af0/5x/segment204.ts",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/dd1e56ca679c14f8e385a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b70500da86ba2afffc50a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/3975ab89c9a159684f9b4.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7914e459546f1ad434ddf.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/3480e9a381e385da0c9b5.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d2fdc582d67f848549cc2~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340029&x-signature=Fv3KcAfk80%2B17rr9n6XqrRXT5CA%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d8f58154822dc47c2b654~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340086&x-signature=Y05bZQLZ9WcRUEJUY0aQrLoioLo%3D",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "半岛新闻",
-      "url": "http://live-hls-web-aja.getaj.net/AJA/02.m3u8",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8900c91aec07790d56f13.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/494690e443125065e4331.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8c2a9d35862a22a93502d.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7b7c057a150f0d6ff0fb7.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/157e03e6e0bd5f9c0fd52.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://pervm1.xspcdn04.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/108073.html",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://pervm1.xspcdn06.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/1080165.html",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "黑龙江卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/黑龙江卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "Global Fashion Channel",
-      "url": "https://pubgfc.teleosmedia.com/linear/globalfashionchannel/globalfashionchannel/playlist.m3u8",
-      "logo": "https://thumbs2.imgbox.com/6b/28/C2bE3Msb_t.png?v=1.0.0.1",
-      "group_title": "Fashion"
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/fdccaf5383fb6ef328b59.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/96c043f8e520cdd11e468.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e52e2c5698e19438ea603.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/1ca03bceb911a4e2fb7a1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b36a9d61afe19ce25539f.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/3600d9beb62f2458b1e92.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/cc919eee3324dfc912b81.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7c2940974fbf5b0a1c729.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d27b4f47d612f326c313a.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f492e2de3194d68ff0590.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d92fb3d97dff9404eaa40~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339959&x-signature=KFCSpw4IPm1uLKG5EGFqKeRQQnc%3D",
+      "name": "Radio Verdad",
+      "url": "http://streaming1.locucionar.com:14631/stream/",
       "logo": null,
       "group_title": null
     },
@@ -2144,585 +1844,489 @@
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d84a70a69d306492389b4~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340050&x-signature=69VcCO%2BHIZQyDeC5FZ0%2FSIUtmh4%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d81e2ad3cf5bd423f840f~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340072&x-signature=D0JsSa%2Fvfv6nc376gGmhPgz4tC4%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d21ca991c91194cb99157~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340051&x-signature=SsAgT21H8eAx637DLS3%2FSv0J%2BFA%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d3a03eeae4e7f4aafb278~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340162&x-signature=Q2vKSC3e3wk8%2B3okrHaHi8X1olk%3D",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/25d0e3c532d3b49f42c6d.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/4f1fb6605fa93c278ee5b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/1ed2d78fbec73b5f1ad1d.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a263b10392964b73d55c0.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/0af6c792a8024b48404d1.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2ccba56f916299986bc1b.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ff7449390c156a5bf02ad.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6408632a37e03acabd7ab.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/4826544494d7a4c4e6f81.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ad36eea1f27f3bf868516.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/7c02ed6516032e280138f.png",
+      "name": ".5",
+      "url": "https://8cinema.xyz/0d6e48378f6f7f575f454eebaa284dd4.html",
       "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "【2002最佳女优】苍井空极限内射无码奉献",
-      "url": "https://edpvev.aiwuci.com/20221206/ANQ4IrUH/index.m3u8",
-      "logo": "https://l2e7j5.xjspimg24.cfd:17856/202212/7b/8639021f68de9515bde52a3a1460027b.png",
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/54bdea9a7a651d0f6ed5e.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/f61c87a43f67f18110fe45ecdc40609f.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/964fc3597205468ad15b8.png",
+      "name": ".833333",
+      "url": "https://8cinema.xyz/75e8d40d781991ded4b758a88af98db7.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/32a30c0ff228782333c12.png",
+      "name": ".6",
+      "url": "https://8cinema.xyz/69500a644abb8681c18a39e65adfe290.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/66cc8205249d5607a06da.png",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/83171fc6db94f84453806f44745db8be.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/139a44c68ccc96c9fb10d.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/deba9229e0fb581805b2796483c033c4.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f933ec0d5f18aed739ac8.png",
+      "name": ".2",
+      "url": "https://8cinema.xyz/b2f3db3fc43c659c7fce3cd7ea9453fe.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9edaa6de95533244a65b0.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/aa7d911a6bdcf8c2ace2c9f66589b44e.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/3903f5e4ca4a84948f1b4.png",
+      "name": ".733333",
+      "url": "https://8cinema.xyz/6a9f2f2a189f3cb3267cdc3897ebe41c.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a3e84454044dec8e8d76d.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/1bfda5718569807fa1de41af93f6364e.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c0a7bfdf28e113a2a1063.png",
+      "name": ".1",
+      "url": "https://8cinema.xyz/13b71e8211eec0a1e2232815e1a9ed3d.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/50c4d67f5cd461e1ca889.png",
+      "name": ".666667",
+      "url": "https://8cinema.xyz/f8f545346521826afa8dd71f6f69d4fa.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/3d23c95b54ec945a1b6e3.png",
+      "name": ".533333",
+      "url": "https://8cinema.xyz/a542bf817c3728df001bb1c1917aaf81.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d66df13f3ee9a83354124.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/5ad53977e684885956ffb085261c0c24.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9e851400e0095c59412dd.png",
+      "name": ".566667",
+      "url": "https://8cinema.xyz/36f1b93f1cb0b844b84c8f23d133a076.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/64f04dd5d0e02dfa13968.png",
+      "name": ".166667",
+      "url": "https://8cinema.xyz/05abee6b3a2572b8a9c8364157356d09.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ac7949a765ed79ad1f4a6.png",
+      "url": "https://8cinema.xyz/0652d42ac21df112692a04653961ce17.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b02e85113e6ee75deea7f.png",
+      "name": ".433333",
+      "url": "https://8cinema.xyz/125f772c55a104adc961dd81af53c37d.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ea02f5c8d1b3c5cbb1072.png",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/5145e00e0b7920f5c4290e5c6ca4ebff.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ffd67763fa5e20d4cffa9.png",
+      "name": ".3",
+      "url": "https://8cinema.xyz/118c994f4f896a7f2369370a90c417ca.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://pervm1.xspcdn09.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/108078.html",
+      "url": "https://8cinema.xyz/e5be93c124ba34dde837ed483c37d561.html",
       "logo": null,
       "group_title": null
-    },
-    {
-      "name": "江苏卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqca/jswshd.m3u8?auth=test20251009$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/江苏卫视.png",
-      "group_title": "📡卫视频道"
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/4618cbe686cd47effe77c.png",
+      "name": ".1",
+      "url": "https://8cinema.xyz/f57809db0e436ac18895762ddae081f0.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/931c47271fa28bbc38775.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/12ee3b2d5a914c18a38e097948b55418.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/fc76a984a173f68575503.png",
+      "name": "France 24_iptv-251009-085.done",
+      "url": "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_5000.m3u8",
       "logo": null,
-      "group_title": null
+      "group_title": "Foreign"
     },
     {
-      "name": "Canal",
-      "url": "https://ajmn-gen-vod.akamaized.net/media/v1/hls/v4/clear/665003304001/a1c7cbca-7fe3-4730-a4f5-0f8c66efefb1/8026f38f-ae6a-4b5d-8524-3937bcc72af0/5x/segment282.ts",
-      "logo": null,
-      "group_title": null
+      "name": "HTV 2 Houston Television",
+      "url": "https://stream.swagit.com/live-edge/houstontx/smil:hd-16x9-2-b/playlist.m3u8",
+      "logo": "https://i.imgur.com/zvj1boM.jpg",
+      "group_title": "美国Local听力磨耳朵"
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/45bde1af1f320dacc7eff.png",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d5bc0df86720c46c08bf4~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339967&x-signature=HcZ%2F%2BE8KBTpu2EAdRaMzhahHnaw%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a99ea57688b9bcaa693f4.png",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d289aecc6653c42648d13~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340089&x-signature=a0vbwLNpASZrTQb650Ll8JeQybk%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/fdab798cac7abb2b2940e.png",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d4a76f0edc70f4bc9ad1b~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340097&x-signature=vvDIDU118unEYBuYF%2Bia0M2NhlM%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d56426c1808d2412d9942~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339944&x-signature=R03UZApzEELXbt7A0KalChLhW8E%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d3b550690eb6548388f4e~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340135&x-signature=PbAuozjnuNXV5d9R1x3165I3JOQ%3D",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0de44cc68bd18e44f49319~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340009&x-signature=WpMoLV%2FqSJwXraqvgJmgo2FD63I%3D",
+      "name": ".666667",
+      "url": "https://8cinema.xyz/feeedfe18ec54b85176283c6f32cf4f2.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d9d825adf3225440c9f02~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340073&x-signature=zX6Y7rI%2F3xKncSrl2mM%2Bg25iY2Y%3D",
+      "name": ".633333",
+      "url": "https://8cinema.xyz/1b5f9288d747243a09c9a24ecdf30b28.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d94b7d92d226046b590a8~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340140&x-signature=2nJ29mL9jopSvFZR69SkdM1BeMg%3D",
+      "url": "https://8cinema.xyz/8e1d8a515cfb1458dc3cf688534fb3f6.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d146b8554cac245f88abb~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340147&x-signature=ExMfSGtckZzuHt2NeZiUHEhlgCE%3D",
+      "name": ".466667",
+      "url": "https://8cinema.xyz/dd6a54c61370a5ee5a012904b63ed27c.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dff2c3f8fdb7540f8887f~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340165&x-signature=QfxHxwk8dmpL8FU0hMSSH%2FIQx6k%3D",
+      "url": "https://8cinema.xyz/b5e7b5acc33fe5badc845e67042e972c.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dddc0edae9f5f4441825d~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340172&x-signature=dhtaMKl%2Fjkh4CW40Wx4LNh8c4Xk%3D",
+      "name": ".7",
+      "url": "https://8cinema.xyz/9acbcea40609af59054cf69018ea8b0b.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/aa5875af3c714b39e9bb0.png",
+      "name": ".633333",
+      "url": "https://8cinema.xyz/a1cffd9461bc92722ac64550668221e7.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e22e5f701bd44ee9d6f20.png",
+      "name": ".9",
+      "url": "https://8cinema.xyz/eb03138354f32a8eeeead799191f33b6.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/bb4c8830c4f934c2f404a.png",
+      "name": ".633333",
+      "url": "https://8cinema.xyz/18fe3e72527174a7c3ae520089a3f91e.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/48d0b603a6a778364367f.png",
+      "url": "https://8cinema.xyz/997bd77f02e6855ea219ff39af2ac79b.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/5e6ae60cdc245bdc0c8ec.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/60b41e6501839570ab8646013cf271ad.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8cd1d4ffb8ea3f9a2792a.png",
+      "name": ".666667",
+      "url": "https://8cinema.xyz/d3779cc5744514c07bb6453c0f9bcc79.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6783e3361707116bdf9bb.png",
+      "name": ".733333",
+      "url": "https://8cinema.xyz/23c65bc815640a3736e21e6e28fe2d20.html",
       "logo": null,
       "group_title": null
-    },
-    {
-      "name": "云南卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/ynwshd.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/云南卫视.png",
-      "group_title": "📡卫视频道"
     },
     {
-      "name": "Canal",
-      "url": "https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_320,h_240,vc_h264:baseline:3.0,br_192k/v1518476665/bbb_38s_s0avek.m3u8",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/ad100db6c113601150dbc509ee3b8952.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "春晚2010",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQ0MjlfMF8z_b_B8818807a00eed329a69fb494f405bd43.mp4",
+      "name": ".933333",
+      "url": "https://8cinema.xyz/5611eb2eb7e0ab25ce1a7bf7e159579d.html",
       "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "【无码】会员才能享受的制肥皂浴．纱仓真菜",
-      "url": "https://edpvev.aiwuci.com/20211203/BF4Ua4rQ/index.m3u8",
-      "logo": "https://l2e7j5.xjspimg24.cfd:17856/202112/c9/861acb7785eb490415c7d819cb3b8dc9.jpg",
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2f31fbec8a0f67406d2c0.png",
+      "name": ".7",
+      "url": "https://8cinema.xyz/d95d12074be8e1d6cebb47c64e6a3792.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/aefcb6b68f2ea56433618.png",
+      "name": ".733333",
+      "url": "https://8cinema.xyz/2fd4c5f5a967aa22c30eefbfd3a8390d.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/82ab0b92c87e529898aeb.png",
+      "name": ".006",
+      "url": "https://8cinema.xyz/4730e6968c99f3808c191500a0bd05d3.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/9d2f81d611cdc3e4875d9.png",
+      "name": "Iran International (1080p)",
+      "url": "https://live.playstop.me/LS-63503-4/index.m3u8",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/103308f6721b930797480.png",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_483/193039199_mp4_h264_aac_hd_7.ts",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/5a3f1b8ec3d11a4df6967.png",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_486/193039199_mp4_h264_aac_hd_7.ts",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b6a2ea74ae530ec3e49f5.png",
+      "name": "María+Visión Medjugorje (720p)",
+      "url": "https://1601580044.rsc.cdn77.org/live/_jcn_/amlst:Italiasette/playlist.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/03936e32fea5c2ae0edff.png",
-      "logo": null,
-      "group_title": null
+      "name": "Olelo Community Media Channel 54 (720p)",
+      "url": "https://cdn3.wowza.com/5/V2Y2VmhqMEFDTUkx/olelo/G0125_012/playlist.m3u8",
+      "logo": "https://i.imgur.com/8BG31QL.png",
+      "group_title": "Legislative"
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/824cad362c2b354f1e9a4.png",
+      "url": "https://im.gurl.eu.org/file/ab77558a0a9851187ea1e.png",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dfc96af5d6f514d399011~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339982&x-signature=PKmyZpbdnHzrLqKUsUenYeQpvkk%3D",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0daaaa289f938c48149841~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340013&x-signature=NCSCsq%2FRpZ9g9wKyfpJq1YZ1jeg%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dc1175f07a3c8433d9731~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340172&x-signature=BbrO1Jwh3IylMJ82zHulhPz7YpQ%3D",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d202c2844e3f24612ad80~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340020&x-signature=UctFoMXoRELEvF9VXRHjwAn%2B%2B%2FY%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://pervl2.xspcdn03.sa.com/cdn/down/709491516820c9f43b1249622a98a2fa/720/720112.html",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d6f641f8ab6164928b3b9~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340150&x-signature=Gxf007U7hdC%2FHCYEJWiQGyMF5h0%3D",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://pervl2.xspcdn03.sa.com/cdn/down/709491516820c9f43b1249622a98a2fa/720/720122.html",
+      "name": "[智利]ElPingüinoTV(360p)[Not24/7]",
+      "url": "http://167.114.133.205:1935/live/pinguinotv_360p/playlist.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/09e8a85f7627ebb9cf54c.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/70a8ffd8d19a271d9ed467cd19cf6caa.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a4f7cb2f10970f4a1d6c5.png",
+      "name": ".066667",
+      "url": "https://8cinema.xyz/edd832500ee39eecfc67094383892c65.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/903654b107c1c0c559964.png",
+      "name": ".133333",
+      "url": "https://8cinema.xyz/f02e3f69da9669b3335d600f07af8fd3.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/d5bd2064a9bff25f4b5d7.png",
+      "name": ".733333",
+      "url": "https://8cinema.xyz/76f92081795f7c6ec01d6ebb07b99908.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/02867a7f9bce5edc61148.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/f460aff487527eada62b0547887bd29b.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/88a387df74c80fccb5c0f.png",
+      "name": ".566667",
+      "url": "https://8cinema.xyz/400ec86f9b53aa77b08370c30e0641ec.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/42705c9e78fb8875c560c.png",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/c4ba229720a2c0c578cdd7797aa29e06.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/ee8774e2d07772a8917a9.png",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/3d6ffa136959cc7cc07fe058982b7fc6.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/1822ef8230de008ab9241.png",
+      "name": ".533333",
+      "url": "https://8cinema.xyz/a6b5b76b1eab12bb5db9bdbe6c009775.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/2e7975432a1b686e507dc.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/3e1b037a5f3486ecf17b8dde37f35ad0.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/8ada4ac202dc8167c863f.png",
+      "name": ".033333",
+      "url": "https://8cinema.xyz/97b6182ceca0d0e5ff5a1c12b4055397.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6c020b8a00509c26677b7.png",
+      "name": ".733333",
+      "url": "https://8cinema.xyz/5c201f4a702d5f3516972629617adfcb.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://pervm1.xspcdn02.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/108011.html",
+      "name": ".1",
+      "url": "https://8cinema.xyz/64383d217bbc2b62a16f2e1707b43687.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://pervm1.xspcdn09.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/108068.html",
+      "name": ".933333",
+      "url": "https://8cinema.xyz/2dd075dd39f0daa51d7d1e76e88f56d4.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://pervm1.xspcdn02.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/1080171.html",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/e834f5e4ab2d08dd2e650ccf584a0579.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://pervm1.xspcdn04.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/1080183.html",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/737d803da6cd4675884edb1ffbc2aa49.html",
       "logo": null,
       "group_title": null
-    },
-    {
-      "name": "春晚2000",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/21/BMjAyMzAxMTMyMTE4MzRfNDAzMDAxOTlfOTM1MDY4ODIxMTNfMF8z_b_Bdddf4e7ef0ff6cfd477857bb40e78419.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
     },
     {
-      "name": "春晚2015",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQ2MTZfMF8z_b_B4851f43f5a2bc2871a9b0ec87294a6e7.mp4",
+      "name": ".4",
+      "url": "https://8cinema.xyz/ed509dd22f2cf780176046fd0fd4ff58.html",
       "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6dbf0ae58b093af8f151e.png",
-      "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/37aeec6bca6f29ec2140f.png",
+      "name": ".733333",
+      "url": "https://8cinema.xyz/2720c9cd7b7aeee92112bc66835c7132.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://ajmn-gen-vod.akamaized.net/media/v1/hls/v4/clear/665003304001/a1c7cbca-7fe3-4730-a4f5-0f8c66efefb1/8026f38f-ae6a-4b5d-8524-3937bcc72af0/5x/segment274.ts",
+      "url": "https://i5.hoopchina.com.cn/blogfile/20226/30/BbsImg_62687529845867_1656573253_s_70_o_w_1_h_1_42502.png",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a3f0ad9a585685afc9224.png",
+      "url": "https://filmovie.github.io/tiviku/m3u8/avatar.ang.(2005).dubb/eps3.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/904d278bcf05b4e0e04bf.png",
+      "name": "CBEW-FM - CBC Radio One Windsor 97.5 FM",
+      "url": "https://cbcradiolive.akamaized.net/hls/live/2041038/ES_R1EWD/master.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a2ddc8ddf04edf674b2f9.png",
-      "logo": null,
-      "group_title": null
+      "name": "Pluto TV Naturaleza (720p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5d8d10ce06a9665fe54bf74a/master.m3u8?advertisingId=&appName=web&appStoreUrl=&appVersion=DNT&app_name=&architecture=&buildVersion=&deviceDNT=0&deviceId=5d8d10ce06a9665fe54bf74a&deviceLat=&deviceLon=&deviceMake=web&deviceModel=web&deviceType=web&deviceVersion=DNT&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false&sid=962&terminate=false&userId=",
+      "logo": "https://i.imgur.com/vUHAWAJ.png",
+      "group_title": "Cultura"
     },
     {
       "name": "Canal",
@@ -2732,274 +2336,670 @@
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d9925250475cb49ff80d0~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339997&x-signature=u7WT%2BgJHVfRNQfgnYFfM1lRvwdE%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d02835693d582480380b9~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339939&x-signature=a%2FLHdgse7I0QnXAZ89W6rCDwYXI%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d9ad3a9329ca542b3b0ca~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340022&x-signature=%2B3NZdDR7olQBowTqulKTbzcqQ70%3D",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dc7658b308562468b931c~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339975&x-signature=ez0UD10clfsH9bmwCOXCZdCUvRo%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d5c76557f343640a7bf57~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340023&x-signature=VPyOViZ7H0ez9nuhF9zyP41OeyA%3D",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d35b9e9917c7845888936~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340111&x-signature=5NVKWACsRn6jlBsTXpQj1LSAcgo%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "France 24 Arabic",
+      "url": "https://static.france24.com/live/F24_AR_LO_HLS/live_web.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "[加拿大]Sardari TV (1080p)",
+      "url": "http://158.69.124.9:1935/sardaritv/sardaritv/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/613cf2a0b90bb8101a53cb5bee315125.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".1",
+      "url": "https://8cinema.xyz/395a3cc921e1eeb0d0e6d92412b21b00.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/75b2a8b9265da0b7e72fa06727863f01.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".033333",
+      "url": "https://8cinema.xyz/811d883f08524e8788556606c94ab7a7.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/0d2041028b1f1c0a7f51f9392a94fdac.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".666667",
+      "url": "https://8cinema.xyz/0012aa53d724772471bde71f182fb657.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".6",
+      "url": "https://8cinema.xyz/fc77edcca050dd9cc55d7c4fa58610a1.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/c6fc7084867424acee1c83caa1fa02c4.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/39ec8cab3bf136edf2e478291827befa.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/3315865d490823dd321c8ecf1dd7ef92.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/84450aa5e907a1d8eab01e315bebffba.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/1b08805b0e5f19a254a9e35d7fc90dfb.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/27b23a538f113c280bb807fbdda35400.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/207982dceaea4bcf5c113cf73c58943a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/33f8837070bef2625c777e06fcdb7e1b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".966667",
+      "url": "https://8cinema.xyz/a0b2e09dda8b3a642dfca9f6e4614d5c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".1",
+      "url": "https://8cinema.xyz/3eb350077e5ba77be68394857f3e3513.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".666667",
+      "url": "https://8cinema.xyz/681ad8c647428bc6a4fdacf85b638d5c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".7",
+      "url": "https://8cinema.xyz/ddd9e42c0f9bf96d7c465b59c9dbede6.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d4ef1d2d84b6d47bbaf23~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340046&x-signature=osL98lxsxhzCRsaX1g2DAoGGzSo%3D",
+      "url": "https://i3.hoopchina.com.cn/blogfile/20226/30/BbsImg_62687529845867_1656573375_s_70_o_w_1_h_1_86953.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Food Network Asia_vietngatv.m3u-250415-090.done",
+      "url": "https://denver1769.pages.dev/Discovery/food_network_hd_english.m3u8",
+      "logo": null,
+      "group_title": "Foreign"
+    },
+    {
+      "name": "9 WFTV (Geo)_xumo.m3u-250415-030.done",
+      "url": "https://dbrb49pjoymg4.cloudfront.net/10001/9995107/hls/playlist.m3u8?ads.xumo_channelId=9995107",
+      "logo": null,
+      "group_title": "Music"
+    },
+    {
+      "name": "Canal",
+      "url": "https://filmovie.github.io/by/vods/squid.game.2021/squid2.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "[美国]Christian Youth Channel (CYC)",
+      "url": "http://media.smc-host.com:1935/cycnow.com/cyc2/chunklist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "TBS East",
+      "url": "https://turnerlive.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8",
+      "logo": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11867_dark_360w_270h.png",
+      "group_title": "Entertainment"
+    },
+    {
+      "name": "Canal",
+      "url": "https://test-streams.mux.dev/x36xhzz/url_0/url_525/193039199_mp4_h264_aac_hd_7.ts",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Radio 10",
+      "url": "http://radio10.stweb.tv/radio10/live/playlist.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Star Trek 2",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f77879983bec60007e2a196/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2bd7a2-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=ffc48245-dd1f-42c0-a844-75a8a43e52b0&serverSideAds=false&checkedby:iptvcat.com",
+      "logo": "",
+      "group_title": "Star Trek"
+    },
+    {
+      "name": "Star Trek Deep Space Nine",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65c69bbfd77d450008c7ffee/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2bd7a3-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=6e3a3277-9d15-4813-a57c-5547e9d53d6e&serverSideAds=false&checkedby:iptvcat.com",
+      "logo": "",
+      "group_title": "Star Trek"
+    },
+    {
+      "name": "Canal",
+      "url": "https://ajmn-gen-vod.akamaized.net/media/v1/hls/v4/clear/665003304001/a1c7cbca-7fe3-4730-a4f5-0f8c66efefb1/8026f38f-ae6a-4b5d-8524-3937bcc72af0/5x/segment68.ts",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d2dc9149374724861a81b~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340115&x-signature=mmA3NUlZqXadT7yGq8j7URDa3kg%3D",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0de3dd2b2645f04c619758~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339945&x-signature=238yU%2FrIVqJmIz3EGZ0kUl90RiM%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d0774c7de32cc47c9b895~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340129&x-signature=MmtdqRM%2B%2FD9pFa5uBn1lJzSXxRs%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d1478f969eef243218db3~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340150&x-signature=cgRfsbwnSUcLIhEC52t7vHTqsss%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://pervl2.xspcdn08.sa.com/cdn/down/709491516820c9f43b1249622a98a2fa/720/720167.html",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d7c1c952aa62e4909b414~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340174&x-signature=HY1UOmVucBmucLta%2BTatTyOxTRk%3D",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "AMX Noticias (720p) [Not 24/7]",
-      "url": "https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8",
+      "name": ".4",
+      "url": "https://8cinema.xyz/5567f4a1fdedb81f6328baa481a44f86.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/01d12f187339ddad895e0.png",
+      "name": ".7",
+      "url": "https://8cinema.xyz/5acae5393a83fcbfb5659ed5136d8c1f.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/3a1d45e62190b503ea10c.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/9d612122496318d1b73d9c7f6fc978b2.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f4917fdf7288d7dcfb223.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/61d8e6579dcec9136169ff3fc2f1d591.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/34bca25a2dc9c684a3f9f.png",
+      "name": ".366667",
+      "url": "https://8cinema.xyz/d69db3a8e869c815a4a1d3b0b4e99937.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e4fd351a8e0c994b0579e.png",
+      "name": ".4",
+      "url": "https://8cinema.xyz/63d622ef30bbadcbf10c6c0d788f2103.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/02ac6823dfb31a51815b2.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/3127f4a6e0f3b016fc7b1d2b160236c7.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/52d3395a5fdc731b8b001.png",
+      "name": ".666667",
+      "url": "https://8cinema.xyz/89cec7d3f3810444a1fb64ef53641b25.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/e6a2ca707fb6d76555a04.png",
+      "name": ".6",
+      "url": "https://8cinema.xyz/a9607483ea3ca950d066d512c4d3ee28.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b6a73366b000ca7ff3484.png",
+      "name": ".533333",
+      "url": "https://8cinema.xyz/52a02647a9f4e5f902504906f31fc29c.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/299411246a224335627e7.png",
+      "name": ".833333",
+      "url": "https://8cinema.xyz/54322926843cb718876be8b07a5a4ded.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/40c94ede67c89e62e6778.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/90e6f57f8225a8b5f3de662bac83b921.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/34e70e5bdb40d858d1fb2.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/780591ce7488ec39c01780f1cd29d6c0.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/4fd168d1aa73a666cfe3e.png",
+      "name": ".5",
+      "url": "https://8cinema.xyz/0dd2a623f98eeacfb91b78644e4b0e64.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/5411b7b8d76bba30ebe19.png",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/f9258f49fecde83874086.png",
+      "name": ".133333",
+      "url": "https://8cinema.xyz/8a559a9995b0a515a93ec7e99bc5be5d.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/b6b62e8bd1b35b04570b2.png",
+      "url": "https://filmovie.github.io/by/trans7.m3u8",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://pervm1.xspcdn07.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/1080376.html",
+      "url": "https://filmovie.github.io/by/transtv.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "NBC News Now",
+      "url": "https://d3f4oii5n0oeqi.cloudfront.net/11701/88814557/hls/master.m3u8?ads.xumo_channelId=88814557&ads.xumo_streamId=88814557",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "CBC TV8 (1080p) [Not 24/7]",
+      "url": "https://1740288887.rsc.cdn77.org/1740288887/index.m3u8",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Rock FM 105.5",
+      "url": "https://securestream.us/radio/8050/radio.mp3",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "SPIEGEL TV Konflikte",
+      "url": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65b9268fc798e800085add89/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b210d30-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=245f86b2-fa92-4679-a002-9525677a4532&checkedby:iptvcat.com",
+      "logo": null,
+      "group_title": "Sport"
+    },
+    {
+      "name": "Canal",
+      "url": "https://im.gurl.eu.org/file/6844fb012e07c8e6e5fd9.png",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://pervm1.xspcdn10.sa.com/cdn/down/c82a7178ece03ba6ee8051cc36691bdc/1080/1080379.html",
-      "logo": null,
-      "group_title": null
-    },
-    {
-      "name": "安徽卫视",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/ahwshd.m3u8?auth=testpub$订阅源",
-      "logo": "https://raw.githubusercontent.com/fanmingming/live/main/tv/安徽卫视.png",
-      "group_title": "📡卫视频道"
-    },
-    {
-      "name": "春晚2013",
-      "url": "https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQ1NjNfMF8z_b_B4fea55408dca4471a68a963ae096be59.mp4",
-      "logo": null,
-      "group_title": "历年春晚"
-    },
-    {
-      "name": "【无码】温柔的人妻不停的玩弄",
-      "url": "https://edpvev.aiwuci.com/20220412/az5xNzDH/index.m3u8",
-      "logo": "https://l2e7j5.xjspimg24.cfd:17856/202204/5b/9625967185b18d90f985d2825953cf5b.jpg",
-      "group_title": null
-    },
-    {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/c72a9416a7730817c46ec.png",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dd58fef9064414dbd99bb~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339998&x-signature=j20kVIe9KCTvh4saZSwS4REb2UI%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0daf268319bb0c40829f39~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339986&x-signature=BaqGOdy6urax681whCBEewPEtDU%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d7faadc6fa0a34feba203~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340005&x-signature=4zZ1TLdjkiXJIyCWvB3cTBKQBS8%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d59b0946be03b45cea9ad~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340008&x-signature=C7Vg18KwhXAG9y3ZSfiUxQXQatw%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0db5733f3836304df2aa3a~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340048&x-signature=8vna5dmaNxRNoPTav%2FwPciuoY90%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d89ec95660cb34f6ea496~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340010&x-signature=6hN3Vg7dS%2FDJMn8wmDi%2FZSLHfWc%3D",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d9cdcc4e249034f519ebb~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340138&x-signature=usTON2RcS09hs4KeGoIMPwSa0Tk%3D",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/e22937285244a4887076d825ec9b20ab.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".633333",
+      "url": "https://8cinema.xyz/e3d7d0e14643266d98ccef9d6e16c2fe.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/766d7583498a2704be061d8bfeaeada6.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".133333",
+      "url": "https://8cinema.xyz/75cfc0f5d707fc247d342e28c46aa8db.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/887a3b479a43230d8c5265f2f2a6a4f7.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/7cb40bba140b179505cab3abc4955b07.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".866667",
+      "url": "https://8cinema.xyz/855f177658c59621adb16858218de25a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".633333",
+      "url": "https://8cinema.xyz/1a44c80b6dd41ea4d7ab7df3d76731d9.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/c8975f40419b3a76a72fb3cd2238613a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".366667",
+      "url": "https://8cinema.xyz/d2ba09f4dbd740a4c1d660871170592f.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d5ac669cefefa4101acae~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340018&x-signature=Gianq8Jte4QK8zaRdSa2TvCtZLs%3D",
+      "url": "https://8cinema.xyz/4014d2133e1ab2fd5824e46ef418a08b.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".933333",
+      "url": "https://8cinema.xyz/acf4e85aecbacbc80da5ce03ea7a3dbd.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/df9851b915d310db0c7d8f01878a7d66.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".5",
+      "url": "https://8cinema.xyz/71b6e5c11771f576eb3c1ce0c088b60d.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".233333",
+      "url": "https://8cinema.xyz/ac63596648a558d1e368a75f64830598.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".433333",
+      "url": "https://8cinema.xyz/9e9f5ef8db0f61d8738309d8e9c57250.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/b3e3dae63ad68916bd4c4e4bcf1d258a.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".133333",
+      "url": "https://8cinema.xyz/6e25e901a3ed96a56781a4f21daedee8.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".566667",
+      "url": "https://8cinema.xyz/cd6e1d17fe57599c12e1ad841a2c7fe3.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".033333",
+      "url": "https://8cinema.xyz/e93a8e1234a18971186b3ab6ea5c7157.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".266667",
+      "url": "https://8cinema.xyz/0f3f153b01fe7899d6f39079b79ef5c7.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/9f70607034ce53ce2ea536fc64a0c637.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".004267",
+      "url": "https://iwpm.xyz/eddeb16af218c86f1a8d2b43bf6b8925.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Olelo Community Media Channel 49 (720p)",
+      "url": "https://cdn3.wowza.com/5/V2Y2VmhqMEFDTUkx/olelo/G0125_009/playlist.m3u8",
+      "logo": "https://i.imgur.com/4C5Xp8M.png",
+      "group_title": "Legislative"
+    },
+    {
+      "name": "Pluto TV Cine Drama (720p)",
+      "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f1ac947dcd00d0007937c08/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&is_lat=1&platform=web&rdid=channel&tags=ROKU_CONTENT_TAGS",
+      "logo": "",
+      "group_title": "Pelis"
+    },
+    {
+      "name": ".25",
+      "url": "https://ixpm.xyz/bc46c4c79b1b2031c31279ec0b2428a0.html",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dd6167d7f28b741d0bb4f~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340062&x-signature=myyqdE4G1x1MAgjg7wqjeHvVaYk%3D",
+      "url": "https://im.gurl.eu.org/file/a6bd53c2908d7ad76f5d5.png",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0dc5897032528140e7990d~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340156&x-signature=Rruz0eiZLmweiXxRxr6216YlzeM%3D",
+      "url": "https://im.gurl.eu.org/file/384016060d4741594e6d2.png",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://pervl2.xspcdn03.sa.com/cdn/down/709491516820c9f43b1249622a98a2fa/720/72092.html",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d8ba7c4b94a414cc88d6f~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798339999&x-signature=Ee6aqt8SXVhHqwSeM1zHna0JvfA%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/78caab4420f2d335bce77.png",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d6620b982f47b4154b398~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340062&x-signature=On%2FfVbzJD4kOPwCgULdEiJ5ieBk%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/5546c27e9d450cea25968.png",
+      "url": "https://p19-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d5ff660613505433686db~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340100&x-signature=WtYnw0WmM89r2HTXPhBqxPevhYQ%3D",
       "logo": null,
       "group_title": null
     },
     {
       "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/6cd634c729d1a2c7ed863.png",
+      "url": "https://p16-ad-site-sign-sg.tiktokcdn.com/ad-site-i18n-sg/202512275d0d1276c5a4819f4b0aa199~tplv-d5opwmad15-ttam-origin.image?lk3s=6d71dd51&x-expires=1798340129&x-signature=SJ1%2BrTtCUkc0Yn3YSF4K4eHrnfA%3D",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/0c22f0fc01e506e1f3ab1.png",
+      "name": "[加拿大]5AAB TV (720p)",
+      "url": "http://158.69.124.9:1935/5aabtv/5aabtv/playlist.m3u8",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/146656990df6a42fea779.png",
+      "name": ".4",
+      "url": "https://8cinema.xyz/5f1ce9855c9eb8814982bde76daa3621.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/bef39a993d2f9041280e1.png",
+      "name": ".333333",
+      "url": "https://8cinema.xyz/8ce15ef7d253c183988596b3c388e570.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/a0a39c1c49f6448d35b0b.png",
+      "name": ".933333",
+      "url": "https://8cinema.xyz/0c45230fca6294895812af8e744a760b.html",
       "logo": null,
       "group_title": null
     },
     {
-      "name": "Canal",
-      "url": "https://im.gurl.eu.org/file/cc6180399dcf89e4b00f0.png",
+      "name": ".466667",
+      "url": "https://8cinema.xyz/8fcd88c98b55ec44247419a4dede1418.html",
       "logo": null,
       "group_title": null
+    },
+    {
+      "name": ".166667",
+      "url": "https://8cinema.xyz/ad29b631d8fc5e59dceefe91e03f71ad.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".8",
+      "url": "https://8cinema.xyz/d7b8e3dda3cb47480a7d26ba4f205cfe.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".766667",
+      "url": "https://8cinema.xyz/5919c0e1e7c49ab784a895f118d599da.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/30d018d00fe62bef4af19e7032649139.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".433333",
+      "url": "https://8cinema.xyz/ef52428b54df02fa9e0d27c6e9e1e58c.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".333333",
+      "url": "https://8cinema.xyz/1291dc57d87f82faa69b7e20870e7235.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".533333",
+      "url": "https://8cinema.xyz/3ad7979397f2c9500bba8cfbc5e8df4e.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".966667",
+      "url": "https://8cinema.xyz/50111cb3fbf975f3fd3c065403baaaf2.html",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": ".0064",
+      "url": "https://iwpm.xyz/a6e55201ef57853ef30a6f948bd9b854.png",
+      "logo": null,
+      "group_title": null
+    },
+    {
+      "name": "Magna Channel",
+      "url": "http://cdn.nng.cloudns.us/live/m3u8/id/6183ec225226cce.m3u8",
+      "logo": "https://warningfm.github.io/v3/img/ZpcePba.png?v=1.1.1.1",
+      "group_title": "🇮🇩 Nasional"
     }
   ],
-  "generated_at": "2026-07-20T14:18:58.203001+00:00"
+  "generated_at": "2026-07-23T13:32:42.549258+00:00"
 }
